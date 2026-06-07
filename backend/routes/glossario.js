@@ -25,7 +25,7 @@ router.post("/", async (req, res) => {
   }
   const termo = palavra.trim().slice(0, 100);
   const response = await anthropic.messages.create({
-    model: "claude-sonnet-4-20250514",
+    model: "claude-sonnet-4-5",
     max_tokens: 600,
     messages: [{ role: "user", content: GLOSSARIO_PROMPT(termo) }],
   });

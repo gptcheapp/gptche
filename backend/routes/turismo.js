@@ -42,7 +42,7 @@ router.post("/", async (req, res) => {
     return res.status(400).json({ error: "Região inválida ou não encontrada." });
   }
   const response = await anthropic.messages.create({
-    model: "claude-sonnet-4-20250514",
+    model: "claude-sonnet-4-5",
     max_tokens: 1200,
     messages: [{ role: "user", content: TURISMO_PROMPT(regiao) }],
   });
