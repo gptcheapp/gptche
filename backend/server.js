@@ -16,18 +16,15 @@ app.use(helmet());
 const allowedOrigins = [
   "https://gptche.app",
   "https://www.gptche.app",
-  "https://gptche.vercel.app",
-  ...(process.env.NODE_ENV !== "production"
-    ? ["http://localhost:5173", "http://localhost:3000"]
-    : []),
+  "https://gptche.vercel.app"
 ];
 
 app.use(
   cors({
-    origin: (origin, cb) => {
+    origin: function(origin, cb) {
       if (!origin) return cb(null, true);
-      if (allowedOrigins.includes(origin)) return cb(null, true);
-      cb(new Error(`CORS bloqueado para origin: ${origin}`));
+      if (allowedOrigins.indexOf(origin) !== -1) return cb(null, true);
+      return cb(new Error("CORS bloqueado"));
     },
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
@@ -39,32 +36,36 @@ const globalLimiter = rateLimit({
   max: 100,
   standardHeaders: true,
   legacyHeaders: false,
-  message: { error: "Bah, tu tá mandando muita mensagem, tchê! Espera um tiquinho." },
+  message: { error: "Limite global atingido." },
 });
 
 const aiLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 30,
-  message: { error: "Barbaridade! Limite de mensagens atingido. Tenta de novo em 15 minutos, xirú." },
+  message: { error: "Limite de mensagens atingido. Tenta em 15 minutos." },
 });
 
 app.use(globalLimiter);
 app.use(express.json({ limit: "10kb" }));
 
-app.get("/health", (_req, res) => res.json({ status: "ok", app: "GPTchê" }));
+app.get("/health", function(_req, res) {
+  res.json({ status: "ok", app: "GPTche" });
+});
 
 app.use("/api/chat", aiLimiter, chatRouter);
 app.use("/api/turismo", aiLimiter, turismoRouter);
 app.use("/api/glossario", aiLimiter, glossarioRouter);
 
-app.use((_req, res) => res.status(404).json({ error: "Rota não encontrada, tchê." }));
-
-app.use((err, _req, res, _next) => {
-  console.error("[GPTchê error]", err.message);
-  const status = err.status || 500;
-  res.status(status).json({ error: err.message || "Entrevero interno no servidor." });
+app.use(function(_req, res) {
+  res.status(404).json({ error: "Rota nao encontrada." });
 });
 
-app.listen(PORT, () => {
-  console.log(`🧉 GPTchê backend rodando na porta ${PORT} [${process.env.NODE_ENV || "development"}]`);
+app.use(function(err, _req, res, _next) {
+  console.error("[GPTche error]", err.message);
+  var status = err.status || 500;
+  res.status(status).json({ error: err.message || "Erro interno." });
+});
+
+app.listen(PORT, function() {
+  console.log("GPTche backend rodando na porta " + PORT);
 });
