@@ -24,11 +24,11 @@ const allowedOrigins = [
 app.use(
   cors({
     origin: (origin, cb) => {
-      if (!origin && process.env.NODE_ENV !== "production") return cb(null, true);
+      if (!origin) return cb(null, true);
       if (allowedOrigins.includes(origin)) return cb(null, true);
       cb(new Error(`CORS bloqueado para origin: ${origin}`));
     },
-    methods: ["POST"],
+    methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   })
 );
