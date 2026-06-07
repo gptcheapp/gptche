@@ -16,6 +16,7 @@ app.use(helmet());
 const allowedOrigins = [
   "https://gptche.app",
   "https://www.gptche.app",
+  "https://gptche.vercel.app",
   ...(process.env.NODE_ENV !== "production"
     ? ["http://localhost:5173", "http://localhost:3000"]
     : []),
