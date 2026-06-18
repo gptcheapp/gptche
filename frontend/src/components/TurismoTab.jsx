@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { fetchTurismo } from "../api/index.js";
+import { salvarRegiaoVisitada } from "../api/historico.js";
 
 const REGIOES = [
   { id: "serra", nome: "Serra Gaúcha", icone: "🍷", desc: "Vinhos, flores e café colonial" },
@@ -26,6 +27,7 @@ export default function TurismoTab({ onPerguntar }) {
     try {
       const data = await fetchTurismo(regiao.nome);
       setGuia(data);
+      salvarRegiaoVisitada(regiao.id, regiao.nome);
     } catch (err) {
       setErro(err.message || "Bah, deu um entrevero. Tenta de novo!");
     }

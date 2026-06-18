@@ -11,12 +11,15 @@ import glossarioRouter from "./routes/glossario.js";
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+app.set("trust proxy", 1);
+
 app.use(helmet());
 
 const allowedOrigins = [
   "https://gptche.app",
   "https://www.gptche.app",
-  "https://gptche.vercel.app"
+  "https://gptche.vercel.app",
+  "http://localhost:5173"
 ];
 
 app.use(

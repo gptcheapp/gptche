@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { sendChat } from "../api/index.js";
+import { salvarMensagem, buscarHistoricoChat } from "../api/historico.js";
 import { useSpeech, speak } from "../hooks/useSpeech.js";
 
 const initialMessage = {
@@ -20,8 +21,18 @@ export default function ChatTab({ initialInput, onInputConsumed }) {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [speaking, setSpeaking] = useState(null);
+  const [carregandoHistorico, setCarregandoHistorico] = useState(true);
   const bottomRef = useRef(null);
   const inputRef = useRef(null);
+
+  useEffect(() => {
+    buscarHistoricoChat().then((historico) => {
+      if (historico && historico.length > 0) {
+        setMessages([initialMessage, ...historico]);
+      }
+      setCarregandoHistorico(false);
+    });
+  }, []);
 
   useEffect(() => {
     if (initialInput) {
@@ -58,19 +69,16 @@ export default function ChatTab({ initialInput, onInputConsumed }) {
     const newMessages = [...messages, userMsg];
     setMessages(newMessages);
     setLoading(true);
+    salvarMensagem("user", t);
     try {
       const reply = await sendChat(
         newMessages.map((m) => ({ role: m.role, content: m.content }))
       );
       setMessages((prev) => [...prev, { role: "assistant", content: reply }]);
+      salvarMensagem("assistant", reply);
     } catch (err) {
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: "assistant",
-          content: `Barbaridade! ${err.message || "Deu um problema na conexão. Tenta de novo!"}`,
-        },
-      ]);
+      const erroMsg = `Barbaridade! ${err.message || "Deu um problema na conexão. Tenta de novo!"}`;
+      setMessages((prev) => [...prev, { role: "assistant", content: erroMsg }]);
     }
     setLoading(false);
     inputRef.current?.focus();
@@ -123,7 +131,7 @@ export default function ChatTab({ initialInput, onInputConsumed }) {
         <div ref={bottomRef} />
       </div>
 
-      {messages.length === 1 && (
+      {messages.length === 1 && !carregandoHistorico && (
         <div className="suggestions">
           {SUGGESTIONS.map((s, i) => (
             <button key={i} className="suggestion-chip" onClick={() => sendMessage(s)}>

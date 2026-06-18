@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { fetchGlossario } from "../api/index.js";
+import { salvarBuscaGlossario, buscarHistoricoGlossario } from "../api/historico.js";
 
 const SUGESTOES = ["bah", "chimarrão", "tchê", "guri", "barbaridade", "xis", "bagual", "querência", "minuano", "oigalê"];
 
@@ -15,6 +16,13 @@ export default function GlossarioTab() {
   const [loading, setLoading] = useState(false);
   const [historico, setHistorico] = useState([]);
 
+  useEffect(() => {
+    buscarHistoricoGlossario().then((dados) => {
+      const termos = dados.map((d) => d.termo);
+      setHistorico(termos);
+    });
+  }, []);
+
   const buscarTermo = async (termo) => {
     const t = (termo || busca).trim();
     if (!t || loading) return;
@@ -24,8 +32,11 @@ export default function GlossarioTab() {
     try {
       const data = await fetchGlossario(t);
       setResultado(data);
-      if (data.encontrado && !historico.includes(t.toLowerCase())) {
-        setHistorico((prev) => [t, ...prev].slice(0, 8));
+      if (data.encontrado) {
+        salvarBuscaGlossario(t, data);
+        if (!historico.includes(t.toLowerCase())) {
+          setHistorico((prev) => [t, ...prev].slice(0, 8));
+        }
       }
     } catch {
       setResultado({ encontrado: false, erro: true });
