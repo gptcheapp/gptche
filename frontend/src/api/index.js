@@ -29,3 +29,8 @@ export async function fetchGlossario(palavra) {
   const data = await request("/api/glossario", { palavra });
   return data.resultado;
 }
+
+export async function fetchGuia(cidade, regiao) {
+  const data = await request("/api/guia", { cidade, regiao });
+  return data.guia;
+}

@@ -2,10 +2,12 @@ import { useState } from "react";
 import ChatTab from "./components/ChatTab.jsx";
 import TurismoTab from "./components/TurismoTab.jsx";
 import GlossarioTab from "./components/GlossarioTab.jsx";
+import GuiaTab from "./components/GuiaTab.jsx";
 
 const TABS = [
   { id: "chat", icon: "🧉", label: "Chat" },
   { id: "turismo", icon: "🗺️", label: "Turismo RS" },
+  { id: "guia", icon: "📍", label: "Guia" },
   { id: "glossario", icon: "📖", label: "Glossário" },
 ];
 
@@ -55,6 +57,7 @@ export default function App() {
           />
         )}
         {aba === "turismo" && <TurismoTab onPerguntar={handlePerguntar} />}
+        {aba === "guia" && <GuiaTab onPerguntar={handlePerguntar} />}
         {aba === "glossario" && <GlossarioTab />}
       </main>
     </div>

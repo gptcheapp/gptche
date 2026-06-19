@@ -7,6 +7,7 @@ import { rateLimit } from "express-rate-limit";
 import chatRouter from "./routes/chat.js";
 import turismoRouter from "./routes/turismo.js";
 import glossarioRouter from "./routes/glossario.js";
+import guiaRouter from "./routes/guia.js";
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -58,6 +59,7 @@ app.get("/health", function(_req, res) {
 app.use("/api/chat", aiLimiter, chatRouter);
 app.use("/api/turismo", aiLimiter, turismoRouter);
 app.use("/api/glossario", aiLimiter, glossarioRouter);
+app.use("/api/guia", aiLimiter, guiaRouter);
 
 app.use(function(_req, res) {
   res.status(404).json({ error: "Rota nao encontrada." });
