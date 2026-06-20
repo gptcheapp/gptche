@@ -100,6 +100,69 @@ function agruparCidades(cidades) {
   return grupos;
 }
 
+const S = {
+  scroll: { flex: 1, overflowY: "auto", padding: 16, display: "flex", flexDirection: "column", gap: 0 },
+  hint: { fontSize: 13, color: "var(--color-text-secondary)", textAlign: "center", padding: "4px 0 12px" },
+  grid: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 },
+  regionCard: { padding: "14px 12px", borderRadius: "var(--border-radius-lg)", border: "0.5px solid var(--color-border-tertiary)", background: "var(--color-background-secondary)", cursor: "pointer", textAlign: "left", display: "flex", flexDirection: "column", gap: 4 },
+  regionIcon: { fontSize: 24 },
+  regionName: { fontSize: 13, fontWeight: 500, color: "var(--color-text-primary)" },
+  regionDesc: { fontSize: 11, color: "var(--color-text-secondary)" },
+  backBtn: { background: "none", border: "none", color: GREEN, cursor: "pointer", fontSize: 13, display: "flex", alignItems: "center", gap: 4, padding: 0, marginBottom: 12 },
+  regionHeader: { display: "flex", alignItems: "center", gap: 10, marginBottom: 14 },
+  regionHeaderIcon: { fontSize: 24 },
+  regionTitle: { fontSize: 16, fontWeight: 500, color: "var(--color-text-primary)" },
+  regionSubtitle: { fontSize: 12, color: "var(--color-text-secondary)" },
+  subLabel: { fontSize: 11, fontWeight: 500, color: "var(--color-text-secondary)", textTransform: "uppercase", letterSpacing: 1, margin: "12px 0 7px" },
+  cityList: { display: "flex", flexDirection: "column", gap: 6, marginBottom: 8 },
+  cityBtn: { padding: "11px 14px", borderRadius: "var(--border-radius-md)", border: "0.5px solid var(--color-border-tertiary)", background: "var(--color-background-secondary)", cursor: "pointer", textAlign: "left", display: "flex", alignItems: "center", justifyContent: "space-between" },
+  cityName: { fontSize: 13, color: "var(--color-text-primary)" },
+  badge: { fontSize: 10, padding: "2px 8px", borderRadius: 20, background: GREEN_BG, color: GREEN, border: `0.5px solid ${GREEN_LIGHT}`, marginLeft: 8, whiteSpace: "nowrap", flexShrink: 0 },
+  loadingCenter: { flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12, paddingTop: 60 },
+  loadingIcon: { fontSize: 32 },
+  loadingText: { fontSize: 14, color: "var(--color-text-secondary)", textAlign: "center" },
+  dots: { display: "flex", gap: 6 },
+  dot: { width: 8, height: 8, borderRadius: "50%", background: GREEN },
+  errorCard: { textAlign: "center", padding: "32px 20px" },
+  errorIcon: { fontSize: 36, marginBottom: 10 },
+  errorTitle: { fontSize: 14, color: "var(--color-text-primary)", marginBottom: 14 },
+  retryBtn: { padding: "9px 20px", borderRadius: 22, border: "none", background: GREEN, color: GREEN_BG, fontSize: 13, cursor: "pointer" },
+  breadcrumb: { display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap", marginBottom: 14 },
+  breadBtn: { background: "none", border: "none", color: "var(--color-text-secondary)", cursor: "pointer", fontSize: 12, padding: 0 },
+  breadSep: { color: "var(--color-text-tertiary)", fontSize: 12 },
+  breadActive: { fontSize: 12, color: GREEN, fontWeight: 500 },
+  saudacaoCard: { background: GREEN_BG, borderRadius: "var(--border-radius-lg)", padding: "12px 16px", display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 12 },
+  mateIcon: { fontSize: 20, flexShrink: 0 },
+  saudacaoText: { margin: 0, fontSize: 13, color: GREEN, lineHeight: 1.6, fontStyle: "italic" },
+  sobreText: { fontSize: 13, color: "var(--color-text-primary)", lineHeight: 1.7, marginBottom: 14 },
+  section: { marginBottom: 14 },
+  sectionLabel: { fontSize: 12, fontWeight: 500, color: "var(--color-text-secondary)", textTransform: "uppercase", letterSpacing: 1, marginBottom: 8 },
+  destaqueCard: { background: "#FFF8E1", borderRadius: "var(--border-radius-md)", padding: "12px 14px", border: "0.5px solid #FFD54F", display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 8 },
+  destaqueIcon: { fontSize: 22, flexShrink: 0 },
+  destaqueTitle: { fontSize: 13, fontWeight: 500, color: "#7B5800", marginBottom: 4 },
+  destaqueDesc: { fontSize: 12, color: "var(--color-text-primary)", lineHeight: 1.5 },
+  pontoCard: { background: "var(--color-background-secondary)", borderRadius: "var(--border-radius-md)", padding: "10px 14px", display: "flex", gap: 10, alignItems: "flex-start", border: "0.5px solid var(--color-border-tertiary)", marginBottom: 8 },
+  pontoIcon: { fontSize: 20, flexShrink: 0 },
+  pontoBody: { flex: 1 },
+  pontoHeader: { display: "flex", alignItems: "center", gap: 6, marginBottom: 2 },
+  pontoNome: { fontSize: 13, fontWeight: 500, color: "var(--color-text-primary)" },
+  tipoBadge: { fontSize: 10, padding: "1px 7px", borderRadius: 20 },
+  pontoDesc: { fontSize: 12, color: "var(--color-text-secondary)", lineHeight: 1.5 },
+  gastGrid: { display: "flex", gap: 8, flexWrap: "wrap" },
+  gastCard: { background: "var(--color-background-secondary)", borderRadius: "var(--border-radius-md)", padding: "10px 14px", flex: "1 1 40%", border: "0.5px solid var(--color-border-tertiary)" },
+  gastIcon: { fontSize: 18, marginBottom: 4 },
+  gastPrato: { fontSize: 13, fontWeight: 500, color: "var(--color-text-primary)", marginBottom: 2 },
+  gastOnde: { fontSize: 11, color: "var(--color-text-secondary)", lineHeight: 1.4 },
+  infoCard: { background: "var(--color-background-secondary)", borderRadius: "var(--border-radius-md)", padding: "12px 14px", border: "0.5px solid var(--color-border-tertiary)", marginBottom: 8 },
+  infoLabel: { fontSize: 12, fontWeight: 500, color: "var(--color-text-secondary)", marginBottom: 4 },
+  infoText: { fontSize: 13, color: "var(--color-text-primary)", lineHeight: 1.5 },
+  infoAviso: { fontSize: 11, color: "var(--color-text-tertiary)", marginTop: 6, fontStyle: "italic" },
+  dicaCard: { background: GREEN_BG, borderRadius: "var(--border-radius-md)", padding: "12px 14px", border: `0.5px solid ${GREEN_LIGHT}`, marginBottom: 12 },
+  dicaLabel: { fontSize: 12, fontWeight: 500, color: GREEN, marginBottom: 4 },
+  dicaText: { fontSize: 13, color: GREEN, lineHeight: 1.5, fontStyle: "italic" },
+  perguntarBtn: { padding: "11px 20px", borderRadius: 24, border: "none", background: GREEN, color: GREEN_BG, fontSize: 13, fontWeight: 500, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 8, width: "100%", marginBottom: 8 },
+};
+
 export default function GuiaTab({ onPerguntar }) {
   const [regiaoSel, setRegiaoSel] = useState(null);
   const [cidadeSel, setCidadeSel] = useState(null);
@@ -125,14 +188,14 @@ export default function GuiaTab({ onPerguntar }) {
   const voltarParaRegioes = () => { setRegiaoSel(null); setCidadeSel(null); setGuia(null); setErro(false); };
 
   if (!regiaoSel) return (
-    <div className="tab-scroll">
-      <p className="tab-hint">Escolhe a região e depois a cidade, tchê! 📍</p>
-      <div className="grid-2col">
+    <div style={S.scroll}>
+      <p style={S.hint}>Escolhe a região e depois a cidade, tchê! 📍</p>
+      <div style={S.grid}>
         {REGIOES_CIDADES.map(r => (
-          <button key={r.id} className="region-card" onClick={() => setRegiaoSel(r)}>
-            <span className="region-icon">{r.icone}</span>
-            <span className="region-name">{r.nome}</span>
-            <span className="region-desc">{r.desc}</span>
+          <button key={r.id} style={S.regionCard} onClick={() => setRegiaoSel(r)}>
+            <span style={S.regionIcon}>{r.icone}</span>
+            <span style={S.regionName}>{r.nome}</span>
+            <span style={S.regionDesc}>{r.desc}</span>
           </button>
         ))}
       </div>
@@ -142,23 +205,23 @@ export default function GuiaTab({ onPerguntar }) {
   if (!cidadeSel) {
     const grupos = agruparCidades(regiaoSel.cidades);
     return (
-      <div className="tab-scroll">
-        <button className="back-btn" onClick={voltarParaRegioes}>← Regiões</button>
-        <div className="region-header">
-          <span>{regiaoSel.icone}</span>
+      <div style={S.scroll}>
+        <button style={S.backBtn} onClick={voltarParaRegioes}>← Regiões</button>
+        <div style={S.regionHeader}>
+          <span style={S.regionHeaderIcon}>{regiaoSel.icone}</span>
           <div>
-            <div className="region-title">{regiaoSel.nome}</div>
-            <div className="region-subtitle">Escolhe a cidade, tchê!</div>
+            <div style={S.regionTitle}>{regiaoSel.nome}</div>
+            <div style={S.regionSubtitle}>Escolhe a cidade, tchê!</div>
           </div>
         </div>
         {Object.entries(grupos).map(([grupo, cidades]) => (
           <div key={grupo}>
-            {grupo !== "__geral" && <div className="sub-label">{grupo}</div>}
-            <div className="city-list">
+            {grupo !== "__geral" && <div style={S.subLabel}>{grupo}</div>}
+            <div style={S.cityList}>
               {cidades.map(c => (
-                <button key={c.id} className="city-btn" onClick={() => buscarGuia(c)}>
-                  <span className="city-name" style={{ fontWeight: c.destaque ? 500 : 400 }}>{c.nome}</span>
-                  {c.destaque && <span className="destaque-badge">destaque</span>}
+                <button key={c.id} style={S.cityBtn} onClick={() => buscarGuia(c)}>
+                  <span style={{ ...S.cityName, fontWeight: c.destaque ? 500 : 400 }}>{c.nome}</span>
+                  {c.destaque && <span style={S.badge}>destaque</span>}
                 </button>
               ))}
             </div>
@@ -169,22 +232,24 @@ export default function GuiaTab({ onPerguntar }) {
   }
 
   if (loading) return (
-    <div className="loading-center">
-      <div className="loading-icon">{regiaoSel.icone}</div>
-      <div className="loading-text">O GPTchê tá campando as melhores dicas de {cidadeSel.nome}...</div>
-      <div className="dots">
-        {[0,1,2].map(d => <div key={d} className="dot" style={{ animationDelay: `${d*0.2}s` }} />)}
+    <div style={S.loadingCenter}>
+      <div style={S.loadingIcon}>{regiaoSel.icone}</div>
+      <div style={S.loadingText}>O GPTchê tá campando as melhores dicas de {cidadeSel.nome}...</div>
+      <div style={S.dots}>
+        {[0,1,2].map(d => (
+          <div key={d} style={{ ...S.dot, animation: "bounce 1.2s infinite", animationDelay: `${d*0.2}s` }} />
+        ))}
       </div>
     </div>
   );
 
   if (erro) return (
-    <div className="tab-scroll">
-      <button className="back-btn" onClick={voltarParaCidades}>← Cidades</button>
-      <div className="error-card">
-        <div className="error-icon">😬</div>
-        <div className="error-title">Barbaridade! Deu um entrevero, tchê!</div>
-        <button className="retry-btn" onClick={() => buscarGuia(cidadeSel)}>Tentar de novo</button>
+    <div style={S.scroll}>
+      <button style={S.backBtn} onClick={voltarParaCidades}>← Cidades</button>
+      <div style={S.errorCard}>
+        <div style={S.errorIcon}>😬</div>
+        <div style={S.errorTitle}>Barbaridade! Deu um entrevero, tchê!</div>
+        <button style={S.retryBtn} onClick={() => buscarGuia(cidadeSel)}>Tentar de novo</button>
       </div>
     </div>
   );
@@ -192,151 +257,90 @@ export default function GuiaTab({ onPerguntar }) {
   if (!guia) return null;
 
   return (
-    <div className="tab-scroll">
-      <div className="breadcrumb">
-        <button className="bread-btn" onClick={voltarParaRegioes}>{regiaoSel.icone} {regiaoSel.nome}</button>
-        <span className="bread-sep">›</span>
-        <button className="bread-btn" onClick={voltarParaCidades}>Cidades</button>
-        <span className="bread-sep">›</span>
-        <span className="bread-active">{cidadeSel.nome}</span>
+    <div style={S.scroll}>
+      <div style={S.breadcrumb}>
+        <button style={S.breadBtn} onClick={voltarParaRegioes}>{regiaoSel.icone} {regiaoSel.nome}</button>
+        <span style={S.breadSep}>›</span>
+        <button style={S.breadBtn} onClick={voltarParaCidades}>Cidades</button>
+        <span style={S.breadSep}>›</span>
+        <span style={S.breadActive}>{cidadeSel.nome}</span>
       </div>
 
-      <div className="saudacao-card">
-        <span className="mate-icon">🧉</span>
-        <p className="saudacao-text">{guia.saudacao}</p>
+      <div style={S.saudacaoCard}>
+        <span style={S.mateIcon}>🧉</span>
+        <p style={S.saudacaoText}>{guia.saudacao}</p>
       </div>
 
-      <p className="sobre-text">{guia.sobre}</p>
+      <p style={S.sobreText}>{guia.sobre}</p>
 
       {guia.destaques?.length > 0 && (
-        <div className="section">
-          <div className="section-label">⭐ Destaque especial</div>
+        <div style={S.section}>
+          <div style={S.sectionLabel}>⭐ Destaque especial</div>
           {guia.destaques.map((d, i) => (
-            <div key={i} className="destaque-card">
-              <span className="destaque-icon">{d.icone}</span>
+            <div key={i} style={S.destaqueCard}>
+              <span style={S.destaqueIcon}>{d.icone}</span>
               <div>
-                <div className="destaque-title">{d.titulo}</div>
-                <div className="destaque-desc">{d.descricao}</div>
+                <div style={S.destaqueTitle}>{d.titulo}</div>
+                <div style={S.destaqueDesc}>{d.descricao}</div>
               </div>
             </div>
           ))}
         </div>
       )}
 
-      <div className="section">
-        <div className="section-label">Pontos turísticos</div>
+      <div style={S.section}>
+        <div style={S.sectionLabel}>Pontos turísticos</div>
         {guia.pontos?.map((p, i) => {
           const cor = TIPO_COR[p.tipo] || TIPO_COR.cultura;
           return (
-            <div key={i} className="ponto-card">
-              <span className="ponto-icon">{p.icone}</span>
-              <div className="ponto-body">
-                <div className="ponto-header">
-                  <span className="ponto-nome">{p.nome}</span>
-                  <span className="tipo-badge" style={{ background: cor.bg, color: cor.text }}>{p.tipo}</span>
+            <div key={i} style={S.pontoCard}>
+              <span style={S.pontoIcon}>{p.icone}</span>
+              <div style={S.pontoBody}>
+                <div style={S.pontoHeader}>
+                  <span style={S.pontoNome}>{p.nome}</span>
+                  <span style={{ ...S.tipoBadge, background: cor.bg, color: cor.text }}>{p.tipo}</span>
                 </div>
-                <div className="ponto-desc">{p.descricao}</div>
+                <div style={S.pontoDesc}>{p.descricao}</div>
               </div>
             </div>
           );
         })}
       </div>
 
-      <div className="section">
-        <div className="section-label">Gastronomia local</div>
-        <div className="gast-grid">
+      <div style={S.section}>
+        <div style={S.sectionLabel}>Gastronomia local</div>
+        <div style={S.gastGrid}>
           {guia.gastronomia?.map((g, i) => (
-            <div key={i} className="gast-card">
-              <div className="gast-icon">{g.icone}</div>
-              <div className="gast-prato">{g.prato}</div>
-              <div className="gast-onde">{g.onde}</div>
+            <div key={i} style={S.gastCard}>
+              <div style={S.gastIcon}>{g.icone}</div>
+              <div style={S.gastPrato}>{g.prato}</div>
+              <div style={S.gastOnde}>{g.onde}</div>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="info-card">
-        <div className="info-label">🗓️ Melhor época para visitar</div>
-        <div className="info-text">{guia.melhor_epoca}</div>
+      <div style={S.infoCard}>
+        <div style={S.infoLabel}>🗓️ Melhor época para visitar</div>
+        <div style={S.infoText}>{guia.melhor_epoca}</div>
       </div>
 
-      <div className="info-card">
-        <div className="info-label">🚗 Como chegar</div>
-        <div className="info-text">{guia.como_chegar}</div>
-        <div className="info-aviso">⚠️ Informações sujeitas a alterações — confirma antes de partir, tchê!</div>
+      <div style={S.infoCard}>
+        <div style={S.infoLabel}>🚗 Como chegar</div>
+        <div style={S.infoText}>{guia.como_chegar}</div>
+        <div style={S.infoAviso}>⚠️ Informações sujeitas a alterações — confirma antes de partir, tchê!</div>
       </div>
 
-      <div className="dica-card">
-        <div className="dica-label">🤫 Dica de gaúcho pra gaúcho</div>
-        <div className="dica-text">{guia.dica_local}</div>
+      <div style={S.dicaCard}>
+        <div style={S.dicaLabel}>🤫 Dica de gaúcho pra gaúcho</div>
+        <div style={S.dicaText}>{guia.dica_local}</div>
       </div>
 
-      <button className="perguntar-btn" onClick={() => onPerguntar(`Me conta mais sobre ${cidadeSel.nome}`)}>
+      <button style={S.perguntarBtn} onClick={() => onPerguntar(`Me conta mais sobre ${cidadeSel.nome}`)}>
         <span>🧉</span> Perguntar mais sobre {cidadeSel.nome}
       </button>
 
-      <style>{`
-        .tab-hint{font-size:13px;color:var(--color-text-secondary);text-align:center;padding:4px 0 8px;}
-        .grid-2col{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-        .region-card{padding:14px 12px;border-radius:var(--border-radius-lg);border:0.5px solid var(--color-border-tertiary);background:var(--color-background-secondary);cursor:pointer;text-align:left;display:flex;flex-direction:column;gap:4px;transition:border-color 0.2s;}
-        .region-card:hover{border-color:${GREEN};}
-        .region-icon{font-size:24px;}
-        .region-name{font-size:13px;font-weight:500;color:var(--color-text-primary);}
-        .region-desc{font-size:11px;color:var(--color-text-secondary);}
-        .back-btn{background:none;border:none;color:${GREEN};cursor:pointer;font-size:13px;display:flex;align-items:center;gap:4px;padding:0;margin-bottom:12px;}
-        .region-header{display:flex;align-items:center;gap:10px;margin-bottom:14px;font-size:24px;}
-        .region-title{font-size:16px;font-weight:500;color:var(--color-text-primary);}
-        .region-subtitle{font-size:12px;color:var(--color-text-secondary);}
-        .sub-label{font-size:11px;font-weight:500;color:var(--color-text-secondary);text-transform:uppercase;letter-spacing:1px;margin:12px 0 7px;}
-        .city-list{display:flex;flex-direction:column;gap:6px;margin-bottom:8px;}
-        .city-btn{padding:11px 14px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);background:var(--color-background-secondary);cursor:pointer;text-align:left;display:flex;align-items:center;justify-content:space-between;transition:border-color 0.2s;}
-        .city-btn:hover{border-color:${GREEN};}
-        .city-name{font-size:13px;color:var(--color-text-primary);}
-	.destaque-badge{font-size:10px;padding:2px 8px;border-radius:20px;background:${GREEN_BG};color:${GREEN};border:0.5px solid ${GREEN_LIGHT};margin-left:8px;white-space:nowrap;flex-shrink:0;}        .loading-center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding-top:60px;}
-        .loading-icon{font-size:32px;}
-        .loading-text{font-size:14px;color:var(--color-text-secondary);text-align:center;}
-        .dots{display:flex;gap:6px;}
-        .dot{width:8px;height:8px;border-radius:50%;background:${GREEN};animation:bounce 1.2s infinite;}
-        .error-card{text-align:center;padding:32px 20px;}
-        .error-icon{font-size:36px;margin-bottom:10px;}
-        .error-title{font-size:14px;color:var(--color-text-primary);margin-bottom:14px;}
-        .retry-btn{padding:9px 20px;border-radius:22px;border:none;background:${GREEN};color:${GREEN_BG};font-size:13px;cursor:pointer;}
-        .breadcrumb{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:14px;}
-        .bread-btn{background:none;border:none;color:var(--color-text-secondary);cursor:pointer;font-size:12px;padding:0;}
-        .bread-sep{color:var(--color-text-tertiary);font-size:12px;}
-        .bread-active{font-size:12px;color:${GREEN};font-weight:500;}
-        .saudacao-card{background:${GREEN_BG};border-radius:var(--border-radius-lg);padding:12px 16px;display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;}
-        .mate-icon{font-size:20px;flex-shrink:0;}
-        .saudacao-text{margin:0;font-size:13px;color:${GREEN};line-height:1.6;font-style:italic;}
-        .sobre-text{font-size:13px;color:var(--color-text-primary);line-height:1.7;margin-bottom:14px;}
-        .section{margin-bottom:14px;}
-        .section-label{font-size:12px;font-weight:500;color:var(--color-text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
-        .destaque-card{background:#FFF8E1;border-radius:var(--border-radius-md);padding:12px 14px;border:0.5px solid #FFD54F;display:flex;gap:10px;align-items:flex-start;margin-bottom:8px;}
-        .destaque-icon{font-size:22px;flex-shrink:0;}
-        .destaque-title{font-size:13px;font-weight:500;color:#7B5800;margin-bottom:4px;}
-        .destaque-desc{font-size:12px;color:var(--color-text-primary);line-height:1.5;}
-        .ponto-card{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 14px;display:flex;gap:10px;align-items:flex-start;border:0.5px solid var(--color-border-tertiary);margin-bottom:8px;}
-        .ponto-icon{font-size:20px;flex-shrink:0;}
-        .ponto-body{flex:1;}
-        .ponto-header{display:flex;align-items:center;gap:6px;margin-bottom:2px;}
-        .ponto-nome{font-size:13px;font-weight:500;color:var(--color-text-primary);}
-        .tipo-badge{font-size:10px;padding:1px 7px;border-radius:20px;}
-        .ponto-desc{font-size:12px;color:var(--color-text-secondary);line-height:1.5;}
-        .gast-grid{display:flex;gap:8px;flex-wrap:wrap;}
-        .gast-card{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 14px;flex:1 1 40%;border:0.5px solid var(--color-border-tertiary);}
-        .gast-icon{font-size:18px;margin-bottom:4px;}
-        .gast-prato{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:2px;}
-        .gast-onde{font-size:11px;color:var(--color-text-secondary);line-height:1.4;}
-        .info-card{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:12px 14px;border:0.5px solid var(--color-border-tertiary);margin-bottom:8px;}
-        .info-label{font-size:12px;font-weight:500;color:var(--color-text-secondary);margin-bottom:4px;}
-        .info-text{font-size:13px;color:var(--color-text-primary);line-height:1.5;}
-        .info-aviso{font-size:11px;color:var(--color-text-tertiary);margin-top:6px;font-style:italic;}
-        .dica-card{background:${GREEN_BG};border-radius:var(--border-radius-md);padding:12px 14px;border:0.5px solid ${GREEN_LIGHT};margin-bottom:12px;}
-        .dica-label{font-size:12px;font-weight:500;color:${GREEN};margin-bottom:4px;}
-        .dica-text{font-size:13px;color:${GREEN};line-height:1.5;font-style:italic;}
-        .perguntar-btn{padding:11px 20px;border-radius:24px;border:none;background:${GREEN};color:${GREEN_BG};font-size:13px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-bottom:8px;}
-        @keyframes bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-6px)}}
-      `}</style>
+      <style>{`@keyframes bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-6px)}}`}</style>
     </div>
   );
 }
