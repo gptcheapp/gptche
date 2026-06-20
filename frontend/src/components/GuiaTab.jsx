@@ -292,8 +292,7 @@ export default function GuiaTab({ onPerguntar }) {
         .city-btn{padding:11px 14px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);background:var(--color-background-secondary);cursor:pointer;text-align:left;display:flex;align-items:center;justify-content:space-between;transition:border-color 0.2s;}
         .city-btn:hover{border-color:${GREEN};}
         .city-name{font-size:13px;color:var(--color-text-primary);}
-        .destaque-badge{font-size:10px;padding:2px 8px;border-radius:20px;background:${GREEN_BG};color:${GREEN};border:0.5px solid ${GREEN_LIGHT};}
-        .loading-center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding-top:60px;}
+	.destaque-badge{font-size:10px;padding:2px 8px;border-radius:20px;background:${GREEN_BG};color:${GREEN};border:0.5px solid ${GREEN_LIGHT};margin-left:8px;white-space:nowrap;flex-shrink:0;}        .loading-center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding-top:60px;}
         .loading-icon{font-size:32px;}
         .loading-text{font-size:14px;color:var(--color-text-secondary);text-align:center;}
         .dots{display:flex;gap:6px;}
