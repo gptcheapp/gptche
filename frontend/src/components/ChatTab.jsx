@@ -72,7 +72,7 @@ export default function ChatTab({ initialInput, onInputConsumed }) {
     salvarMensagem("user", t);
     try {
       const reply = await sendChat(
-        newMessages.map((m) => ({ role: m.role, content: m.content }))
+        newMessages.slice(-10).map((m) => ({ role: m.role, content: m.content }))
       );
       setMessages((prev) => [...prev, { role: "assistant", content: reply }]);
       salvarMensagem("assistant", reply);
