@@ -3,6 +3,7 @@ import ChatTab from "./components/ChatTab.jsx";
 import TurismoTab from "./components/TurismoTab.jsx";
 import GlossarioTab from "./components/GlossarioTab.jsx";
 import GuiaTab from "./components/GuiaTab.jsx";
+import LandingPage from "./components/LandingPage.jsx";
 
 const TABS = [
   { id: "chat", icon: "🧉", label: "Chat" },
@@ -12,8 +13,13 @@ const TABS = [
 ];
 
 export default function App() {
+  const [showLanding, setShowLanding] = useState(true);
   const [aba, setAba] = useState("chat");
   const [chatInput, setChatInput] = useState("");
+
+  if (showLanding) {
+    return <LandingPage onEntrar={() => setShowLanding(false)} />;
+  }
 
   const handlePerguntar = (texto) => {
     setChatInput(texto);
