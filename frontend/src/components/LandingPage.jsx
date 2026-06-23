@@ -527,7 +527,7 @@ export default function LandingPage({ onEntrar }) {
                   <a href="https://instagram.com/gptche.app" className="lp-footer-link">Instagram</a>
                   <a href="https://tiktok.com/@gptche.app" className="lp-footer-link">TikTok</a>
                   <a href="https://x.com/gptcheapp" className="lp-footer-link">X</a>
-                  <a href="mailto:gptcheapp@gmail.com" className="lp-footer-link">gptcheapp@gmail.com</a>
+                  <a href="mailto:contato@gptche.app" className="lp-footer-link">contato@gptche.app</a>
                 </div>
               </div>
             </div>
