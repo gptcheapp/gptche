@@ -13,12 +13,21 @@ const TABS = [
 ];
 
 export default function App() {
-  const [showLanding, setShowLanding] = useState(true);
+  const [showLanding, setShowLanding] = useState(
+    () => !localStorage.getItem("gptche_visited")
+  );
   const [aba, setAba] = useState("chat");
   const [chatInput, setChatInput] = useState("");
 
   if (showLanding) {
-    return <LandingPage onEntrar={() => setShowLanding(false)} />;
+    return (
+      <LandingPage
+        onEntrar={() => {
+          localStorage.setItem("gptche_visited", "1");
+          setShowLanding(false);
+        }}
+      />
+    );
   }
 
   const handlePerguntar = (texto) => {
