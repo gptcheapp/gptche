@@ -36,7 +36,19 @@ export default function LandingPage({ onEntrar }) {
       { threshold: 0.12 }
     );
     document.querySelectorAll(".lp-fade").forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+
+    const bg = document.querySelector("[data-parallax]");
+    const onScroll = () => {
+      if (bg && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        bg.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
   return (
@@ -65,50 +77,98 @@ export default function LandingPage({ onEntrar }) {
 
         /* HERO */
         .lp-hero {
-          background: #1B4D2E; padding: 96px 48px 100px;
-          text-align: center; position: relative; overflow: hidden;
+          min-height: 100vh; padding: 0;
+          display: flex; align-items: center;
+          position: relative; overflow: hidden;
+          background-color: #1B4D2E;
         }
-        .lp-hero-dots {
+        .lp-hero-bg {
           position: absolute; inset: 0;
-          background-image: radial-gradient(rgba(168,213,181,0.07) 1.5px, transparent 1.5px);
-          background-size: 28px 28px; pointer-events: none;
+          background-image: url('/hero-bg.png');
+          background-size: cover;
+          background-position: center right;
+          background-repeat: no-repeat;
+          will-change: transform;
         }
-        .lp-hero-ring {
-          position: absolute; border-radius: 50%;
-          border: 1px solid rgba(168,213,181,0.07); pointer-events: none;
+        .lp-hero-overlay-h {
+          position: absolute; inset: 0; pointer-events: none;
+          background: linear-gradient(
+            to right,
+            #1B4D2EF5 0%, #1B4D2ED0 28%,
+            #1B4D2E80 48%, #1B4D2E20 65%,
+            transparent 80%
+          );
         }
-        .lp-hero-content { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
-        .lp-hero-badge {
-          display: inline-flex; align-items: center; gap: 7px;
-          background: rgba(168,213,181,0.12); border: 0.5px solid rgba(168,213,181,0.25);
-          border-radius: 20px; padding: 6px 16px;
-          font-size: 12px; color: #A8D5B5; letter-spacing: 0.5px; margin-bottom: 32px;
-          opacity: 0; transform: translateY(16px);
+        .lp-hero-overlay-v {
+          position: absolute; inset: 0; pointer-events: none;
+          background: linear-gradient(
+            to bottom,
+            #1B4D2E60 0%, transparent 18%,
+            transparent 75%, #1B4D2E95 100%
+          );
+        }
+        .lp-hero-online {
+          position: absolute; top: 32px; right: 48px; z-index: 20;
+          display: flex; align-items: center; gap: 8px;
+          background: rgba(27,77,46,0.65);
+          backdrop-filter: blur(8px);
+          border: 0.5px solid rgba(168,213,181,0.2);
+          border-radius: 100px; padding: 6px 14px 6px 10px;
+        }
+        .lp-hero-online-dot {
+          width: 7px; height: 7px; border-radius: 50%;
+          background: #A8D5B5; animation: lp-pulse 2s infinite;
+        }
+        .lp-hero-online-text { font-size: 11px; font-weight: 500; color: #A8D5B5; letter-spacing: 0.08em; }
+        .lp-hero-content {
+          position: relative; z-index: 10;
+          width: 100%; max-width: 1280px; margin: 0 auto;
+          padding: 120px 48px 100px;
+        }
+        .lp-hero-eyebrow {
+          display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
+          opacity: 0; transform: translateY(14px);
           animation: lp-heroEnter 0.6s ease 0.1s forwards;
         }
-        .lp-hero-icon { margin-bottom: 28px; opacity: 0; transform: translateY(16px) scale(0.92); animation: lp-heroEnter 0.7s ease 0.25s forwards; }
+        .lp-hero-eyebrow-line { width: 32px; height: 1px; background: #A8D5B5; opacity: 0.5; }
+        .lp-hero-eyebrow-text { font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #A8D5B5; }
         .lp-hero-h1 {
-          font-size: 72px; font-weight: 700; color: #E8F5EC;
-          letter-spacing: -0.04em; line-height: 1.0; margin-bottom: 20px;
-          opacity: 0; transform: translateY(16px); animation: lp-heroEnter 0.65s ease 0.4s forwards;
+          font-size: clamp(64px, 9vw, 108px); font-weight: 700; color: #E8F5EC;
+          letter-spacing: -0.04em; line-height: 0.95; margin-bottom: 24px;
+          opacity: 0; transform: translateY(16px);
+          animation: lp-heroEnter 0.65s ease 0.3s forwards;
         }
         .lp-hero-sub {
-          font-size: 19px; font-weight: 300; color: #A8D5B5; line-height: 1.7;
-          margin-bottom: 44px; max-width: 460px; margin-left: auto; margin-right: auto;
-          opacity: 0; transform: translateY(16px); animation: lp-heroEnter 0.65s ease 0.55s forwards;
+          font-size: clamp(15px, 1.8vw, 19px); font-weight: 300; color: #A8D5B5;
+          line-height: 1.75; max-width: 420px; margin-bottom: 40px;
+          opacity: 0; transform: translateY(16px);
+          animation: lp-heroEnter 0.65s ease 0.48s forwards;
         }
+        .lp-hero-sub em { font-style: italic; opacity: 0.65; }
         .lp-hero-ctas {
-          display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 56px;
-          opacity: 0; transform: translateY(16px); animation: lp-heroEnter 0.65s ease 0.7s forwards;
+          display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 60px;
+          opacity: 0; transform: translateY(16px);
+          animation: lp-heroEnter 0.65s ease 0.62s forwards;
         }
-        .lp-hero-scroll { display: flex; flex-direction: column; align-items: center; gap: 6px; opacity: 0; animation: lp-heroEnter 0.65s ease 1s forwards; }
-        .lp-hero-scroll span { font-size: 10px; color: rgba(168,213,181,0.35); letter-spacing: 1.5px; text-transform: uppercase; }
-        .lp-scroll-line { width: 1px; height: 32px; background: linear-gradient(to bottom, rgba(168,213,181,0.25), transparent); animation: lp-scrollPulse 2s ease-in-out infinite; }
+        .lp-hero-divider { width: 1px; height: 40px; background: #A8D5B5; opacity: 0.2; }
+        .lp-hero-stats {
+          display: flex; align-items: center; gap: 40px; flex-wrap: wrap;
+          padding-top: 32px; border-top: 0.5px solid rgba(168,213,181,0.15);
+          max-width: 440px;
+          opacity: 0; transform: translateY(16px);
+          animation: lp-heroEnter 0.65s ease 0.78s forwards;
+        }
+        .lp-hero-stat-num { font-size: 28px; font-weight: 700; color: #E8F5EC; letter-spacing: -0.03em; line-height: 1; margin-bottom: 4px; }
+        .lp-hero-stat-label { font-size: 11px; color: #A8D5B5; opacity: 0.7; letter-spacing: 0.04em; }
+        .lp-hero-url {
+          position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+          z-index: 10; font-size: 11px; color: #A8D5B5; opacity: 0.3;
+          letter-spacing: 0.14em;
+        }
 
         @keyframes lp-heroEnter { to { opacity: 1; transform: translateY(0) scale(1); } }
-        @keyframes lp-scrollPulse {
-          0%, 100% { opacity: 0.25; transform: scaleY(1); }
-          50% { opacity: 0.7; transform: scaleY(1.15); }
+        @keyframes lp-pulse {
+          0%, 100% { opacity: 1; } 50% { opacity: 0.35; }
         }
 
         .lp-btn-primary {
@@ -232,9 +292,15 @@ export default function LandingPage({ onEntrar }) {
         @media (max-width: 768px) {
           .lp-nav { padding: 0 20px; }
           .lp-nav-links { display: none; }
-          .lp-hero { padding: 64px 24px 72px; }
-          .lp-hero-h1 { font-size: 48px; }
-          .lp-hero-sub { font-size: 16px; }
+          .lp-hero-content { padding: 100px 24px 80px; }
+          .lp-hero-online { top: 20px; right: 20px; }
+          .lp-hero-overlay-h {
+            background: linear-gradient(
+              to right,
+              #1B4D2EF8 0%, #1B4D2EE0 50%, #1B4D2E90 80%, transparent 100%
+            );
+          }
+          .lp-hero-url { display: none; }
           .lp-features, .lp-about, .lp-pwa { padding: 64px 24px; }
           .lp-cards { grid-template-columns: 1fr; }
           .lp-about-inner, .lp-pwa-inner { grid-template-columns: 1fr; gap: 48px; }
@@ -245,8 +311,9 @@ export default function LandingPage({ onEntrar }) {
 
         @media (prefers-reduced-motion: reduce) {
           .lp-fade { opacity: 1; transform: none; transition: none; }
-          .lp-hero-badge, .lp-hero-icon, .lp-hero-h1, .lp-hero-sub, .lp-hero-ctas, .lp-hero-scroll { opacity: 1; transform: none; animation: none; }
-          .lp-scroll-line { animation: none; opacity: 0.35; }
+          .lp-hero-eyebrow, .lp-hero-h1, .lp-hero-sub, .lp-hero-ctas, .lp-hero-stats { opacity: 1; transform: none; animation: none; }
+          .lp-hero-online-dot { animation: none; }
+          .lp-hero-bg { will-change: auto; }
           .lp-card:hover, .lp-stat:hover { transform: none; }
         }
       `}</style>
@@ -267,30 +334,53 @@ export default function LandingPage({ onEntrar }) {
         </nav>
 
         {/* HERO */}
-        <section className="lp-hero">
-          <div className="lp-hero-dots" />
-          <div className="lp-hero-ring" style={{ width: 520, height: 520, right: -200, top: -200 }} />
-          <div className="lp-hero-ring" style={{ width: 300, height: 300, right: -80, top: -80, borderColor: "rgba(168,213,181,0.04)" }} />
-          <div className="lp-hero-ring" style={{ width: 440, height: 440, left: -180, bottom: -180 }} />
+        <section className="lp-hero" aria-label="GPTchê — O primeiro chat gaúcho com IA">
+          <div className="lp-hero-bg" data-parallax />
+          <div className="lp-hero-overlay-h" />
+          <div className="lp-hero-overlay-v" />
+
+          <div className="lp-hero-online">
+            <div className="lp-hero-online-dot" />
+            <span className="lp-hero-online-text">Online agora</span>
+          </div>
+
           <div className="lp-hero-content">
-            <div className="lp-hero-badge">🌿 O primeiro chat gaúcho com IA</div>
-            <div className="lp-hero-icon">
-              <CuiaSVG maskId="lp-hm" width={80} height={98} />
+            <div className="lp-hero-eyebrow">
+              <div className="lp-hero-eyebrow-line" />
+              <span className="lp-hero-eyebrow-text">O Gaúcho Digital</span>
             </div>
+
             <h1 className="lp-hero-h1">GPTchê</h1>
-            <p className="lp-hero-sub">Teu parceiro digital gaúcho — fala a tua língua, conhece a tua terra e tá sempre pronto feito chimarrão quente.</p>
+
+            <p className="lp-hero-sub">
+              O primeiro chat com IA que fala gaúcho de verdade.{" "}
+              <em>Tradição e tecnologia, juntas como cuia e bomba.</em>
+            </p>
+
             <div className="lp-hero-ctas">
               <button className="lp-btn-primary" onClick={onEntrar}>
-                Bora conversar, tchê
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                <CuiaSVG maskId="lp-hcta" width={17} height={21} />
+                Começar a conversar
               </button>
-              <a href="#funcionalidades" className="lp-btn-secondary">Ver como funciona</a>
+              <div className="lp-hero-divider" />
+              <a href="#funcionalidades" className="lp-btn-secondary">Como funciona →</a>
             </div>
-            <div className="lp-hero-scroll">
-              <div className="lp-scroll-line" />
-              <span>scroll</span>
+
+            <div className="lp-hero-stats">
+              {[
+                { n: "4",   l: "módulos de conteúdo" },
+                { n: "8",   l: "regiões do RS"       },
+                { n: "∞",   l: "conversas gaúchas"   },
+              ].map(({ n, l }) => (
+                <div key={l}>
+                  <div className="lp-hero-stat-num">{n}</div>
+                  <div className="lp-hero-stat-label">{l}</div>
+                </div>
+              ))}
             </div>
           </div>
+
+          <span className="lp-hero-url">gptche.app</span>
         </section>
 
         {/* FEATURES */}
