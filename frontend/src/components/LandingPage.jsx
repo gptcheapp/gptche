@@ -179,11 +179,13 @@ export default function LandingPage({ onEntrar }) {
         }
         .lp-btn-primary:hover { background: white; }
         .lp-btn-secondary {
-          background: transparent; color: #A8D5B5; border: 0.5px solid rgba(168,213,181,0.35);
+          background: rgba(168,213,181,0.1); color: #E8F5EC;
+          border: 1px solid rgba(168,213,181,0.55);
           border-radius: 28px; padding: 15px 30px; font-size: 15px; font-weight: 400;
           cursor: pointer; font-family: inherit; letter-spacing: -0.1px; text-decoration: none;
+          backdrop-filter: blur(4px);
         }
-        .lp-btn-secondary:hover { border-color: rgba(168,213,181,0.6); color: #E8F5EC; }
+        .lp-btn-secondary:hover { background: rgba(168,213,181,0.18); border-color: rgba(168,213,181,0.8); }
 
         /* FEATURES */
         .lp-features { background: #F7FAF8; padding: 96px 48px; }
@@ -301,6 +303,9 @@ export default function LandingPage({ onEntrar }) {
             );
           }
           .lp-hero-url { display: none; }
+          .lp-hero-ctas { flex-direction: column; align-items: flex-start; gap: 12px; }
+          .lp-hero-divider { display: none; }
+          .lp-btn-primary, .lp-btn-secondary { width: 100%; justify-content: center; }
           .lp-features, .lp-about, .lp-pwa { padding: 64px 24px; }
           .lp-cards { grid-template-columns: 1fr; }
           .lp-about-inner, .lp-pwa-inner { grid-template-columns: 1fr; gap: 48px; }
@@ -359,8 +364,8 @@ export default function LandingPage({ onEntrar }) {
 
             <div className="lp-hero-ctas">
               <button className="lp-btn-primary" onClick={onEntrar}>
-                <CuiaSVG maskId="lp-hcta" width={17} height={21} />
                 Começar a conversar
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
               <div className="lp-hero-divider" />
               <a href="#funcionalidades" className="lp-btn-secondary">Como funciona →</a>
