@@ -9,6 +9,8 @@ Quando precisares de informações atuais como jogos, eventos, notícias ou qual
 
 EXPRESSÕES DE USO FREQUENTE: "bah!", "tchê", "barbaridade!", "capaz!", "oigalê!", "buenas!", "tri" (muito/ótimo), "baita" (enorme/incrível), "macanudo" (excelente), "guri/guria", "xirú" (amigo), "pila/gaita" (dinheiro), "bolicho" (boteco), "sinaleira" (semáforo), "cacetinho" (pão francês), "bergamota" (tangerina), "xis" (sanduíche gaúcho), "chimarrão/mate", "querência", "campear" (procurar), "lagartear" (relaxar), "abichornado" (triste), "minuano" (vento frio), "cusco" (cachorro), "entrevero" (confusão), "peleia" (esforço).
 
+EXPRESSÕES ADICIONAIS (usar naturalmente na conversa): "arrecém" (recentemente, acabou de acontecer — "arrecém cheguei"), "vivente" (pessoa — "bah, vivente!"), "pago" (terra natal, par de querência — "longe do pago"), "atucanado / não me atucana" (irritado, não me aborreça), "boia" (comida — "que boia boa!"), "em cima do laço" (imediatamente, sem demora), "não te fresqueia" (sem frescura, sem bobagem), "buenas e me espalho" (chegada animada e confiante — imortalizou Érico Veríssimo), "afudê" (muito bom, excelente), "prende o grito" (pode contar comigo).
+
 VESTUÁRIO E CULTURA MATERIAL: "bombacha" (calça típica gaúcha), "chiripa" (vestuário ancestral), "pilcha" (traje típico completo), "bota campeira", "alpargata", "lenço" (no pescoço, cor tem significado), "guaiaca" (cinto com bolso), "rastra" (cinto ornamentado), "poncho" (agasalho/capa), "galocha" (bota de borracha), "chapéu" (panamá ou feltro), "boina preta" (chapéu do peão de campo).
 
 TRADIÇÃO E CTG: "CTG" (Centro de Tradições Gaúchas, fundado em 1948), "invernada" (grupo artístico do CTG), "prenda" (moça prendada, dança), "peão" (homem que dança), "rodeio", "laçada", "tropeiro", "estância" (fazenda gaúcha), "galpão" (espaço de reunião), "fogão a lenha", "nativismo" (movimento musical gaúcho surgido nos anos 70 nos festivais), "Semana Farroupilha" (14 a 20 de setembro, data oficial), "Revolução Farroupilha" (1835-1845, símbolo do orgulho gaúcho), "payador" (músico que improvisa versos na milonga), "sapucai" (grito da alma em guarani, usado no chamamé), "pachola" (composição cômica e brincalhona), "tertúlia" (roda de músicos tocando livremente).
@@ -98,5 +100,24 @@ router.post("/", async (req, res) => {
     throw new Error("Bah, deu um entrevero aqui. Tenta de novo!");
   }
 });
+
+// ─────────────────────────────────────────────────────────────────────────────
+// VERBETES PRIORITÁRIOS PARA O GLOSSÁRIO GAÚCHO
+// (expressões com origem histórica/cultural rica — merecem card completo na UI)
+//
+//  1. "me caiu os butiá do bolso"  — surpresa extrema; origem: coquinhos na bombacha
+//  2. "não tá morto quem peleia"   — ditado nativista de resistência e esperança
+//  3. "preteou o olho da gateada"  — situação complicou; metáfora do cavalo crioulo
+//  4. "faca na bota"               — pessoa valente, pavio curto; origem séc. XIX
+//  5. "buenas e me espalho"        — chegada animada; Érico Veríssimo / Cap. Rodrigo
+//  6. "frio de renguear cusco"     — frio intensíssimo; expressão mais icônica do inverno
+//  7. "capaz / bem capaz"          — negação enfática OU modéstia; ambiguidade fascinante
+//  8. "talagaço"                   — de uma vez, num gole; campeiro e visual
+//  9. "ginete"                     — cavaleiro habilidoso; cultura equestre e CTG
+// 10. "chasque"                    — aviso, convite, carta; comunicação campeira histórica
+// 11. "pandorga"                   — pipa/papagaio; infância gaúcha
+// 12. "pilcha"                     — traje típico completo; fundamental no CTG
+// 13. "prenda"                     — mulher gaúcha; par cultural de guri/guria
+// ─────────────────────────────────────────────────────────────────────────────
 
 export default router;
