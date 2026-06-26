@@ -15,7 +15,6 @@ const REGIOES_VALIDAS = [
   "Caminhos de Pedra",
 ];
 
-// Eventos e festas com datas — injetados no prompt quando a região bater
 const EVENTOS_POR_REGIAO = {
   "Litoral Norte": [
     {
@@ -82,7 +81,7 @@ router.post("/", async (req, res) => {
   const eventos = EVENTOS_POR_REGIAO[regiao] || [];
 
   const response = await anthropic.messages.create({
-    model: "claude-sonnet-4-20250514",
+    model: "claude-sonnet-4-6",
     max_tokens: 1400,
     messages: [{ role: "user", content: TURISMO_PROMPT(regiao, eventos) }],
   });
