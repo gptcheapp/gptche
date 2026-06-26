@@ -8,6 +8,7 @@ const REGIOES = [
   { id: "missoes", nome: "Missões Jesuíticas", icone: "🏛️", desc: "Patrimônio da Humanidade" },
   { id: "pampa", nome: "Pampa e Fronteira", icone: "🐄", desc: "Estâncias, vinhos e tradição" },
   { id: "litoral", nome: "Litoral Gaúcho", icone: "🌊", desc: "Praias, dunas e falésias" },
+  { id: "litoralnorte", nome: "Litoral Norte", icone: "🐟", desc: "Festa do Peixe e praias do RS" },
   { id: "poa", nome: "Porto Alegre", icone: "🌅", desc: "O pôr do sol no Guaíba" },
   { id: "central", nome: "Região Central", icone: "🦕", desc: "Dinossauros e história" },
   { id: "caminho", nome: "Caminhos de Pedra", icone: "🏡", desc: "Arquitetura e imigração italiana" },
@@ -95,6 +96,26 @@ export default function TurismoTab({ onPerguntar }) {
             <span>🧉</span>
             <p>{guia.saudacao}</p>
           </div>
+
+          {guia.evento_destaque && (
+            <div className="info-card evento">
+              <div className="info-label">🎉 Evento rolando agora</div>
+              <div className="evento-nome">{guia.evento_destaque.nome}</div>
+              <div className="evento-periodo">{guia.evento_destaque.periodo}</div>
+              <p>{guia.evento_destaque.descricao}</p>
+              {guia.evento_destaque.destaque && (
+                <p><strong>Não perca:</strong> {guia.evento_destaque.destaque}</p>
+              )}
+              {guia.evento_destaque.entrada_gratuita && (
+                <span className="badge-gratuito">✅ Entrada gratuita</span>
+              )}
+              {guia.evento_destaque.site && (
+                <a href={guia.evento_destaque.site} target="_blank" rel="noopener noreferrer" className="evento-link">
+                  Ver programação →
+                </a>
+              )}
+            </div>
+          )}
 
           <section className="guia-section">
             <h3 className="section-label">Pontos turísticos</h3>
