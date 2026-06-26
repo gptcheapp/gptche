@@ -15,6 +15,7 @@ const REGIOES_VALIDAS = [
   "Caminhos de Pedra",
 ];
 
+// Eventos e festas com datas — injetados no prompt quando a região bater
 const EVENTOS_POR_REGIAO = {
   "Litoral Norte": [
     {
