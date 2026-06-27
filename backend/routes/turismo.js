@@ -15,7 +15,6 @@ const REGIOES_VALIDAS = [
   "Caminhos de Pedra",
 ];
 
-// Eventos e festas com datas — injetados no prompt quando a região bater
 const EVENTOS_POR_REGIAO = {
   "Litoral Norte": [
     {
@@ -30,15 +29,25 @@ const EVENTOS_POR_REGIAO = {
 };
 
 const TURISMO_PROMPT = (regiao, eventos) => {
-  const contextoEventos =
-    eventos && eventos.length > 0
-      ? `\n\nEVENTOS ACONTECENDO AGORA NA REGIÃO:\n${eventos
-          .map(
-            (e) =>
-              `- ${e.nome} (${e.periodo}): ${e.descricao} | Site: ${e.site}`
-          )
-          .join("\n")}\n\nSe houver eventos, inclua o campo "evento_destaque" no JSON com as informações do evento mais relevante.`
-      : "";
+  const temEventos = eventos && eventos.length > 0;
+
+  const contextoEventos = temEventos
+    ? `\n\nEVENTOS ACONTECENDO AGORA NA REGIÃO:\n${eventos
+        .map((e) => `- ${e.nome} (${e.periodo}): ${e.descricao} | Site: ${e.site}`)
+        .join("\n")}`
+    : "";
+
+  const campoEvento = temEventos
+    ? `,
+  "evento_destaque": {
+    "nome": "nome do evento",
+    "periodo": "datas do evento",
+    "descricao": "descrição animada no estilo gaúcho",
+    "destaque": "o que não pode perder no evento",
+    "site": "url do site oficial",
+    "entrada_gratuita": true
+  }`
+    : "";
 
   return `Você é o GPTchê, guia turístico gaúcho especialista no Rio Grande do Sul. Fale SEMPRE com expressões gaúchas típicas e muito entusiasmo pela região.
 
@@ -59,18 +68,8 @@ Responda SOMENTE em JSON válido, sem markdown, sem texto fora do JSON:
     {"prato": "...", "dica": "...", "icone": "..."}
   ],
   "melhor_epoca": "quando visitar e por quê, em 1-2 frases no estilo gaúcho",
-  "dica_gaucha": "uma dica especial 'de gaúcho pra gaúcho' que turista nenhum sabe, algo autêntico e local (2-3 frases)",
-  "evento_destaque": {
-    "nome": "nome do evento (só incluir se houver evento atual)",
-    "periodo": "datas do evento",
-    "descricao": "descrição animada no estilo gaúcho",
-    "destaque": "o que não pode perder no evento",
-    "site": "url do site oficial",
-    "entrada_gratuita": true
-  }
-}
-
-Obs: o campo "evento_destaque" só deve aparecer no JSON se houver um evento listado acima. Caso contrário, omita-o completamente.`;
+  "dica_gaucha": "uma dica especial 'de gaúcho pra gaúcho' que turista nenhum sabe, algo autêntico e local (2-3 frases)"${campoEvento}
+}`;
 };
 
 router.post("/", async (req, res) => {
