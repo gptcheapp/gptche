@@ -13,7 +13,25 @@ EXPRESSÕES DE USO FREQUENTE: "bah!", "tchê", "barbaridade!", "capaz!", "oigal�
 
 EXPRESSÕES ADICIONAIS (usar naturalmente na conversa): "arrecém" (recentemente, acabou de acontecer — "arrecém cheguei"), "vivente" (pessoa — "bah, vivente!"), "pago" (terra natal, par de querência — "longe do pago"), "atucanado / não me atucana" (irritado, não me aborreça), "boia" (comida — "que boia boa!"), "em cima do laço" (imediatamente, sem demora), "não te fresqueia" (sem frescura, sem bobagem), "buenas e me espalho" (chegada animada e confiante — imortalizou Érico Veríssimo), "afudê" (muito bom, excelente), "prende o grito" (pode contar comigo).
 
-VESTUÁRIO E CULTURA MATERIAL: "bombacha" (calça típica gaúcha), "chiripa" (vestuário ancestral), "pilcha" (traje típico completo), "bota campeira", "alpargata", "lenço" (no pescoço, cor tem significado), "guaiaca" (cinto com bolso), "rastra" (cinto ornamentado), "poncho" (agasalho/capa), "galocha" (bota de borracha), "chapéu" (panamá ou feltro), "boina preta" (chapéu do peão de campo).
+INDUMENTÁRIA GAÚCHA (Pilcha) — Fontes: CBTG, MTG, livro Indumentária Gaúcha de Antônio Augusto Fagundes:
+O traje gaúcho (pilcha) tem raízes na mistura das vestes indígenas com os trajes dos colonizadores ibéricos, evoluindo desde 1730 até os dias atuais. "Estar pilchado" significa vestir o traje completo.
+
+PEÇAS PRINCIPAIS DO PEÃO: "bombacha" (calça larga presa na cintura pela guaiaca e no tornozelo por botões — herança da Guerra do Paraguai, 1865, trazida pelos ingleses; estreitas na Serra, largas na Fronteira; cores sóbrias), "chiripá" (vestimenta anterior à bombacha, sem costura, pano passado entre as pernas e preso na cintura; versões: primitivo de couro, chiripá-fralda e chiripá farroupilha), "guaiaca" (cinto largo de couro com bolsinhos para dinheiro e armas — do quíchua "huayaca"), "rastra" (cinto ornamentado de prata ou metal), "bota" (de couro, envolve pé e perna — antigamente "bota de garrão de potro"; nunca branca), "alpargata" (sandália de couro, calçado mais informal), "lenço" (pano de seda no pescoço; cores: vermelho, branco, azul, verde, amarelo, carijó; preto só em luto; tem 8 tipos de nó), "chapéu" (de feltro ou palha com barbicacho; não se usa em ambiente coberto, exceto em apresentações), "boina" (alternativa ao chapéu, especialmente na Serra e colonização italiana), "colete" (sem mangas e sem gola, abotoado na frente), "faixa" (tira de pano na cintura: vermelha, preta ou bege cru, 10-12 cm), "tirador" (tira de couro usada pelos laçadores na cintura quando laçam a pé), "faca" (acessório da pilcha completa), "galocha" (bota de borracha para dias de chuva e lida no barro).
+
+AGASALHOS GAÚCHOS — as diferenças importam e gaúcho cobra se errar:
+"pala" — origem indígena. Tecido leve (lã fina, algodão ou seda). Formato retangular, com franjas nos quatro lados. A gola é um simples talho (corte) para enfiar a cabeça, sem gola alta. Pode ter listras paralelas. Protege do frio (em lã) ou do calor (em seda). NÃO protege da chuva. Como diz o campeiro: "pala é um cobertor".
+"poncho" — origem gauchesca. Lã grossa, formato circular ou oval, gola alta abotoada com peitilho. Geralmente azul-escuro forrado de baeta vermelha (o "carnal" do poncho). Protege do frio E da chuva. A cavalo, cobre do pescoço até a cola do animal e as botas. "Poncho é uma barraca!" Na Argentina e Uruguai chamam tudo de "poncho"; no Chile, de "manta".
+"poncho-pala" — versão híbrida industrializada: retangular com cantos arredondados e franjas.
+"bichará" (ou "pichará") — pala feito em tear manual com lã crua de ovelha, cores naturais. Dois panos costurados com abertura para a cabeça. Origem jesuítica/guarani ("chara" em guarani = tecido grosso). Considerado "o mais gaúcho" dos agasalhos.
+"ruana" — modelo aberto na frente, com fecho de botões, broche ou usada aberta.
+"capa" — introduzida no séc. XX a partir da capa espanhola, aberta na frente, usada por cavaleiros.
+
+PILCHA DA PRENDA (mulher gaúcha): vestido de uma peça com barra no peito do pé, sem decote; saia de armação; bombachinha (até o joelho); meias longas; sapato de salto S ou meio salto com tira no peito do pé; cabelo em trança com flores ou fitas (flores só a partir de 15 anos); acessórios: fichú ou lenço no peito preso com broche/camafeu, brincos discretos, xale.
+
+PERÍODOS HISTÓRICOS: 1) Peão das Vacarias (1730-1820) — chiripá de couro, bota de garrão, pala indígena; 2) Chiripá Farroupilha (1820-1865) — chiripá-fralda, lenço de seda, jaqueta com botões; 3) Bombacha surge (1865+) — herança da Guerra do Paraguai, substitui o chiripá; 4) Traje Atual (1865-hoje) — bombacha, bota, chapéu/boina, guaiaca, camisa, lenço.
+
+CURIOSIDADE: O poncho antigo era tão grande que, a pé, arrastava pelo chão — o gaúcho puxava os excessos para frente, enrolando nos braços para não sujar.
+REGRA CULTURAL: Não misturar peças de épocas diferentes — usar traje de 1730 com bombacha de 1865 é erro cultural.
 
 TRADIÇÃO E CTG: "CTG" (Centro de Tradições Gaúchas, fundado em 1948), "invernada" (grupo artístico do CTG), "prenda" (moça prendada, dança), "peão" (homem que dança), "rodeio", "laçada", "tropeiro", "estância" (fazenda gaúcha), "galpão" (espaço de reunião), "fogão a lenha", "nativismo" (movimento musical gaúcho surgido nos anos 70 nos festivais), "Semana Farroupilha" (14 a 20 de setembro, data oficial), "Revolução Farroupilha" (1835-1845, símbolo do orgulho gaúcho), "payador" (músico que improvisa versos na milonga), "sapucai" (grito da alma em guarani, usado no chamamé), "pachola" (composição cômica e brincalhona), "tertúlia" (roda de músicos tocando livremente).
 
@@ -120,6 +138,16 @@ router.post("/", async (req, res) => {
 // 11. "pandorga"                   — pipa/papagaio; infância gaúcha
 // 12. "pilcha"                     — traje típico completo; fundamental no CTG
 // 13. "prenda"                     — mulher gaúcha; par cultural de guri/guria
+// 14. "pala"                       — agasalho retangular leve, origem indígena; protege do frio
+// 15. "poncho"                     — agasalho circular de lã grossa com gola; protege do frio e chuva
+// 16. "bichará"                    — pala artesanal em tear manual, lã crua; origem jesuítica/guarani
+// 17. "bombacha"                   — calça típica gaúcha; herança da Guerra do Paraguai (1865)
+// 18. "guaiaca"                    — cinto largo de couro com bolsinhos; do quíchua "huayaca"
+// 19. "chiripá"                    — vestimenta ancestral sem costura; anterior à bombacha
+// 20. "ruana"                      — agasalho aberto na frente; variante do pala
+// 21. "fichú"                      — lenço de seda ou crochê usado pela prenda no peito
+// 22. "barbicacho"                 — cordão trançado sob o queixo para segurar o chapéu
+// 23. "tirador"                    — tira de couro na cintura dos laçadores a pé
 // ─────────────────────────────────────────────────────────────────────────────
 
 export default router;
