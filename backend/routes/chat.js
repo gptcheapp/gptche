@@ -115,9 +115,9 @@ router.post("/", async (req, res) => {
 
     res.json({ reply });
   } catch (err) {
-    if (err.status) throw err;
     console.error("[chat route]", err);
-    throw new Error("Bah, deu um entrevero aqui. Tenta de novo!");
+    const status = err.status || 500;
+    res.status(status).json({ error: "Bah, deu um entrevero aqui. Tenta de novo!" });
   }
 });
 

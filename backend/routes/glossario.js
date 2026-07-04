@@ -156,19 +156,24 @@ router.post("/", async (req, res) => {
   }
 
   // Palavra comum: chama a API com critérios de classificação fixos
-  const response = await anthropic.messages.create({
-    model: "claude-sonnet-4-20250514",
-    max_tokens: 600,
-    messages: [{ role: "user", content: GLOSSARIO_PROMPT(termo) }],
-  });
-
-  const text = response.content.map((b) => b.text || "").join("");
-
   try {
-    const resultado = JSON.parse(text.replace(/```json|```/g, "").trim());
-    res.json({ resultado });
-  } catch {
-    res.status(500).json({ error: "Bah, não consegui campear essa palavra direito. Tenta de novo!" });
+    const response = await anthropic.messages.create({
+      model: "claude-sonnet-4-5",
+      max_tokens: 600,
+      messages: [{ role: "user", content: GLOSSARIO_PROMPT(termo) }],
+    });
+
+    const text = response.content.map((b) => b.text || "").join("");
+
+    try {
+      const resultado = JSON.parse(text.replace(/```json|```/g, "").trim());
+      res.json({ resultado });
+    } catch {
+      res.status(500).json({ error: "Bah, não consegui campear essa palavra direito. Tenta de novo!" });
+    }
+  } catch (err) {
+    console.error("[glossario route]", err);
+    res.status(500).json({ error: "Bah, deu um entrevero aqui. Tenta de novo!" });
   }
 });
 

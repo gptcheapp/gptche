@@ -34,17 +34,22 @@ router.post("/", async (req, res) => {
   if (!regiao) {
     return res.status(400).json({ error: "Região não informada." });
   }
-  const response = await anthropic.messages.create({
-    model: "claude-sonnet-4-5",
-    max_tokens: 1500,
-    messages: [{ role: "user", content: GUIA_PROMPT(cidade, regiao) }],
-  });
-  const text = response.content.map((b) => b.text || "").join("");
   try {
-    const guia = JSON.parse(text.replace(/```json|```/g, "").trim());
-    res.json({ guia });
-  } catch {
-    res.status(500).json({ error: "Bah, o guia saiu torto. Tenta de novo, tchê!" });
+    const response = await anthropic.messages.create({
+      model: "claude-sonnet-4-5",
+      max_tokens: 1500,
+      messages: [{ role: "user", content: GUIA_PROMPT(cidade, regiao) }],
+    });
+    const text = response.content.map((b) => b.text || "").join("");
+    try {
+      const guia = JSON.parse(text.replace(/```json|```/g, "").trim());
+      res.json({ guia });
+    } catch {
+      res.status(500).json({ error: "Bah, o guia saiu torto. Tenta de novo, tchê!" });
+    }
+  } catch (err) {
+    console.error("[guia route]", err);
+    res.status(500).json({ error: "Bah, deu um entrevero aqui. Tenta de novo!" });
   }
 });
 

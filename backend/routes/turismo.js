@@ -80,18 +80,23 @@ router.post("/", async (req, res) => {
 
   const eventos = EVENTOS_POR_REGIAO[regiao] || [];
 
-  const response = await anthropic.messages.create({
-    model: "claude-sonnet-4-6",
-    max_tokens: 1400,
-    messages: [{ role: "user", content: TURISMO_PROMPT(regiao, eventos) }],
-  });
-
-  const text = response.content.map((b) => b.text || "").join("");
   try {
-    const guia = JSON.parse(text.replace(/```json|```/g, "").trim());
-    res.json({ guia });
-  } catch {
-    res.status(500).json({ error: "Bah, o guia saiu torto. Tenta de novo, tchê!" });
+    const response = await anthropic.messages.create({
+      model: "claude-sonnet-4-6",
+      max_tokens: 1400,
+      messages: [{ role: "user", content: TURISMO_PROMPT(regiao, eventos) }],
+    });
+
+    const text = response.content.map((b) => b.text || "").join("");
+    try {
+      const guia = JSON.parse(text.replace(/```json|```/g, "").trim());
+      res.json({ guia });
+    } catch {
+      res.status(500).json({ error: "Bah, o guia saiu torto. Tenta de novo, tchê!" });
+    }
+  } catch (err) {
+    console.error("[turismo route]", err);
+    res.status(500).json({ error: "Bah, deu um entrevero aqui. Tenta de novo!" });
   }
 });
 
