@@ -37,6 +37,37 @@ TRADIÇÃO E CTG: "CTG" (Centro de Tradições Gaúchas, fundado em 1948), "inve
 
 MÚSICA GAÚCHA: Os principais gêneros são a milonga (origem platina, ritmo dolente de compasso binário — um dos mais queridos), o chamamé (origem correntina/paraguaia, compasso ternário, hoje plenamente gaúcho), a vaneira/vanerão (derivada da habanera hispano-cubana, muito tocada nos bailes), a rancheira (da mazurka polonesa), o xote (do schottische alemão), a chimarrita (dos Açores), a polca e a valsa campeira. O bugio é considerado o único ritmo originalmente gaúcho. A tchê music é uma vertente mais comercial e dançante dos anos 90. Instrumentos: gaita de botão ou teclado (acordeão — símbolo da música gaúcha), violão, bombo legüero (percussão de origem argentina), cajón, pandeiro, bandoneón.
 
+CONHECIMENTO SOBRE MATE/CHIMARRÃO:
+- Tipos de cuia: Gaúcha (bocal largo, formato afunilado, ideal pra roda/compartilhar), 
+  Coquinho (uruguaia, formato redondo tipo coco, uso individual rápido), 
+  Gajeta/Mate galleta (pequena, feita de porongo grosso, formato arredondado que lembra a 
+  "galleta" de campo — um pão redondo que dura semanas sem endurecer —, uso solo ou roda 
+  pequena, esquenta na palma da mão), Torpedo (formato quadricular, não precisa de apoio), 
+  Argentina (formato tipo copo, bocal largo, geralmente em prata ou alumínio), além de 
+  versões modernas em metal/inox e cerâmica (não mofam, mais fáceis de limpar, mas sem a 
+  mesma eficiência térmica do porongo tradicional).
+- "Mate galleta": é um tipo de CUIA, não um prato ou comida — o nome vem da semelhança de 
+  formato com a galleta de campo. Tradição compartilhada entre litoral, Banda Oriental 
+  (Uruguai) e Pampa gaúcho — não é exclusiva do RS, é cultura platina/pampeana.
+- Origem histórica: bebida indígena guarani, chamada de ka'a y ("água de folha") ou erva 
+  sagrada (ka'a karai). Foi sistematizada pelos jesuítas espanhóis nas reduções/missões 
+  (século 17), que ensinaram técnicas de plantio, colheita e secagem, e introduziram o 
+  metal nos apetrechos (bomba de prata, beiço prateado da cuia). Depois se espalhou entre 
+  colonos, tropeiros e gaúchos, virando parte essencial da rotina campeira.
+- Materiais da cuia: porongo (cabaça da planta Lagenaria siceraria, tem "beiço" — abertura 
+  voltada pra fora) e cuieira (fruto sem beiço) são os materiais tradicionais — preservam 
+  melhor o sabor e a temperatura do que madeira, porcelana, vidro ou metal.
+- Etiqueta da roda de chimarrão: quem prepara é o "mateador" — ele bebe primeiro (o mate 
+  mais amargo, serve pra testar a água) e depois passa a cuia adiante. É de praxe fazer a 
+  cuia "roncar" (esvaziar totalmente a água) antes de encher de novo e passar pro próximo, 
+  garantindo que todos bebam um mate "cheio".
+- Variações: tereré (mesmo preparo do chimarrão, mas com água fria — tradição do Paraguai 
+  e Mato Grosso do Sul), chimarrão invertido (erva por cima da água, sabor mais suave e 
+  prolongado), chá mate torrado (estilo Rio de Janeiro/São Paulo — erva passa por torra 
+  intensa e vira infusão parecida com chá preto, bem diferente do chimarrão gaúcho).
+- Significado cultural: mais que uma bebida, é ritual de união, hospitalidade e resistência 
+  — símbolo de identidade do Rio Grande do Sul, Uruguai e norte da Argentina.
+
 GASTRONOMIA GAÚCHA — PRATOS: "churrasco/espeto corrido" (prato mais representativo, carnes na brasa), "arroz carreteiro" (arroz com sobra de churrasco ou charque — origem nos tropeiros), "tainha na taquara" (peixe assado em espeto de taquara, típico do litoral), "matambre recheado" (corte bovino entre costela e couro, recheado com ovos, cenoura e pimentão), "espinhaço de ovelha com aipim" (corte macio do pescoço ao lombo com mandioca), "xis" (hambúrguer gaúcho — maior e melhor, recheios variados), "galeto" (frango jovem assado, herança italiana, acompanha sopa de capeletti e polenta), "pinhão" (semente da araucária, cozido com sal ou em receitas), "entrevero" (mistura de carnes cozidas com legumes e pinhão), "café colonial" (herança alemã — mesa farta com pães, cucas, tortas e bolos caseiros), "feijão mexido" (feijão com farinha de mandioca), "quibebe" (purê de moranga), "borrego ensopado/puchero de borrego" (ensopado de ovelha com legumes e arroz).
 
 GASTRONOMIA GAÚCHA — DOCES E SOBREMESAS: "sagu de vinho com creme" (bolinhas de fécula cozidas em vinho tinto — sobremesa preferida dos gaúchos), "cuca" (bolo doce de origem alemã, coberturas variadas), "chimia/schmier" (geleia artesanal alemã de frutas da estação — goiaba é a mais tradicional), "chico balanceado" (sobremesa em camadas: caramelo no fundo, creme aveludado, rodelas de banana e merengue dourado — servida gelada em travessa), "ambrosia" (doce à base de ovos, tradição portuguesa/gaúcha), "papo-de-anjo" (doce de origem portuguesa, base de ovos), "cueca virada" (massa frita crocante por fora e macia por dentro), "arroz doce" (feito com leite de vaca, toques cítricos).
