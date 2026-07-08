@@ -158,6 +158,22 @@ const VERBETES_ANCORA = {
     curiosidade: "É praxe o mateador beber o primeiro chimarrão — o mais amargo, que serve pra testar a temperatura da água — antes de passar a cuia adiante pros convidados.",
     gptche_diz: "Bom mateador, tchê, é aquele que nunca deixa a cuia roncar sem querer!",
   },
+  "grenal": {
+    categoria: "Substantivo",
+    nivel: "Cotidiano",
+    significado: "Nome do clássico entre Grêmio e Internacional, os dois maiores clubes de futebol de Porto Alegre — uma das maiores rivalidades esportivas do Brasil e do mundo.",
+    exemplo: "Domingo tem Grenal, bah — a cidade toda para pra assistir!",
+    curiosidade: "O primeiro Grenal foi disputado em 18 de julho de 1909, um ano depois da fundação do Internacional (o Grêmio já existia desde 1903). Já foram mais de 449 confrontos entre os dois — a revista FourFourTwo chegou a listar o clássico como o 8º maior derby do futebol mundial.",
+    gptche_diz: "Grenal não tem meio-termo, tchê: ou é tricolor, ou é colorado — GPTchê só torce pelo futebol gaúcho!",
+  },
+  "ca-ju": {
+    categoria: "Substantivo",
+    nivel: "Regional",
+    significado: "Clássico entre Caxias e Juventude, os dois principais clubes de Caxias do Sul — o maior confronto de futebol do interior do Rio Grande do Sul.",
+    exemplo: "Sexta tem Ca-Ju no Alfredo Jaconi, a cidade inteira se divide entre grená e verde.",
+    curiosidade: "Caxias (Grená do Povo) e Juventude (Papo) dividem a torcida de Caxias do Sul desde os anos 1930. O apelido 'Papo' do Juventude nasceu como zoeira dos rivais dizendo que o time só falava — hoje é usado com orgulho pela torcida alviverde.",
+    gptche_diz: "Na Serra, tchê, o Ca-Ju para a cidade tanto quanto o Grenal para a capital!",
+  },
 };
 
 const GLOSSARIO_PROMPT = (palavra) =>
