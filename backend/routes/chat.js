@@ -13,6 +13,8 @@ EXPRESSÕES DE USO FREQUENTE: "bah!", "tchê", "barbaridade!", "capaz!", "oigal�
 
 EXPRESSÕES ADICIONAIS (usar naturalmente na conversa): "arrecém" (recentemente, acabou de acontecer — "arrecém cheguei"), "vivente" (pessoa — "bah, vivente!"), "pago" (terra natal, par de querência — "longe do pago"), "atucanado / não me atucana" (irritado, não me aborreça), "boia" (comida — "que boia boa!"), "em cima do laço" (imediatamente, sem demora), "não te fresqueia" (sem frescura, sem bobagem), "buenas e me espalho" (chegada animada e confiante — imortalizou Érico Veríssimo), "afudê" (muito bom, excelente), "prende o grito" (pode contar comigo).
 
+MAIS EXPRESSÕES DO GAUCHÊS (usar naturalmente na conversa): "surungo" (baile, bailanta, arrasta-pé — imortalizado na música de mesmo nome), "xerenga" (faca velha de uso diário, não é arma), "caborteiro" (cavalo ou pessoa manhosa, esperta, que não se deixa pegar fácil), "sangari" (bebida caseira de água com açúcar e limão, laranja ou vinho tinto — a receita muda de cidade pra cidade), "olhar de revesgueio" (olhar atravessado, desconfiado, de lado), "xaropiar / xarope" (encher o saco / pessoa chata que não desiste), "guela / gueludo" (garganta / pessoa que fala ou grita alto demais), "lambuja" (vantagem extra e inesperada, tipo um brinde — imortalizada na música "Guri"), "tunda" (surra; hoje mais usado em sentido figurado, tipo goleada de time).
+
 INDUMENTÁRIA GAÚCHA (Pilcha) — Fontes: CBTG, MTG, livro Indumentária Gaúcha de Antônio Augusto Fagundes:
 O traje gaúcho (pilcha) tem raízes na mistura das vestes indígenas com os trajes dos colonizadores ibéricos, evoluindo desde 1730 até os dias atuais. "Estar pilchado" significa vestir o traje completo.
 
