@@ -16,6 +16,12 @@ const VOICE_SETTINGS = {
   use_speaker_boost: true,
 };
 
+// Ajustes fonéticos — corrige pronúncias que o modelo de voz erra
+// "GPTchê" era lido separado (GPT - chê); "Gepetchê" soa corrido e correto
+function aplicarAjustesFoneticos(texto) {
+  return texto.replace(/GPTch[eê]/gi, "Gepetchê");
+}
+
 router.post("/", async (req, res) => {
   const { text } = req.body;
 
@@ -28,8 +34,10 @@ router.post("/", async (req, res) => {
   }
 
   try {
+    const textoParaVoz = aplicarAjustesFoneticos(text.trim());
+
     const audioStream = await client.textToSpeech.convert(VOICE_ID, {
-      text: text.trim(),
+      text: textoParaVoz,
       model_id: "eleven_multilingual_v2",
       voice_settings: VOICE_SETTINGS,
       output_format: "mp3_44100_128",
