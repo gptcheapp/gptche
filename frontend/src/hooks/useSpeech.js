@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 
+const BACKEND_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
+
 export function useSpeech(onTranscript) {
   const [listening, setListening] = useState(false);
   const [supported, setSupported] = useState(false);
@@ -38,23 +40,63 @@ export function useSpeech(onTranscript) {
   return { listening, supported, toggle };
 }
 
-export function speak(text, onEnd) {
-  if (!window.speechSynthesis) return;
-  window.speechSynthesis.cancel();
-  const utt = new SpeechSynthesisUtterance(text.replace(/[🧉🌿]/g, ""));
-  utt.lang = "pt-BR";
-  utt.rate = 0.95;
-  utt.pitch = 1.05;
-  const trySpeak = () => {
-    const ptBR = window.speechSynthesis.getVoices().find((v) => v.lang === "pt-BR");
-    if (ptBR) utt.voice = ptBR;
-    utt.onend = onEnd;
-    utt.onerror = onEnd;
-    window.speechSynthesis.speak(utt);
-  };
-  if (window.speechSynthesis.getVoices().length > 0) {
-    trySpeak();
-  } else {
-    window.speechSynthesis.onvoiceschanged = trySpeak;
+// Referência ao áudio atual para poder parar
+let currentAudio = null;
+
+export async function speak(text, onEnd) {
+  // Para qualquer áudio em andamento
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio = null;
+  }
+
+  // Remove emojis antes de enviar
+  const textoLimpo = text.replace(/[\u{1F300}-\u{1FFFF}]/gu, "").trim();
+  if (!textoLimpo) {
+    onEnd?.();
+    return;
+  }
+
+  try {
+    const res = await fetch(`${BACKEND_URL}/api/voice`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: textoLimpo }),
+    });
+
+    if (!res.ok) {
+      console.error("[ElevenLabs] Resposta inválida:", res.status);
+      onEnd?.();
+      return;
+    }
+
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    const audio = new Audio(url);
+    currentAudio = audio;
+
+    audio.onended = () => {
+      URL.revokeObjectURL(url);
+      currentAudio = null;
+      onEnd?.();
+    };
+
+    audio.onerror = () => {
+      URL.revokeObjectURL(url);
+      currentAudio = null;
+      onEnd?.();
+    };
+
+    audio.play();
+  } catch (err) {
+    console.error("[ElevenLabs] Erro ao buscar áudio:", err);
+    onEnd?.();
+  }
+}
+
+export function stopSpeaking() {
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio = null;
   }
 }

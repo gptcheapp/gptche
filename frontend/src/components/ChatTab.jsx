@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { sendChat } from "../api/index.js";
 import { salvarMensagem, buscarHistoricoChat } from "../api/historico.js";
-import { useSpeech, speak } from "../hooks/useSpeech.js";
+import { useSpeech, speak, stopSpeaking } from "../hooks/useSpeech.js";
 
 const initialMessage = {
   role: "assistant",
@@ -52,14 +52,14 @@ export default function ChatTab({ initialInput, onInputConsumed }) {
   });
 
   const handleSpeak = (text, idx) => {
-    if (speaking === idx) {
-      window.speechSynthesis?.cancel();
-      setSpeaking(null);
-      return;
-    }
-    setSpeaking(idx);
-    speak(text, () => setSpeaking(null));
-  };
+  if (speaking === idx) {
+    stopSpeaking();
+    setSpeaking(null);
+    return;
+  }
+  setSpeaking(idx);
+  speak(text, () => setSpeaking(null));
+};
 
   const sendMessage = async (text) => {
     const t = (text || input).trim();
