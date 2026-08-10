@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — GPTchê</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #2C2C2A; background: #F7FAF8; line-height: 1.7; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px 96px; }
+  header { background: #1B4D2E; padding: 56px 24px; text-align: center; }
+  header h1 { font-family: 'Playfair Display', serif; color: #E8F5EC; font-size: 34px; margin: 0 0 8px; }
+  header p { color: #A8D5B5; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0; }
+  h2 { font-family: 'Playfair Display', serif; color: #1B4D2E; font-size: 22px; margin: 40px 0 12px; }
+  p, li { font-size: 15px; color: #4A6655; }
+  ul { padding-left: 20px; }
+  strong { color: #2C2C2A; }
+  .updated { font-size: 13px; color: #8BA898; margin-bottom: 32px; }
+  .box { background: #E8F5EC; border-radius: 12px; padding: 20px 24px; margin: 32px 0; }
+  a { color: #1B4D2E; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Política de Privacidade</h1>
+  <p>GPTchê — O Gaúcho Digital</p>
+</header>
+<div class="wrap">
+  <p class="updated">Última atualização: agosto de 2026</p>
+
+  <p>O GPTchê (gptche.app) é um assistente de conversação com identidade cultural gaúcha. Esta política explica quais dados coletamos, como usamos e quais são os teus direitos sobre eles, em conformidade com a Lei Geral de Proteção de Dados (LGPD).</p>
+
+  <h2>1. Quais dados coletamos</h2>
+  <ul>
+    <li><strong>Identificador anônimo do dispositivo (device_id):</strong> gerado automaticamente e guardado no armazenamento local do teu navegador, sem vínculo com nome, e-mail ou qualquer dado que identifique diretamente quem tu és.</li>
+    <li><strong>Histórico de conversas:</strong> as mensagens trocadas com o GPTchê ficam associadas a esse device_id, pra que a conversa continue de onde parou.</li>
+    <li><strong>Conteúdo de voz (quando usado):</strong> se tu usares o microfone pra falar com o GPTchê, o reconhecimento de fala é processado pelo navegador ou sistema operacional do teu aparelho, não por servidores próprios do GPTchê.</li>
+  </ul>
+  <p>Não pedimos cadastro, login, e-mail ou dados de pagamento pra usar o GPTchê.</p>
+
+  <h2>2. Como usamos esses dados</h2>
+  <ul>
+    <li>Gerar as respostas do assistente, através da API da Anthropic (Claude);</li>
+    <li>Narrar respostas em voz, através da API da ElevenLabs;</li>
+    <li>Manter o histórico de conversa entre sessões no mesmo dispositivo;</li>
+    <li>Diagnosticar problemas técnicos e melhorar o funcionamento do app.</li>
+  </ul>
+
+  <div class="box">
+    <strong>Não vendemos dados a terceiros.</strong> Os dados só são compartilhados com os prestadores de serviço abaixo, estritamente pra fazer o GPTchê funcionar.
+  </div>
+
+  <h2>3. Com quem compartilhamos</h2>
+  <p>Usamos os seguintes prestadores de serviço (subprocessadores) pra operar o GPTchê:</p>
+  <ul>
+    <li><strong>Anthropic</strong> — processamento das respostas de IA;</li>
+    <li><strong>ElevenLabs</strong> — geração de voz das respostas;</li>
+    <li><strong>Supabase</strong> — armazenamento do histórico de conversas;</li>
+    <li><strong>Vercel</strong> e <strong>Render</strong> — hospedagem do site e do servidor.</li>
+  </ul>
+
+  <h2>4. Cookies e armazenamento local</h2>
+  <p>Usamos armazenamento local do navegador (localStorage) pra guardar o teu device_id anônimo. Isso permite que o app lembre da tua conversa sem precisar de login. Tu podes apagar esse dado a qualquer momento limpando os dados do site nas configurações do teu navegador.</p>
+
+  <h2>5. Teus direitos (LGPD)</h2>
+  <p>Como titular dos dados, tu tens direito a:</p>
+  <ul>
+    <li>Confirmar se tratamos dados sobre ti;</li>
+    <li>Acessar, corrigir ou excluir o histórico associado ao teu device_id;</li>
+    <li>Solicitar a portabilidade dos teus dados;</li>
+    <li>Revogar o consentimento a qualquer momento.</li>
+  </ul>
+  <p>Pra exercer qualquer desses direitos, escreve pra <a href="mailto:contato@gptche.app">contato@gptche.app</a>.</p>
+
+  <h2>6. Retenção de dados</h2>
+  <p>O histórico de conversa fica armazenado enquanto o device_id permanecer ativo no teu navegador. Tu podes solicitar a exclusão a qualquer momento pelo contato acima.</p>
+
+  <h2>7. Crianças e adolescentes</h2>
+  <p>O GPTchê não é direcionado especificamente a menores de idade e não coletamos intencionalmente dados de identificação de crianças.</p>
+
+  <h2>8. Alterações nesta política</h2>
+  <p>Podemos atualizar esta política conforme o GPTchê evolui. A data no topo desta página indica a versão mais recente.</p>
+
+  <h2>9. Contato</h2>
+  <p>Dúvidas sobre esta política ou sobre teus dados: <a href="mailto:contato@gptche.app">contato@gptche.app</a></p>
+</div>
+</body>
+</html>
