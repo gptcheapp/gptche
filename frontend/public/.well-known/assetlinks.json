@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.gptche.twa",
+        "sha256_cert_fingerprints": ["3C:63:7B:AA:02:01:42:CD:2C:AD:F9:48:A6:16:81:E2:EC:E3:86:A6:30:C0:1A:6C:65:BF:12:98:AA:1F:A9:B8"]
+      }
+    }]
