@@ -4,6 +4,7 @@ import TurismoTab from "./components/TurismoTab.jsx";
 import GlossarioTab from "./components/GlossarioTab.jsx";
 import GuiaTab from "./components/GuiaTab.jsx";
 import LandingPage from "./components/LandingPage.jsx";
+import PreferenciaModal from "./components/PreferenciaModal.jsx";
 
 const TABS = [
   { id: "chat", icon: "🧉", label: "Chat" },
@@ -39,6 +40,7 @@ export default function App() {
 
   return (
     <div className="app-shell">
+      <PreferenciaModal />
       <header className="app-header">
         <div className="header-avatar">🧉</div>
         <div className="header-info">

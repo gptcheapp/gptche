@@ -1,3 +1,5 @@
+import { getDeviceId } from "../lib/supabase.js";
+
 const BASE_URL = import.meta.env.VITE_API_URL || "";
 
 async function request(path, body) {
@@ -16,7 +18,7 @@ async function request(path, body) {
 }
 
 export async function sendChat(messages) {
-  const data = await request("/api/chat", { messages });
+  const data = await request("/api/chat", { messages, device_id: getDeviceId() });
   return data.reply;
 }
 

@@ -1,5 +1,6 @@
 import { Router } from "express";
 import anthropic from "../anthropic.js";
+import { supabase } from "../lib/supabaseClient.js";
 
 const router = Router();
 
@@ -92,6 +93,39 @@ Exemplo correto: "Bah, tchê, esse termo não tô conhecendo bem. Tu podes me co
 
 const TOOLS = [{ type: "web_search_20250305", name: "web_search" }];
 
+const PRONOME_INSTRUCOES = {
+  guri: "Trate o usuário como 'guri' quando for natural (ex: 'e aí, guri!', 'tri, guri!'). Não force isso em toda frase, use com moderação.",
+  guria: "Trate o usuário como 'guria' quando for natural (ex: 'e aí, guria!', 'tri, guria!'). Não force isso em toda frase, use com moderação.",
+  neutro: "Não use 'guri' nem 'guria' para se referir ao usuário; mantenha o tratamento neutro.",
+};
+
+/**
+ * Monta o system prompt final, injetando a preferência de pronome se existir.
+ * Se o device_id não tiver preferência salva (ou não vier na requisição), o comportamento
+ * continua neutro — igual é hoje.
+ */
+async function buildSystemPrompt(deviceId) {
+  if (!deviceId) return SYSTEM_PROMPT;
+
+  const { data, error } = await supabase
+    .from("preferencias")
+    .select("valor")
+    .eq("device_id", deviceId)
+    .eq("chave", "pronome")
+    .maybeSingle();
+
+  if (error) {
+    console.error("[chat route] erro ao buscar preferencia:", error.message);
+    return SYSTEM_PROMPT;
+  }
+
+  if (data?.valor && PRONOME_INSTRUCOES[data.valor]) {
+    return SYSTEM_PROMPT + "\n\n" + PRONOME_INSTRUCOES[data.valor];
+  }
+
+  return SYSTEM_PROMPT;
+}
+
 function validateMessages(messages) {
   if (!Array.isArray(messages) || messages.length === 0) {
     throw Object.assign(new Error("Histórico de mensagens inválido."), { status: 400 });
@@ -113,11 +147,12 @@ function validateMessages(messages) {
 router.post("/", async (req, res) => {
   try {
     let messages = validateMessages(req.body.messages);
+    const systemPrompt = await buildSystemPrompt(req.body.device_id);
 
     let response = await anthropic.messages.create({
       model: "claude-sonnet-4-5",
       max_tokens: 1024,
-      system: SYSTEM_PROMPT,
+      system: systemPrompt,
       tools: TOOLS,
       messages,
     });
@@ -146,7 +181,7 @@ router.post("/", async (req, res) => {
       response = await anthropic.messages.create({
         model: "claude-sonnet-4-5",
         max_tokens: 1024,
-        system: SYSTEM_PROMPT,
+        system: systemPrompt,
         tools: TOOLS,
         messages,
       });
