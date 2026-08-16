@@ -1,0 +1,48 @@
+[
+  {
+    "regiao": "Vale do Sinos",
+    "saudacao": "Oigalê, tchê! Bem-vindo ao Vale do Sinos — pra turismo, a gente chama de Vale Germânico. Aqui a imigração alemã deitou raiz de verdade, faz mais de 200 anos, e o cheiro de cuca no forno ainda tá no ar.",
+    "pontos": [
+      {
+        "nome": "Museu Histórico Visconde de São Leopoldo",
+        "descricao": "Um dos acervos mais ricos do Brasil sobre a imigração alemã, com milhares de objetos e documentos raros. Aula de história em forma de museu.",
+        "icone": "🏛️"
+      },
+      {
+        "nome": "Santuário Padre Reus (São Leopoldo)",
+        "descricao": "Um dos locais mais visitados e queridos da região — ponto de fé e boas energias, mesmo pra quem não é religioso.",
+        "icone": "🙏"
+      },
+      {
+        "nome": "Bairro Hamburgo Velho (Novo Hamburgo)",
+        "descricao": "Distrito histórico tombado como patrimônio nacional, com casario enxaimel do século XIX — coração da herança alemã da região.",
+        "icone": "🏘️"
+      },
+      {
+        "nome": "Museu Nacional do Calçado (Novo Hamburgo)",
+        "descricao": "Conta a história da atividade coureiro-calçadista que colocou o Vale do Sinos no mapa mundial dos sapatos.",
+        "icone": "👢"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Cuca",
+        "dica": "Encontrada em padarias e cafés coloniais de São Leopoldo e Novo Hamburgo — pede a de banana-nanica com farofa crocante, que é a clássica.",
+        "icone": "🍰"
+      },
+      {
+        "prato": "Eisbein (joelho de porco)",
+        "dica": "Prato-símbolo da herança alemã, servido em restaurantes típicos — vai bem com chucrute e purê.",
+        "icone": "🍖"
+      },
+      {
+        "prato": "Café colonial",
+        "dica": "Mesa farta de doces, salgados e pães caseiros — reserva antes se for num fim de semana, porque enche rápido.",
+        "icone": "☕"
+      }
+    ],
+    "melhor_epoca": "Julho é o mês mais gostoso — clima de inverno combina com Eisbein e café colonial, e é quando rolam as festas de tradição alemã na região, como a São Leopoldo Fest.",
+    "dica_gaucha": "São Leopoldo e Novo Hamburgo ficam coladinhas, então dá pra fazer as duas no mesmo dia — de manhã o Museu Histórico e o Padre Reus, à tarde o Hamburgo Velho e um café colonial pra fechar com chave de ouro. E se for de trem, o Trensurb liga direto da capital até São Leopoldo, sem precisar de carro.",
+    "desc": "Imigração alemã e casario enxaimel"
+  }
+]

@@ -1,7 +1,22 @@
 import { Router } from "express";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 import anthropic from "../anthropic.js";
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const router = Router();
+
+// ── Dado estático (Opção B) ──────────────────────────────────────────
+// Regiões já pesquisadas e verificadas manualmente. Servidas direto,
+// sem chamada à API — zero custo por clique, zero risco de alucinação.
+// Hoje só o Vale do Sinos está aqui; as outras 8 regiões continuam
+// gerando ao vivo, sem nenhuma mudança de comportamento.
+const dataPath = path.join(__dirname, "../data/regioesEstaticas.json");
+const REGIOES_ESTATICAS = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
+const MAPA_ESTATICO = new Map(REGIOES_ESTATICAS.map((r) => [r.regiao, r]));
 
 const REGIOES_VALIDAS = [
   "Serra Gaúcha",
@@ -12,7 +27,7 @@ const REGIOES_VALIDAS = [
   "Litoral Norte",
   "Porto Alegre",
   "Região Central",
-  "Caminhos de Pedra",
+  "Vale do Sinos",
 ];
 
 const EVENTOS_POR_REGIAO = {
@@ -78,6 +93,12 @@ router.post("/", async (req, res) => {
     return res.status(400).json({ error: "Região inválida ou não encontrada." });
   }
 
+  // ── Opção B: região já verificada → serve estático, sem tocar na API ──
+  if (MAPA_ESTATICO.has(regiao)) {
+    return res.json({ guia: MAPA_ESTATICO.get(regiao), fonte: "estatico" });
+  }
+
+  // ── Região ainda não pesquisada → gera ao vivo como sempre ──
   const eventos = EVENTOS_POR_REGIAO[regiao] || [];
 
   try {
@@ -90,7 +111,7 @@ router.post("/", async (req, res) => {
     const text = response.content.map((b) => b.text || "").join("");
     try {
       const guia = JSON.parse(text.replace(/```json|```/g, "").trim());
-      res.json({ guia });
+      res.json({ guia, fonte: "gerado" });
     } catch {
       res.status(500).json({ error: "Bah, o guia saiu torto. Tenta de novo, tchê!" });
     }
