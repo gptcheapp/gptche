@@ -1,0 +1,2515 @@
+[
+  {
+    "cidade": "Gramado",
+    "regiao": "Serra Gaúcha",
+    "saudacao": "Bah, tchê! Bem-vindo a Gramado — aqui o friozinho, as hortênsias e o cheiro de fondue tomam conta. Se prepara que é tri charmoso!",
+    "sobre": "Cidade da Serra Gaúcha na Região das Hortênsias, colonizada por imigrantes alemães e italianos, hoje um dos destinos turísticos mais visitados do Brasil. Conhecida pelo Festival de Cinema de Gramado, pelo Natal Luz e por sua arquitetura de inspiração europeia.",
+    "pontos": [
+      {
+        "nome": "Lago Negro",
+        "descricao": "Lago cercado de pinheiros e hortênsias, com pedalinhos; um dos cartões-postais mais românticos da cidade",
+        "icone": "🌳",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Rua Coberta",
+        "descricao": "Rua com teto translúcido em frente ao Palácio dos Festivais, cheia de lojas, cafés e feiras",
+        "icone": "🎭",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Mini Mundo",
+        "descricao": "Parque ao ar livre com réplicas em miniatura de construções famosas do Brasil e do mundo",
+        "icone": "🎭",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Igreja Matriz São Pedro e Fonte do Amor Eterno",
+        "descricao": "Igreja de pedra no centro, ao lado da fonte inspirada na Fontana di Trevi, ponto romântico da cidade",
+        "icone": "🎭",
+        "tipo": "cultura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Sequência de fondue (queijo, carne e chocolate)",
+        "onde": "Le Chalet de la Fondue (aberto desde 1982)",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Fondue tradicional (culinária suíça e alemã)",
+        "onde": "St. Gallen Restaurant",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Fondue com vista para o Lago Negro",
+        "onde": "Le Lac Noir Fondue",
+        "icone": "🍽️"
+      }
+    ],
+    "melhor_epoca": "O inverno (junho a agosto) é o auge, com clima de lareira, fondue e o Natal Luz a partir de outubro; a primavera traz as hortênsias floridas. Reserve restaurantes na alta temporada.",
+    "como_chegar": "Cerca de 115km de Porto Alegre (1h30-2h de carro) pela BR-116 e RS-115, ou pela Rota Romântica via Nova Petrópolis (RS-235). Sem aeroporto próprio; os mais próximos são o de Caxias do Sul e o de Porto Alegre. Há ônibus regulares de Porto Alegre.",
+    "dica_local": "Fuja do pico de julho e do Natal Luz se quiser preços melhores e menos filas — outubro e novembro trazem as hortênsias floridas com movimento menor. Reserve o fondue com antecedência nos fins de semana.",
+    "slug": "gramado"
+  },
+  {
+    "cidade": "Canela",
+    "regiao": "Serra Gaúcha",
+    "saudacao": "Oigalê! Chegou em Canela, tchê — terra da Catedral de Pedra e das cachoeiras que tiram o fôlego. Bota um agasalho que aqui refresca!",
+    "sobre": "Cidade vizinha de Gramado na Região das Hortênsias, conhecida por suas paisagens naturais e pela colonização europeia. Reúne parques naturais, cascatas e a icônica Catedral de Pedra, sendo um dos principais destinos da Serra Gaúcha.",
+    "pontos": [
+      {
+        "nome": "Catedral de Pedra (Igreja Matriz Nossa Senhora de Lourdes)",
+        "descricao": "Igreja em estilo gótico feita de pedra, com torre de mais de 60 metros, cartão-postal de Canela; à noite recebe show de luzes",
+        "icone": "🎭",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Parque Estadual do Caracol / Cascata do Caracol",
+        "descricao": "Queda d'água de 131 metros (altura confirmada pelo Parque do Caracol) em formação basáltica, um dos símbolos da Serra Gaúcha",
+        "icone": "🌳",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Bondinhos Aéreos de Canela",
+        "descricao": "Cabines fechadas que permitem ver a Cascata do Caracol de ângulos privilegiados",
+        "icone": "🧗",
+        "tipo": "aventura"
+      },
+      {
+        "nome": "Skyglass Canela / Vale da Ferradura",
+        "descricao": "Mirante de vidro suspenso sobre o Vale da Ferradura, com vista para o cânion do rio Caraí",
+        "icone": "🧗",
+        "tipo": "aventura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Café colonial e comida típica serrana",
+        "onde": "não verificado — confirmar estabelecimento atual antes de publicar",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Fondue",
+        "onde": "não verificado — confirmar estabelecimento atual antes de publicar",
+        "icone": "🍽️"
+      }
+    ],
+    "melhor_epoca": "Visitável o ano todo; o inverno traz clima de serra e fondue, e primavera/verão facilitam as trilhas e parques. Leve agasalho mesmo no verão.",
+    "como_chegar": "Cerca de 125km de Porto Alegre (2h de carro), coladinha em Gramado, pela BR-116 e RS-115. Sem aeroporto próprio. O ônibus turístico BusTour liga as atrações de Gramado e Canela.",
+    "dica_local": "O Parque do Caracol passou por obras — confirme reabertura e horários antes de ir. O BusTour de dois andares liga as atrações de Gramado e Canela, prático para quem está sem carro.",
+    "slug": "canela"
+  },
+  {
+    "cidade": "Bento Gonçalves",
+    "regiao": "Serra Gaúcha",
+    "saudacao": "Barbaridade, tchê! Chegou na capital do vinho — aqui a taça está sempre cheia e a comida italiana é de fartar. Salute!",
+    "sobre": "Cidade da Serra Gaúcha fundada pela imigração italiana a partir de 1875, considerada a capital nacional do vinho. Reúne o Vale dos Vinhedos (única região do Brasil com Denominação de Origem para vinhos), o roteiro Caminhos de Pedra e o passeio de trem Maria Fumaça.",
+    "pontos": [
+      {
+        "nome": "Vale dos Vinhedos",
+        "descricao": "Rota de enoturismo com dezenas de vinícolas (Casa Valduga, Miolo, Cave Geisse, Don Laurindo), única região do Brasil com Denominação de Origem para vinhos",
+        "icone": "🍽️",
+        "tipo": "gastronomia"
+      },
+      {
+        "nome": "Caminhos de Pedra",
+        "descricao": "Roteiro rural de ~12km no distrito de São Pedro, Patrimônio Histórico do RS desde 2009, com mais de 20 casas de pedra basalto da imigração italiana; inclui a Casa de 1884 (maior prédio em pedra basalto da Serra), a Casa do Tomate, a Casa da Ovelha e a casa que serviu de cenário ao filme 'O Quatrilho'. Fica no lado oposto da cidade em relação ao Vale dos Vinhedos",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Maria Fumaça",
+        "descricao": "Trem turístico a vapor que percorre cerca de 23km até Garibaldi e Carlos Barbosa, com show folclórico italiano e degustação a bordo",
+        "icone": "🎭",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Pipa Pórtico",
+        "descricao": "Barril gigante na entrada da cidade, símbolo do enoturismo, com posto de informações turísticas",
+        "icone": "🎭",
+        "tipo": "cultura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Galeto al primo canto, sopa de capeletti e polenta",
+        "onde": "Galeto Di Paolo (BR-470, Km 221,6, ao lado do Castello Benvenutti, Garibaldi)",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Sequência italiana típica (capeletti, polenta na chapa, massas e carnes)",
+        "onde": "Maria Valduga (dentro da Vinícola Casa Valduga, no Vale dos Vinhedos)",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Cozinha autoral com ingredientes locais (Slow Food)",
+        "onde": "Valle Rústico (chef Rodrigo Bellora, Vale dos Vinhedos)",
+        "icone": "🍽️"
+      }
+    ],
+    "melhor_epoca": "A época da Vindima (colheita da uva, geralmente janeiro a março) é o auge, com festas e degustações. O inverno também é procurado pelo clima de vinho e fondue. Reserve nos fins de semana.",
+    "como_chegar": "Cerca de 120km de Porto Alegre (1h30-2h de carro) pela BR-470. Sem aeroporto comercial próprio; o mais próximo é o de Caxias do Sul. Ônibus regulares de Porto Alegre.",
+    "dica_local": "No Caminhos de Pedra, evite as estradas de terra sugeridas pelo Google Maps e prefira o Waze — algumas atrações abrem só em determinados dias e valem agendamento. Reserve os restaurantes das vinícolas nos fins de semana e na Vindima.",
+    "slug": "bento-goncalves"
+  },
+  {
+    "cidade": "São Miguel das Missões",
+    "regiao": "Missões Jesuíticas",
+    "saudacao": "Bah, tchê! Aqui o tempo parou no século XVII — as Ruínas de São Miguel Arcanjo contam a história dos Sete Povos das Missões. Vem sentir essa emoção!",
+    "sobre": "Cidade de cerca de 11 mil habitantes (Censo 2022/IBGE) no noroeste do RS, na Rota Missioneira. Abriga as Ruínas de São Miguel Arcanjo, redução jesuítico-guarani declarada Patrimônio Mundial pela UNESCO em 1983. Foi uma das reduções dos Sete Povos das Missões, fundadas pelos jesuítas espanhóis no século XVII.",
+    "destaques": [
+      {
+        "titulo": "Patrimônio Mundial da UNESCO",
+        "descricao": "As Ruínas de São Miguel Arcanjo foram declaradas Patrimônio Mundial pela UNESCO em 1983 — único título desse tipo no Rio Grande do Sul. É a redução jesuítico-guarani mais bem preservada dos Sete Povos das Missões, barbaridade de importante, tchê.",
+        "icone": "🏛️"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Sítio Arqueológico de São Miguel Arcanjo (Ruínas)",
+        "descricao": "Ruínas da antiga igreja jesuítica, Patrimônio Mundial da UNESCO desde 1983, principal atração da Rota das Missões",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Espetáculo de Som e Luz",
+        "descricao": "Espetáculo noturno criado em 1978 (o mais antigo do Brasil) que conta, com iluminação e narração, a história das Missões dentro das ruínas; narração com vozes de atores famosos como Fernanda Montenegro e Lima Duarte",
+        "icone": "🎭",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Museu das Missões",
+        "descricao": "Museu projetado por Lucio Costa que reúne imaginária sacra missioneira, ao lado das ruínas",
+        "icone": "🎭",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Fonte Missioneira",
+        "descricao": "Fonte de água dentro do sítio arqueológico, a cerca de 1km das ruínas, uma das que abasteciam a antiga redução",
+        "icone": "🏛️",
+        "tipo": "historia"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Churrasco na vala / comida caseira missioneira (buffet)",
+        "onde": "Restaurante Sabor Missioneiro",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Buffet regional no almoço e pizza à noite",
+        "onde": "Restaurante e Pizzaria Recantu's (Av. Borges do Canto, 1344)",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Cozinha contemporânea-missioneira",
+        "onde": "Restaurante Pixé (dentro do Tenondé Park Hotel)",
+        "icone": "🍽️"
+      }
+    ],
+    "melhor_epoca": "Visitável o ano todo. O Espetáculo de Som e Luz é imperdível — o horário muda com a estação porque escurece mais cedo no inverno. Leve agasalho: as noites nas ruínas são frias.",
+    "como_chegar": "Cerca de 470km de Porto Alegre (mais de 6h de carro). O aeroporto mais próximo é o de Santo Ângelo (Aeroporto Sepé Tiaraju), a cerca de 50km, que desde outubro de 2022 tem voos diretos de Guarulhos.",
+    "dica_local": "O Espetáculo de Som e Luz muda de horário conforme a estação (por volta de 20h/20h30 na versão em português) e as versões em espanhol e inglês só ocorrem em dias alternados (e mais cedo, ~19h, no inverno) — confirme o dia e horário antes. Leve casaco: mesmo no verão a noite nas ruínas refresca.",
+    "slug": "sao-miguel-das-missoes"
+  },
+  {
+    "cidade": "Santa Maria",
+    "regiao": "Região Central",
+    "saudacao": "Oigalê, tchê! Chegou no coração do estado — Santa Maria, a 'Cidade Cultura' dos estudantes e do galeto mais famoso do RS. Bem-vindo!",
+    "sobre": "Maior cidade da Região Central do RS, conhecida como 'Cidade Cultura' e importante polo universitário, sede da Universidade Federal de Santa Maria (UFSM). Tem forte herança ferroviária (Vila Belga, Gare da Estação) e influência da imigração italiana.",
+    "pontos": [
+      {
+        "nome": "Vila Belga",
+        "descricao": "Conjunto de casas coloridas do início do século XX, patrimônio ferroviário e um dos principais pontos históricos da cidade",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Planetário da UFSM",
+        "descricao": "Primeiro planetário do RS, inaugurado em 1971 no campus da universidade; visitação sob agendamento",
+        "icone": "🎭",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Theatro Treze de Maio",
+        "descricao": "Teatro em estilo neoclássico inaugurado em 1890, restaurado, com programação de espetáculos",
+        "icone": "🎭",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Catedral Metropolitana e Calçadão Salvador Isaía",
+        "descricao": "Centro histórico com a catedral tombada e o calçadão, espaço de convivência e chimarrão",
+        "icone": "🏛️",
+        "tipo": "historia"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Galeto al primo canto com polenta brustolada",
+        "onde": "Galeteria Vera Cruz (referência de galeto na cidade há mais de 60 anos)",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Churrasco / picanha",
+        "onde": "Bovinus (churrascaria tradicional da cidade)",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Massas e culinária italiana",
+        "onde": "Cantina Pozzobon (confirmar horários de funcionamento)",
+        "icone": "🍽️"
+      }
+    ],
+    "melhor_epoca": "Julho traz o Festival Internacional de Inverno da UFSM. O clima é agradável na primavera e no outono. Novembro tem a romaria da Basílica de Nossa Senhora Medianeira, padroeira do RS.",
+    "como_chegar": "Cerca de 290km de Porto Alegre (3h-3h30 de carro) pela BR-287 ou BR-158. Tem aeroporto (Aeroporto Regional de Santa Maria) e é importante entroncamento rodoviário, com ônibus frequentes de Porto Alegre.",
+    "dica_local": "O galeto é a instituição gastronômica local — Santa Maria disputa o título de terra do galeto. A visita ao Planetário da UFSM precisa de agendamento prévio.",
+    "slug": "santa-maria"
+  },
+  {
+    "cidade": "Bagé",
+    "regiao": "Pampa e Fronteira",
+    "saudacao": "Barbaridade, tchê! Chegou na Rainha da Fronteira — terra de campo aberto, churrasco de fronteira e o vinho e azeite do Pampa. Se ajeita no lombo!",
+    "sobre": "Cidade da região do Pampa e Fronteira, conhecida como 'Rainha da Fronteira', com forte cultura gaúcha campeira e centro histórico com casarões do ciclo da pecuária. Vem se destacando no enoturismo e no olivoturismo (vinícolas e produção de azeite).",
+    "pontos": [
+      {
+        "nome": "Centro Histórico e Palacete Pedro Osório",
+        "descricao": "Casarões do início do século XX, com destaque para o Palacete Pedro Osório (1901), na Praça Silveira Martins",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Catedral São Sebastião",
+        "descricao": "Igreja da praça central, dedicada ao padroeiro da cidade, reconstruída após a Revolução Farroupilha",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Vinícolas e olivais do Pampa",
+        "descricao": "Rota de enoturismo e olivoturismo com vinícolas como a Cerros de Gaya, aproveitando o clima do Pampa",
+        "icone": "🍽️",
+        "tipo": "gastronomia"
+      },
+      {
+        "nome": "Cidade Cenográfica de Santa Fé",
+        "descricao": "Cenário de cinema a alguns quilômetros do centro, uma das atrações turísticas da cidade",
+        "icone": "🎭",
+        "tipo": "cultura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Churrasco de fronteira (buffet com carne na brasa)",
+        "onde": "Galeto e Churrascaria Mário (Rua Hipólito Ribeiro, 31)",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Cozinha regional em ambiente sofisticado",
+        "onde": "Betemps (Av. Santa Tecla, 1626)",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Pratos autorais (bolinho de costela defumado, risoto)",
+        "onde": "Bistrô San Valentino (centro de Bagé)",
+        "icone": "🍽️"
+      }
+    ],
+    "melhor_epoca": "Primavera e outono têm clima mais ameno. O inverno é frio e seco no Pampa, com geadas — bom para o enoturismo. Confira a agenda de festivais campeiros locais.",
+    "como_chegar": "Cerca de 380km de Porto Alegre (4h30-5h de carro) pela BR-290 (Free Way) e BR-153. Tem aeroporto (Aeroporto Comandante Gustavo Kraemer). Ônibus regulares de Porto Alegre.",
+    "dica_local": "Quanto mais perto da fronteira, melhor a carne — o churrasco em Bagé é a comida típica por excelência. Agências locais como Tchê Fronteira e Baye Turismo oferecem roteiros guiados pelo centro histórico e pelas vinícolas.",
+    "slug": "bage"
+  },
+  {
+    "cidade": "Caçapava do Sul",
+    "regiao": "Pampa e Fronteira",
+    "saudacao": "Bah, tchê! Chegou na capital gaúcha do montanhismo — aqui as pedras contam segredos de milhões de anos. Bota o tênis e vem trilhar!",
+    "sobre": "Uma das cidades mais antigas do RS, na região do Pampa, foi a segunda capital farroupilha. Conhecida como capital gaúcha do montanhismo, tem no ecoturismo geológico seu grande atrativo, com formações rochosas milenares. Também é polo de mineração (cobre nas Minas do Camaquã).",
+    "destaques": [
+      {
+        "titulo": "Geoparque Mundial da UNESCO",
+        "descricao": "Caçapava do Sul integra o Geoparque Caçapava, reconhecido pela UNESCO por sua geologia única de mais de 1 bilhão de anos — capital gaúcha do montanhismo com selo mundial de importância científica.",
+        "icone": "🌍"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Parque Natural Municipal da Pedra do Segredo",
+        "descricao": "Conjunto de cerros com uma pedra de cerca de 120m equilibrada, grutas e trilhas; a trilha ao topo (Cabeça do Gorila) exige guia e agendamento",
+        "icone": "🌳",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Parque das Guaritas (Geoparque)",
+        "descricao": "Formações rochosas em cerros íngremes esculpidas pela erosão, a cerca de 54km do centro; visitação por agendamento pois são propriedades particulares",
+        "icone": "🌳",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Minas do Camaquã",
+        "descricao": "Antiga área de mineração de cobre (desde 1865), com ruínas e um lago azul; visitação apenas à área externa por segurança",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Forte Dom Pedro II",
+        "descricao": "Fortificação histórica ligada à Revolução Farroupilha, ponto de contemplação do pôr do sol",
+        "icone": "🏛️",
+        "tipo": "historia"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Comida campeira / refeições nas trilhas",
+        "onde": "Associação dos Moradores das Guaritas (refeições durante o dia, com agendamento)",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Comida caseira do Pampa",
+        "onde": "não verificado — confirmar restaurante no centro antes de publicar",
+        "icone": "🍽️"
+      }
+    ],
+    "melhor_epoca": "Outono e primavera têm clima ameno, ideal para trilhas. Evite o pico do calor do verão no meio do dia. O parque da Pedra do Segredo abre de terça a domingo.",
+    "como_chegar": "Cerca de 260km de Porto Alegre (3h-3h30 de carro) pela BR-290 e BR-392. Sem aeroporto comercial próprio. Ônibus para a cidade a partir de Porto Alegre.",
+    "dica_local": "A trilha ao topo da Pedra do Segredo só pode ser feita com guia e agendamento prévio; as Guaritas ficam em propriedade particular e também exigem agendamento por telefone. Leve água e calçado firme.",
+    "slug": "cacapava-do-sul"
+  },
+  {
+    "cidade": "Pelotas",
+    "regiao": "Litoral Gaúcho",
+    "saudacao": "Oigalê, tchê! Bem-vindo à Princesa do Sul, a Capital Nacional do Doce — aqui o quindim e o camafeu são levados a sério. Vem adoçar a vida!",
+    "sobre": "Quarta cidade mais populosa do RS (325.685 habitantes no Censo 2022/IBGE), fundada no século XVIII às margens do Arroio Pelotas, é a 'Capital Nacional do Doce' e a 'Princesa do Sul'. Teve seu apogeu com o ciclo do charque (charqueadas) no século XIX, deixando um rico centro histórico tombado pelo IPHAN.",
+    "destaques": [
+      {
+        "titulo": "Fenadoce — maior feira de doces do Brasil",
+        "descricao": "A Fenadoce é reconhecida como a maior feira de doces do Brasil, recebendo centenas de milhares de visitantes a cada edição. É a consagração do título de Pelotas como Capital Nacional do Doce, tchê.",
+        "icone": "🍬"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Charqueada São João",
+        "descricao": "Charqueada de 1810 aberta à visitação guiada, com passeio de barco pelo Arroio Pelotas; cenário da série 'A Casa das Sete Mulheres'",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Praça Coronel Pedro Osório e centro histórico",
+        "descricao": "Praça central rodeada de casarões e prédios tombados: Biblioteca Pública, Museu do Doce e Prefeitura",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Museu do Doce (Casarão 8)",
+        "descricao": "Museu instalado em casarão de 1878 que conta a relação da cidade com os doces de origem portuguesa",
+        "icone": "🎭",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Praia do Laranjal",
+        "descricao": "Balneário de água doce na Lagoa dos Patos, com os balneários de Santo Antônio e Valverde",
+        "icone": "🌳",
+        "tipo": "natureza"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Doces finos de Pelotas (quindim, camafeu, pastel de Santa Clara, bem-casado)",
+        "onde": "Confeitaria Imperatriz (Mercado Central, lojas 39-40, e Rua 7 de Setembro, 272)",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Doces tradicionais e tortas",
+        "onde": "Doçaria Fran's (Mercado Central de Pelotas)",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Doces, tortas e sobremesas variadas",
+        "onde": "Confeitaria Monalu (Rua Almirante Barroso, 2510, Centro)",
+        "icone": "🍽️"
+      }
+    ],
+    "melhor_epoca": "A Fenadoce (Feira Nacional do Doce) é o momento mais doce do ano, mas atenção: a data mudou — a 32ª edição ocorreu de 15/jul a 2/ago/2026 (a 33ª está marcada para 26/mai a 13/jun/2027). Em 2025 a feira recebeu 305 mil visitantes. Primavera e verão são ideais para o Laranjal.",
+    "como_chegar": "Cerca de 250km de Porto Alegre (3h de carro) pela BR-116. Tem aeroporto (Aeroporto Internacional de Pelotas). Ônibus frequentes de Porto Alegre.",
+    "dica_local": "Os doces certificados com Indicação de Procedência trazem uma rede personalizada e dois selos (nome do produtor e número do lote) — é o sinal de que você está comprando a receita original. No Mercado Central, se uma confeitaria estiver com fila, a vizinha oferece praticamente os mesmos doces.",
+    "slug": "pelotas"
+  },
+  {
+    "cidade": "Porto Alegre",
+    "regiao": "Porto Alegre",
+    "saudacao": "Bah, tchê, bem-vindo à capital! Porto Alegre é chimarrão na beira do Guaíba, pôr do sol de cair o queixo e o melhor xis do mundo. Se acomoda que a Capital te recebe!",
+    "sobre": "Capital do Rio Grande do Sul, às margens do Lago Guaíba, é a porta de entrada cultural do estado e hub para a Serra, o Pampa e a fronteira. Combina centro histórico preservado, cena cultural contemporânea (MARGS, Iberê Camargo, Casa de Cultura Mario Quintana) e o famoso pôr do sol no Guaíba.",
+    "pontos": [
+      {
+        "nome": "Mercado Público",
+        "descricao": "Mercado de 1869 em arquitetura neoclássica no centro histórico, com peixarias, queijarias, restaurantes de cozinha regional e o icônico sorvete da Banca 40",
+        "icone": "🍽️",
+        "tipo": "gastronomia"
+      },
+      {
+        "nome": "Usina do Gasômetro e Orla Moacyr Scliar",
+        "descricao": "Antiga usina termelétrica com chaminé de 101 metros, hoje centro cultural, e a orla revitalizada do Guaíba — ponto do pôr do sol",
+        "icone": "🎭",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Parque Farroupilha (Redenção)",
+        "descricao": "Grande parque urbano no centro, com o Brique da Redenção aos domingos (artesanato, antiguidades e comidas)",
+        "icone": "🌳",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Centro Histórico (Praça da Alfândega, MARGS, Casa de Cultura Mario Quintana)",
+        "descricao": "Conjunto de museus e prédios históricos, com o MARGS e a Casa de Cultura Mario Quintana",
+        "icone": "🏛️",
+        "tipo": "historia"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Cachorro-quente / xis porto-alegrense e lanches",
+        "onde": "Lancheria do Parque (próximo à Redenção)",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Churrasco gaúcho (à la carte)",
+        "onde": "Komka (churrascaria de 1967, uma das mais antigas da cidade)",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Cozinha regional gaúcha contemporânea",
+        "onde": "Bah! Restaurante (BarraShoppingSul)",
+        "icone": "🍽️"
+      }
+    ],
+    "melhor_epoca": "Primavera e outono têm clima mais agradável. O verão é quente e úmido. O pôr do sol no Guaíba é espetáculo o ano todo.",
+    "como_chegar": "É a capital do estado, ponto de partida das distâncias deste guia. Tem o Aeroporto Internacional Salgado Filho, principal do RS, e é o maior entroncamento rodoviário do estado.",
+    "dica_local": "Faça o circuito do centro histórico a pé de dia (Mercado Público, Rua da Praia, Gasômetro) e termine na orla para o pôr do sol. À noite, prefira sair de táxi/app em Cidade Baixa e Bom Fim. Aos domingos, o Brique da Redenção é parada obrigatória.",
+    "slug": "porto-alegre"
+  },
+  {
+    "cidade": "Torres",
+    "regiao": "Litoral Norte",
+    "saudacao": "Bah, tchê! Chegou em Torres, a praia mais linda do RS — aqui o mar encontra as falésias e o balão colore o céu. Bota o pé na areia!",
+    "sobre": "Cidade do Litoral Norte gaúcho na divisa com Santa Catarina, delimitada pelo Rio Mampituba. É a única praia do RS com falésias (penhascos à beira-mar), reunidas no Parque Estadual da Guarita. É a 'Capital Nacional do Balonismo' (Lei Federal nº 14.808/2024) e sedia anualmente o Festival Internacional de Balonismo.",
+    "pontos": [
+      {
+        "nome": "Parque Estadual da Guarita",
+        "descricao": "Unidade de conservação com as falésias à beira-mar, trilhas e a Praia da Guarita, considerada a mais bela do RS",
+        "icone": "🌳",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Praia da Guarita",
+        "descricao": "Praia de apenas 200m entre duas falésias (Morro das Furnas e Torre Sul), com o pináculo isolado da Torre da Guarita",
+        "icone": "🌳",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Morro do Farol",
+        "descricao": "Mirante no centro com vista para as praias e a Ilha dos Lobos",
+        "icone": "🌳",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Rio Mampituba e orla",
+        "descricao": "Rio que faz a divisa com SC, com orla de bares e restaurantes de frutos do mar e pôr do sol",
+        "icone": "🌳",
+        "tipo": "natureza"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Frutos do mar / pescados",
+        "onde": "Restaurante Cantinho do Pescador (Av. Cristóvão Colombo)",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Comida à beira-mar (aberto o ano todo)",
+        "onde": "Guarita Gastronomia (dentro do Parque da Guarita)",
+        "icone": "🍽️"
+      }
+    ],
+    "melhor_epoca": "Alta temporada de dezembro a março (praias cheias e sol). Abril-junho e setembro-novembro têm clima agradável e menos turistas. O Festival Internacional de Balonismo ocorre no fim de abril/início de maio (a 36ª edição foi de 30/abr a 3/mai/2026, com cerca de 110 balões).",
+    "como_chegar": "Cerca de 200km de Porto Alegre (2h-2h30 de carro) pela BR-290 (Free Way) e BR-101. Sem aeroporto comercial regular; o mais próximo é o de Porto Alegre. Ônibus regulares de Porto Alegre.",
+    "dica_local": "O acesso de carro ao Parque da Guarita é pago (R$20 na alta temporada, R$10 na baixa), mas pedestres e veículos emplacados em Torres são isentos. O parque abre das 8h30 às 17h30 na baixa temporada e das 7h às 19h na alta (a partir de 15/dez). Atenção à maré alta nas trilhas dos morros — pode ficar perigoso.",
+    "slug": "torres"
+  },
+  {
+    "cidade": "Capão da Canoa",
+    "regiao": "Litoral Norte",
+    "saudacao": "Oigalê, tchê! Chegou em Capão da Canoa — praia, parque aquático e a Lagoa dos Quadros pra fechar o dia com pôr do sol. Vem curtir o verão gaúcho!",
+    "sobre": "Um dos principais balneários do Litoral Norte gaúcho, com praia urbana extensa e boa infraestrutura o ano todo. Abriga os dois maiores parques aquáticos do RS e a Lagoa dos Quadros, procurada para esportes náuticos. Recebe turistas brasileiros, argentinos e uruguaios no verão.",
+    "pontos": [
+      {
+        "nome": "Praia de Capão da Canoa",
+        "descricao": "Praia urbana com calçadão, quiosques e esportes; principal atração da cidade",
+        "icone": "🌳",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Lagoa dos Quadros",
+        "descricao": "Lagoa de águas calmas para jet ski, windsurf, kitesurf e stand-up paddle, com Parque Náutico e mirante do pôr do sol",
+        "icone": "🌳",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Parques aquáticos Acqua Lokos e Marina Park",
+        "descricao": "Os dois maiores parques aquáticos do RS, com toboáguas e piscinas, ótimos para famílias",
+        "icone": "🧗",
+        "tipo": "aventura"
+      },
+      {
+        "nome": "Avenida Paraguassú",
+        "descricao": "Principal eixo gastronômico e de comércio da cidade, com restaurantes e vida noturna no verão",
+        "icone": "🎭",
+        "tipo": "cultura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Massas e culinária italiana",
+        "onde": "Cantina Pastasciutta",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Comida caseira / buffet (aberto o ano todo)",
+        "onde": "Réchaud (clássico de Capão da Canoa)",
+        "icone": "🍽️"
+      }
+    ],
+    "melhor_epoca": "Alta temporada de dezembro a março, com praia movimentada e vida noturna intensa. Fora da temporada a cidade fica tranquila, boa para contemplar o mar e o pôr do sol na lagoa.",
+    "como_chegar": "Cerca de 130km de Porto Alegre (1h30 de carro) pela BR-290 (Free Way) e Estrada do Mar (RS-389), ou pela Interpraias. Sem aeroporto próprio; o mais próximo é o de Porto Alegre. Ônibus regulares (Unesul) de Porto Alegre.",
+    "dica_local": "Para o pôr do sol, vá à Lagoa dos Quadros e ao Parque Náutico em vez da praia — é um dos melhores points da cidade e menos óbvio para o turista.",
+    "slug": "capao-da-canoa"
+  },
+  {
+    "cidade": "Tramandaí",
+    "regiao": "Litoral Norte",
+    "saudacao": "Bah, tchê! Chegou em Tramandaí — praia, peixe fresquinho na beira do rio e a plataforma de pesca clássica. Se joga que o verão é aqui!",
+    "sobre": "Um dos balneários mais tradicionais e movimentados do Litoral Norte gaúcho, com praia extensa e a barra do Rio Tramandaí, onde o rio encontra o mar. Conhecida pela pesca, pela vida à beira-mar e por ser um destino econômico. Sedia a Festa Nacional do Peixe em julho.",
+    "pontos": [
+      {
+        "nome": "Trapiche / Plataforma de Pesca",
+        "descricao": "Píer que avança mar adentro, cartão-postal da cidade e ponto de pesca e pôr do sol",
+        "icone": "🌳",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Barra do Rio Tramandaí",
+        "descricao": "Encontro do rio com o mar, com passeios de barco, pesca e restaurantes de peixe fresco",
+        "icone": "🌳",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Parque Histórico Marechal Manoel Luís Osório",
+        "descricao": "Parque de 1970 com a casa natal do Marechal Osório, Museu de Armas, bosques, lago e camping",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Monumento a Iemanjá",
+        "descricao": "Monumento na Av. Beira Mar, ponto de fé com grande festa na virada de 1 para 2 de fevereiro",
+        "icone": "🎭",
+        "tipo": "cultura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Peixe fresco e frutos do mar",
+        "onde": "restaurantes da barra do Rio Tramandaí (próximo à ponte e ao mercado público) — não verificado, confirmar nome específico antes de publicar",
+        "icone": "🍽️"
+      }
+    ],
+    "melhor_epoca": "Alta temporada de dezembro a março. Julho tem a Festa Nacional do Peixe. Fora da temporada as praias ficam tranquilas, boas para descanso.",
+    "como_chegar": "Cerca de 120km de Porto Alegre (1h20-1h30 de carro) pela BR-290 (Free Way) e RS-030. Sem aeroporto próprio; o mais próximo é o de Porto Alegre. Ônibus frequentes de Porto Alegre.",
+    "dica_local": "Prepare-se para vento na praia — guarda-sol firme e canga pesada evitam perrengue. Para comer peixe fresco de verdade, vá aos restaurantes perto da ponte e do mercado público, na barra.",
+    "slug": "tramandai"
+  },
+  {
+    "cidade": "Cidreira",
+    "regiao": "Litoral Norte",
+    "saudacao": "Oigalê, tchê! Chegou em Cidreira, uma das praias mais antigas do RS — aqui o sossego, as dunas e a maior Iemanjá do estado te esperam. Relaxa!",
+    "sobre": "Um dos balneários mais antigos do RS e uma das praias mais próximas de Porto Alegre. Tem cerca de 10km de praia em linha reta, com metade do território formado por dunas e três lagoas. É um destino tranquilo, procurado por quem busca sossego e pesca.",
+    "pontos": [
+      {
+        "nome": "Farol de Cidreira",
+        "descricao": "Farol construído em 1933, com 30 metros de altura, entre os balneários de Salinas e Nazaré",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Plataforma de Pesca",
+        "descricao": "Plataforma que avança cerca de 500m mar adentro, uma das maiores do Brasil, point dos pescadores",
+        "icone": "🌳",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Estátua/Santuário de Iemanjá",
+        "descricao": "Estátua de 8 metros, a maior de Iemanjá no RS, em frente às dunas; palco das Festas de Iemanjá",
+        "icone": "🎭",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Dunas de Cidreira",
+        "descricao": "Extensas dunas que formam contraste com o mar, procuradas para sandboard e passeios de buggy",
+        "icone": "🌳",
+        "tipo": "natureza"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Peixe e frutos do mar / comida de praia",
+        "onde": "quiosques e restaurantes do centrinho — não verificado, confirmar nome específico antes de publicar",
+        "icone": "🍽️"
+      }
+    ],
+    "melhor_epoca": "Alta temporada de dezembro a março. A Festa do Pescador celebra a pesca e a culinária local. Fora da temporada a cidade fica bem vazia, quase 'fantasma'.",
+    "como_chegar": "Cerca de 130-140km de Porto Alegre (1h30 de carro): pela BR-290 e RS-030 via Tramandaí (140km) ou pela RS-040 (130km). Sem aeroporto próprio. Ônibus de Porto Alegre.",
+    "dica_local": "Não há arborização na orla, então leve guarda-sol — o sol do verão gaúcho é forte. Para conhecer a maior Iemanjá do estado, siga sentido Balneário Pinhal e aproveite para ver as dunas no caminho.",
+    "slug": "cidreira"
+  },
+  {
+    "cidade": "Xangri-lá",
+    "regiao": "Litoral Norte",
+    "saudacao": "Bah, tchê! Chegou em Xangri-lá, o endereço mais chique do litoral — Atlântida, plataforma, decks e gastronomia à beira-mar. Vem com estilo!",
+    "sobre": "Município do Litoral Norte gaúcho conhecido pela Praia de Atlântida, o balneário mais nobre e desejado do litoral do RS, frequentado por público de alto poder aquisitivo. Famoso pelas casas de veraneio sofisticadas, pela plataforma marítima e por sediar o festival Planeta Atlântida.",
+    "pontos": [
+      {
+        "nome": "Praia de Atlântida",
+        "descricao": "A praia mais nobre do litoral gaúcho, com casas de veraneio sofisticadas, calçadão, decks e restaurantes à beira-mar",
+        "icone": "🌳",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Plataforma de Atlântida",
+        "descricao": "Plataforma que avança cerca de 280m mar adentro, inspirada nos modelos californianos, ponto de contemplação e surfe",
+        "icone": "🧗",
+        "tipo": "aventura"
+      },
+      {
+        "nome": "Orla e decks da Av. Beira-Mar",
+        "descricao": "Calçadão com decks de música, gastronomia e esportes à beira-mar, coração da vida social do verão",
+        "icone": "🎭",
+        "tipo": "cultura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Cozinha mediterrânea/internacional autoral",
+        "onde": "Maré Brasil (Av. Paraguassu, 1473, Xangri-lá)",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Pizza e pratos variados (filés, frutos do mar)",
+        "onde": "Fornellone (Av. Central, 1319, Atlântida)",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Carnes na parrilla / brasa",
+        "onde": "Toro (menu na brasa, Praia de Atlântida)",
+        "icone": "🍽️"
+      }
+    ],
+    "melhor_epoca": "Alta temporada de dezembro a fevereiro, com a orla lotada, festas e o Planeta Atlântida (geralmente em fevereiro). Fora da temporada muitos estabelecimentos fecham.",
+    "como_chegar": "Cerca de 130km de Porto Alegre (1h30 de carro) pela BR-290 (Free Way) e Estrada do Mar (RS-389). Fica coladinha em Capão da Canoa. Sem aeroporto próprio; o mais próximo é o de Porto Alegre.",
+    "dica_local": "Vários restaurantes de Atlântida abrem só na temporada (encerram no fim de fevereiro) e pedem reserva — confirme antes de ir fora do verão. A plataforma de pesca de Atlântida é de uso exclusivo de sócios.",
+    "slug": "xangri-la"
+  },
+  {
+    "cidade": "Caxias do Sul",
+    "regiao": "Serra Gaúcha",
+    "saudacao": "Bah, tchê, chegou na capital da uva e do vinho! Aqui em Caxias a gente te recebe com um brinde e um galeto no capricho — senta que a nona já vai servir.",
+    "sobre": "Segunda maior cidade do Rio Grande do Sul, Caxias do Sul é o coração da imigração italiana na Serra, terra de parreirais, cantinas e vinícolas. É um polo industrial metalmecânico forte, mas mantém viva a tradição italiana e gaúcha, misturando afrescos de igreja, sopa de capeletti e vinho colonial.",
+    "destaques": [
+      {
+        "titulo": "Festa Nacional da Uva",
+        "descricao": "Uma das maiores e mais tradicionais festas de imigração do Brasil, a Festa da Uva acontece a cada dois anos entre fevereiro e março, com desfiles, degustação de uvas e vinhos e apresentações artísticas. A 35ª edição, em 2026, reuniu cerca de 710 mil visitantes — orgulho caxiense que atrai gente do país inteiro, tchê.",
+        "icone": "🍇"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Igreja São Pelegrino",
+        "descricao": "Uma maravilha com afrescos monumentais do artista italiano Aldo Locatelli, incluindo um mural da Santa Ceia de tirar o fôlego. Barbaridade de bonita!",
+        "icone": "⛪",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Catedral Diocesana de Santa Teresa",
+        "descricao": "No coração da cidade, de frente para a Praça Dante Alighieri, com sua arquitetura imponente. Ponto de encontro certeiro no centro.",
+        "icone": "⛪",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Complexo da Estação Férrea",
+        "descricao": "Conjunto de prédios históricos onde ficava a antiga estação de trens e o armazém dos vinhos, hoje um espaço cultural cheio de bares e restaurantes.",
+        "icone": "🚂",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Gruta da Terceira Légua",
+        "descricao": "Parada obrigatória na Estrada do Imigrante, no meio dos parreirais, misturando fé e a história da chegada dos italianos.",
+        "icone": "🙏",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Bairro Ana Rech",
+        "descricao": "Bairro charmoso com pinheiros centenários e ruas floridas; em dezembro a Vila dos Presépios enche a comunidade de encanto.",
+        "icone": "🎄",
+        "tipo": "cultura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Galeto al primo canto",
+        "onde": "Galeteria Alvorada (Rua Os Dezoito do Forte) ou Galeto Di Paolo, tradicionais no bairro Lourdes",
+        "icone": "🍗"
+      },
+      {
+        "prato": "Sopa de capeletti / agnoline",
+        "onde": "servida nas galeterias e cantinas tradicionais da cidade, como parte da sequência italiana",
+        "icone": "🍲"
+      },
+      {
+        "prato": "Vinho colonial",
+        "onde": "nas vinícolas do interior e cantinas do Vale Trentino",
+        "icone": "🍷"
+      }
+    ],
+    "melhor_epoca": "Vá no verão (fevereiro-março) em ano de Festa da Uva para o auge da celebração italiana, ou no outono/inverno para curtir vinho quente e a serra fresquinha, tchê.",
+    "como_chegar": "Fica a cerca de 130 km de Porto Alegre, subindo a Serra pela RS-122 ou BR-116. Tem o Aeroporto Regional Hugo Cantergiani e ampla oferta de ônibus da capital.",
+    "dica_local": "Não fique só no centro: pega a Estrada do Imigrante e o Vale Trentino para provar vinho na cantina direto com o produtor. E se for em dezembro, a Vila dos Presépios em Ana Rech é um espetáculo feito pelos próprios moradores.",
+    "slug": "caxias-do-sul"
+  },
+  {
+    "cidade": "São Leopoldo",
+    "regiao": "Vale do Sinos",
+    "saudacao": "Oigalê, bem-vindo à Cidade Berço! Aqui em São Léo foi onde tudo começou pros alemães no Brasil — chega mais que tem cuca fresquinha e história de sobra.",
+    "sobre": "São Leopoldo é o berço da imigração alemã no Brasil: foi aqui que, em 25 de julho de 1824, chegaram os primeiros 39 imigrantes de língua alemã pelo Rio dos Sinos. A cidade guarda essa herança em museus, na arquitetura enxaimel e na mesa farta, sendo hoje um importante polo da Região Metropolitana de Porto Alegre.",
+    "destaques": [
+      {
+        "titulo": "Berço da Imigração Alemã no Brasil",
+        "descricao": "São Leopoldo recebeu os primeiros 39 imigrantes de língua alemã do país em 25 de julho de 1824, ganhando o título de 'Cidade Berço' da colonização germânica no Brasil. É aqui que fica o Marco Zero dessa história que moldou a cultura de todo o sul, tchê.",
+        "icone": "🇩🇪"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Museu Histórico Visconde de São Leopoldo",
+        "descricao": "Guarda um dos acervos mais ricos do Brasil sobre a imigração alemã, com milhares de objetos, fotos e documentos raros. Uma verdadeira aula de história.",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Santuário do Sagrado Coração de Jesus (Padre Reus)",
+        "descricao": "Conhecido como Santuário Padre Reus, é um dos locais mais visitados e queridos da cidade, cheio de boas energias.",
+        "icone": "⛪",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Parque Imperatriz Leopoldina",
+        "descricao": "Ampla área verde com lago, ótima para caminhar e relaxar no domingo em família.",
+        "icone": "🌳",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Catedral São João Batista",
+        "descricao": "Igreja matriz no centro histórico, ponto de referência da cidade.",
+        "icone": "⛪",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Casa do Imigrante / Sítio Histórico da Imigração Alemã",
+        "descricao": "Marco da chegada dos colonos alemães em 1824; verifique a situação de visitação antes de ir, pois o prédio passou por obras após danos estruturais.",
+        "icone": "🏠",
+        "tipo": "historia"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Eisbein (joelho de porco)",
+        "onde": "servido nos restaurantes do centro e, com destaque, na São Leopoldo Fest em julho",
+        "icone": "🍖"
+      },
+      {
+        "prato": "Cuca",
+        "onde": "encontrada nas padarias e cafés coloniais da cidade",
+        "icone": "🍰"
+      },
+      {
+        "prato": "Galeto e massas",
+        "onde": "Cantina Cândido Valduga (Rua Coelho Neto, bairro Rio Branco)",
+        "icone": "🍗"
+      }
+    ],
+    "melhor_epoca": "Julho é o mês perfeito: além do clima de inverno pra saborear comida alemã, tem a São Leopoldo Fest com gastronomia típica, danças folclóricas e música ao vivo.",
+    "como_chegar": "Pertinho da capital, a cerca de 35 km de Porto Alegre pela BR-116. Dá pra ir de carro ou pelo Trensurb (metrô de superfície), que liga a capital direto à cidade.",
+    "dica_local": "Aproveita que a cidade é compacta e faça o centro histórico a pé, do Museu Histórico ao Santuário Padre Reus. E não vá embora sem provar um bom café colonial de tarde, que é herança pura dos colonos.",
+    "slug": "sao-leopoldo"
+  },
+  {
+    "cidade": "Rio Grande",
+    "regiao": "Litoral Gaúcho",
+    "saudacao": "Bah, tchê, chegou na cidade mais antiga do Rio Grande do Sul e na beira da maior praia do mundo! Aqui o vento salgado e a história de séculos te esperam.",
+    "sobre": "Fundada em 1737, Rio Grande é o município mais antigo do estado e abrigou a primeira capital da província. Cidade portuária de peso, guarda um vasto centro histórico com casarões e museus, e é dona da lendária Praia do Cassino, além dos imponentes Molhes da Barra.",
+    "destaques": [
+      {
+        "titulo": "Praia do Cassino — a maior praia contínua do mundo",
+        "descricao": "Reconhecida pelo Guinness World Records em 1994, o Cassino é o balneário marítimo mais antigo do Brasil e a maior praia contínua do mundo em extensão — chegando a 254 km de areia branca e fina, dos Molhes da Barra ao Arroio Chuí. Os carros circulam na beira do mar e a temporada recebe mais de 150 mil turistas. Barbaridade de grande, tchê!",
+        "icone": "🏖️"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Praia do Cassino",
+        "descricao": "A maior praia contínua do mundo em extensão, com dunas preservadas, a estátua de Iemanjá e o velho navio Altair encalhado. Fica a 22 km do centro.",
+        "icone": "🏖️",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Molhes da Barra",
+        "descricao": "Uma das maiores obras de engenharia oceânica do mundo, avançando mais de 4 km mar adentro. Dá pra percorrer os trilhos com a vagoneta movida a vento, com o mar de um lado e a Lagoa dos Patos do outro.",
+        "icone": "🌊",
+        "tipo": "aventura"
+      },
+      {
+        "nome": "Centro Histórico de Rio Grande",
+        "descricao": "Casarões e prédios seculares tombados, como a antiga alfândega em frente ao porto velho, que hoje abriga museu. Passado marítimo em cada esquina.",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Estação Ecológica do Taim",
+        "descricao": "Uma das principais reservas ambientais do estado, lar de jacarés, aves migratórias e dezenas de espécies de mamíferos, com trilhas de educação ambiental.",
+        "icone": "🐊",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Catedral de São Pedro",
+        "descricao": "Templo histórico no coração da cidade mais antiga do estado.",
+        "icone": "⛪",
+        "tipo": "historia"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Frutos do mar e pescados",
+        "onde": "Restaurante e Petiscaria Garoupa, na Praia do Cassino",
+        "icone": "🦐"
+      },
+      {
+        "prato": "Pastéis e casquinha de siri",
+        "onde": "Restaurante e Pastelaria Mattos (Rua Paulino Modernell, Cassino)",
+        "icone": "🥟"
+      },
+      {
+        "prato": "Anchova assada na brasa",
+        "onde": "prato símbolo da Festa do Mar e servido nos restaurantes da cidade e do balneário",
+        "icone": "🐟"
+      }
+    ],
+    "melhor_epoca": "O verão (dezembro a março) é a temporada do Cassino, quando o balneário ferve de turistas. Se curte a anchova na brasa, fica de olho na Festa do Mar, tchê.",
+    "como_chegar": "Fica no extremo sul, a cerca de 320 km de Porto Alegre pelas BR-116 e BR-392. Tem aeroporto regional e ônibus diretos da capital; do balneário ao centro são só 22 km.",
+    "dica_local": "Reserve pelo menos dois dias pro Cassino e um pro centro histórico. E se for aventureiro de verdade, os molhes da barra ao pôr do sol, com a vagoneta, são inesquecíveis — leve casaco, que o vento na barra não perdoa.",
+    "slug": "rio-grande"
+  },
+  {
+    "cidade": "Novo Hamburgo",
+    "regiao": "Vale do Sinos",
+    "saudacao": "Tchê, bem-vindo à Capital Nacional do Calçado! Aqui em Novo Hamburgo o couro é fino, a cultura alemã é forte e o chimarrão tá sempre pronto no calçadão.",
+    "sobre": "Fundada por descendentes de imigrantes alemães, Novo Hamburgo cresceu como o maior polo calçadista do Brasil, ganhando o título de 'Capital Nacional do Calçado'. Integra o Vale Germânico e a Rota Romântica, preservando o charme enxaimel do bairro Hamburgo Velho e uma vida cultural e gastronômica animada.",
+    "destaques": [
+      {
+        "titulo": "Capital Nacional do Calçado",
+        "descricao": "Novo Hamburgo se consolidou como o maior polo de calçados do Brasil, especialmente em couro, e sedia grandes feiras do setor — a Fenac e a Fimec (Feira Internacional do Calçado), esta uma das maiores do mundo, com mais de 400 mil visitantes na última edição. O couro e o sapato fazem parte da identidade da cidade, tchê.",
+        "icone": "👞"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Bairro Hamburgo Velho (Centro Histórico)",
+        "descricao": "Distrito histórico tombado como patrimônio nacional, com casario enxaimel do século XIX. Coração da herança alemã da cidade.",
+        "icone": "🏘️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Museu Comunitário Casa Schmitt-Presser",
+        "descricao": "Instalado num casarão do começo do século XIX, é um dos exemplares mais antigos da arquitetura alemã no estado e o primeiro exemplar da técnica enxaimel protegido pelo IPHAN no Brasil.",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Catedral Basílica de São Luís Gonzaga",
+        "descricao": "Construída em 1950 em estilo romano basilical, guarda no interior afrescos de Aldo Locatelli, entre outros artistas.",
+        "icone": "⛪",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Parque Henrique Luiz Roessler (Parcão)",
+        "descricao": "O pulmão verde da cidade, perfeito para caminhada, corrida e um mate ao ar livre.",
+        "icone": "🌳",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Museu Nacional do Calçado",
+        "descricao": "No campus da Feevale, conserva a memória da atividade coureiro-calçadista do país e do design de calçado.",
+        "icone": "👢",
+        "tipo": "cultura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Café colonial",
+        "onde": "Café Colonial Lomba Grande (Rua João Aloysio Algayer, 3790, bairro Lomba Grande)",
+        "icone": "☕"
+      },
+      {
+        "prato": "Comida caseira e colonial",
+        "onde": "restaurantes coloniais do distrito rural de Lomba Grande",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Cuca e doces coloniais",
+        "onde": "cafés e padarias de herança alemã da cidade",
+        "icone": "🍰"
+      }
+    ],
+    "melhor_epoca": "A cidade recebe bem o ano inteiro, mas o outono e o inverno combinam com café colonial farto e a atmosfera germânica; fique de olho no calendário de feiras da Fenac se viajar a negócios.",
+    "como_chegar": "A cerca de 40 km de Porto Alegre pela BR-116, com ligação direta ao aeroporto da capital pelo Trensurb (metrô de superfície). Fácil acesso de ônibus e carro.",
+    "dica_local": "Fuja da ideia de que é só cidade de compras: reserve uma tarde para o distrito rural de Lomba Grande, onde os cafés coloniais servem uma mesa farta de raiz alemã. E caminhe pelo calçadão do centro, que tem chimarródromo com água quente à disposição.",
+    "slug": "novo-hamburgo"
+  },
+  {
+    "cidade": "Nova Petrópolis",
+    "regiao": "Serra Gaúcha",
+    "saudacao": "Oigalê, bem-vindo ao Jardim da Serra Gaúcha! Aqui em Nova Petrópolis tem flor por todo lado, café colonial de encher os olhos e labirinto pra se perder de rir, tchê.",
+    "sobre": "Fundada em 1858 por imigrantes alemães, Nova Petrópolis é conhecida como o 'Jardim da Serra Gaúcha' e como Capital Nacional do Cooperativismo. Preserva com carinho a arquitetura enxaimel, os cafés coloniais fartos e as tradições germânicas, sendo parada charmosa da Rota Romântica perto de Gramado e Canela.",
+    "destaques": [
+      {
+        "titulo": "Capital Nacional do Cooperativismo",
+        "descricao": "Nova Petrópolis carrega o título de Capital Nacional do Cooperativismo, com a maior parte de sua economia baseada em cooperativas. É um modelo de organização comunitária de raiz alemã reconhecido nacionalmente, barbaridade de orgulho, tchê.",
+        "icone": "🤝"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Parque Aldeia do Imigrante",
+        "descricao": "Museu vivo da imigração alemã em cerca de dez hectares, com casas enxaimel reconstruídas, oficinas, salão de baile e mata nativa. É o atrativo mais famoso da cidade.",
+        "icone": "🏘️",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Labirinto Verde (Praça das Flores)",
+        "descricao": "Formado por ciprestes em cercas vivas, inaugurado em 1989, é um dos cartões-postais da cidade e diversão certa para a família.",
+        "icone": "🌿",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Ninho das Águias",
+        "descricao": "Mirante e rampa de voo livre com vista panorâmica da Serra Gaúcha. De tirar o fôlego!",
+        "icone": "🦅",
+        "tipo": "aventura"
+      },
+      {
+        "nome": "Avenida 15 de Novembro e Centro Histórico",
+        "descricao": "Arquitetura germânica preservada, Igreja Matriz e a charmosa Praça das Flores para passeio a pé.",
+        "icone": "⛪",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Esculturas Parque Pedras do Silêncio",
+        "descricao": "Museu ao ar livre com dezenas de esculturas em arenito que retratam a história da imigração alemã.",
+        "icone": "🗿",
+        "tipo": "cultura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Café colonial alemão",
+        "onde": "Café Colonial Alto da Serra (tradicional desde 1986, no centro) ou Kaffehaus, na Avenida 15 de Novembro",
+        "icone": "☕"
+      },
+      {
+        "prato": "Eisbein (joelho de porco) e sequência alemã",
+        "onde": "Restaurante Colina Verde ou Torquês Restaurante",
+        "icone": "🍖"
+      },
+      {
+        "prato": "Apfelstrudel e cuca",
+        "onde": "nos cafés coloniais e restaurantes típicos da cidade",
+        "icone": "🥧"
+      }
+    ],
+    "melhor_epoca": "Bonita o ano inteiro, mas brilha no inverno com o friozinho da serra e nos festivais culturais — como a Magia da Páscoa, o Festival Internacional de Folclore e a Magia do Natal.",
+    "como_chegar": "Fica a cerca de 100 km de Porto Alegre pela BR-116, na Rota Romântica. Os aeroportos mais próximos são o de Caxias do Sul e o de Porto Alegre; há ônibus da capital e das cidades vizinhas da serra.",
+    "dica_local": "Vá com fome de verdade ao café colonial — a sequência servida na mesa tem dezenas de itens e você vai querer provar tudo. E não deixe de subir ao Ninho das Águias no fim da tarde para ver a serra dourada.",
+    "slug": "nova-petropolis"
+  },
+  {
+    "cidade": "Santana do Livramento",
+    "regiao": "Pampa e Fronteira",
+    "saudacao": "Bah, tchê, aqui tu dá um passo e tá no Uruguai! Bem-vindo à Fronteira da Paz, onde o portunhol rola solto e o churrasco encontra o asado.",
+    "sobre": "Santana do Livramento forma com Rivera, no Uruguai, uma das conurbações binacionais mais curiosas do mundo, a chamada 'Fronteira da Paz', separadas apenas por uma avenida e uma praça internacional. Terra de cultura gaúcha aguerrida, free shops, enoturismo e o autêntico modo de vida do pampa.",
+    "destaques": [
+      {
+        "titulo": "Fronteira da Paz — cidade binacional com Rivera",
+        "descricao": "Livramento e Rivera são praticamente uma cidade só, divididas por uma avenida e a Praça Internacional, onde um passo te leva de um país a outro sem alfândega. É um fenômeno social e cultural raro no mundo, tchê.",
+        "icone": "🌎"
+      },
+      {
+        "titulo": "Vinícola Almadén — o maior vinhedo da América Latina",
+        "descricao": "Em Santana do Livramento fica a Almadén, do grupo Miolo, cuja propriedade de 1.200 hectares abriga o maior parreiral contínuo em área plantada da América Latina — 450 hectares de vinhedos próprios em espaldeira. O complexo enoturístico tem museu, deck panorâmico sobre os vinhedos e o primeiro free shop de vinhos em uma vinícola do Brasil.",
+        "icone": "🍷"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Praça Internacional",
+        "descricao": "Compartilhada por Brasil e Uruguai, com um marco delimitando a fronteira. Aqui tu literalmente pisa nos dois países ao mesmo tempo.",
+        "icone": "🗿",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Vinícola Almadén (Complexo Enoturístico)",
+        "descricao": "O maior vinhedo da América Latina em área plantada, com visitas guiadas, degustação, deck panorâmico e free shop de vinhos. Reserve com antecedência.",
+        "icone": "🍇",
+        "tipo": "gastronomia"
+      },
+      {
+        "nome": "Free Shops de Rivera",
+        "descricao": "Do lado uruguaio, o maior número de free shops de toda a fronteira: perfumes, bebidas e eletrônicos com preços em dólar.",
+        "icone": "🛍️",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Cerro do Marco",
+        "descricao": "Morro com obelisco que demarca a divisa; lá de cima se vê a linha divisória e as duas cidades. Vista panorâmica dos dois países.",
+        "icone": "⛰️",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Trem do Pampa",
+        "descricao": "Passeio de trem que percorre cerca de 20 km do pampa gaúcho ao som de músicas típicas, com parada na vinícola. Precisa de agendamento.",
+        "icone": "🚂",
+        "tipo": "aventura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Asado / parrilla (churrasco de fronteira)",
+        "onde": "nas parrillas e restaurantes de Livramento e Rivera, que misturam culinária gaúcha e uruguaia",
+        "icone": "🥩"
+      },
+      {
+        "prato": "Vinho Almadén",
+        "onde": "na degustação do Complexo Enoturístico Almadén",
+        "icone": "🍷"
+      },
+      {
+        "prato": "Café e doces",
+        "onde": "La Terraza Cafeteria, frequentada por moradores dos dois lados da fronteira",
+        "icone": "☕"
+      }
+    ],
+    "melhor_epoca": "Como o forte é o comércio e o enoturismo, dá pra ir o ano todo; o outono, na época da colheita da uva, é especial para visitar a Ferradura dos Vinhedos. A cotação do dólar influencia o valor das compras nos free shops.",
+    "como_chegar": "Fica no extremo sul, a cerca de 490 km de Porto Alegre — de 6 a 7 horas de carro por rodovias asfaltadas. Há ônibus da capital ao terminal de Livramento; o aeroporto de Rivera opera voos regionais no Uruguai.",
+    "dica_local": "Leve documento e, se for cruzar pra Rivera de carro, aproveite os estacionamentos das lojas. O sinal do celular brasileiro cai ao avançar no Uruguai, então um chip local ajuda. E não perca o pôr do sol do Cerro do Marco com um pé em cada país.",
+    "slug": "santana-do-livramento"
+  },
+  {
+    "cidade": "Santo Ângelo",
+    "regiao": "Missões Jesuíticas",
+    "saudacao": "Tchê, bem-vindo à Capital das Missões! Aqui em Santo Ângelo a história guarani-jesuítica tá viva em cada pedra — chega mais que a Catedral já te chama.",
+    "sobre": "Santo Ângelo é a Capital das Missões e principal porta de entrada para a Rota Missioneira e as ruínas de São Miguel das Missões. Último dos Sete Povos das Missões a ser fundado, prosperou como o maior produtor de erva-mate da região e guarda a herança jesuítica-guarani na sua imponente catedral e na praça histórica.",
+    "destaques": [
+      {
+        "titulo": "Capital das Missões e porta de entrada dos Sete Povos",
+        "descricao": "Santo Ângelo é o coração da região missioneira, com a Catedral Angelopolitana erguida sobre as ruínas da antiga redução de Santo Ângelo Custódio e a Praça Pinheiro Machado com os 30 arcos que homenageiam os povos missioneiros. É daqui que se parte para São Miguel das Missões, Patrimônio Mundial da UNESCO.",
+        "icone": "⛪"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Catedral Angelopolitana",
+        "descricao": "Erguida a partir de 1929 como reprodução fiel da igreja da redução de São Miguel Arcanjo, mistura traços barrocos, renascentistas e guaranis. Foi construída sobre as ruínas da redução de Santo Ângelo Custódio.",
+        "icone": "⛪",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Praça Pinheiro Machado",
+        "descricao": "Considerada uma das mais bonitas do estado, é um museu a céu aberto com os 30 arcos dos povos missioneiros e o Monumento a Sepé Tiaraju.",
+        "icone": "🌳",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Museu Municipal Dr. José Olavo Machado",
+        "descricao": "Instalado num casarão do fim do século XIX, guarda vestígios das ruínas missioneiras e peças do período pós-jesuítico.",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Ruínas de São Miguel das Missões (nas proximidades)",
+        "descricao": "A cerca de 50-60 km, o sítio arqueológico Patrimônio Mundial da UNESCO com a monumental fachada da igreja de São Miguel Arcanjo e o espetáculo de Som e Luz à noite.",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Fonte Missioneira (São Miguel)",
+        "descricao": "Estrutura de pedra grês construída por jesuítas e guaranis no século XVIII para abastecer a antiga redução; exemplo da engenharia missioneira.",
+        "icone": "⛲",
+        "tipo": "historia"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Chimarrão e erva-mate",
+        "onde": "tradição viva na Praça Pinheiro Machado e em toda a cidade, terra que já foi a maior produtora de erva-mate da região",
+        "icone": "🧉"
+      },
+      {
+        "prato": "Churrasco gaúcho",
+        "onde": "nas churrascarias e restaurantes do centro",
+        "icone": "🥩"
+      },
+      {
+        "prato": "Culinária missioneira",
+        "onde": "não verificado",
+        "icone": "🍽️"
+      }
+    ],
+    "melhor_epoca": "A primavera e o outono trazem clima mais ameno para explorar o centro histórico a pé; combine a visita com o espetáculo de Som e Luz nas ruínas de São Miguel, que funciona à noite.",
+    "como_chegar": "Fica a cerca de 430-460 km de Porto Alegre pelas BR-290 e BR-285. Tem o Aeroporto Sepé Tiaraju, com voos diários da Azul saindo de Porto Alegre, o que faz da cidade o ponto de acesso aéreo às Missões.",
+    "dica_local": "Use Santo Ângelo como base para a Rota das Missões: alugue um carro, porque não há transporte público direto para as ruínas. E veja a catedral e a praça iluminadas à noite, que rende as melhores fotos.",
+    "slug": "santo-angelo"
+  },
+  {
+    "cidade": "Uruguaiana",
+    "regiao": "Pampa e Fronteira",
+    "saudacao": "Bah, tchê, chegou na fronteira com a Argentina! Aqui em Uruguaiana o pampa é largo, o carnaval é quente e o churrasco encontra o sabor argentino.",
+    "sobre": "Maior cidade da fronteira oeste do Rio Grande do Sul, Uruguaiana fica às margens do Rio Uruguai e se liga a Paso de los Libres, na Argentina, pela ponte internacional. Ponto vital de comércio entre Brasil, Argentina e Uruguai, é famosa pelo carnaval, pelas estâncias e por abrigar o maior porto seco rodoviário da América Latina.",
+    "destaques": [
+      {
+        "titulo": "Maior porto seco rodoviário da América Latina",
+        "descricao": "Uruguaiana é um dos maiores pontos de fluxo de fronteira da América Latina e abriga o maior porto seco rodoviário do continente, além de ter tido a primeira ponte construída entre Brasil e Argentina. Fronteira que pulsa comércio e integração, tchê.",
+        "icone": "🌉"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Ponte Internacional Agustín Justo–Getúlio Vargas",
+        "descricao": "Liga Uruguaiana a Paso de los Libres, na Argentina; foi a primeira ponte entre Brasil e Argentina e oferece vista panorâmica do Rio Uruguai.",
+        "icone": "🌉",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Praça Barão do Rio Branco",
+        "descricao": "Considerada por muitos a praça mais bonita da Fronteira-Oeste, cheia de árvores centenárias, chafarizes e gente tomando chimarrão.",
+        "icone": "🌳",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Catedral Sant'Ana",
+        "descricao": "Marco arquitetônico do século XIX no centro da cidade, importante ponto religioso e cultural da fronteira.",
+        "icone": "⛪",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Rio Uruguai e Praia da Formosa",
+        "descricao": "O rio que faz fronteira é palco de pesca e atividades aquáticas; a Praia da Formosa fica no distrito de São Marcos.",
+        "icone": "🏞️",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Carnaval de Uruguaiana",
+        "descricao": "Um dos maiores e mais tradicionais carnavais do sul do Brasil, com desfiles de escolas de samba que atraem turistas de todo o país.",
+        "icone": "🎭",
+        "tipo": "cultura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Parrilla (churrasco de fronteira)",
+        "onde": "Restaurante De la Deni, com influência argentina e uruguaia",
+        "icone": "🥩"
+      },
+      {
+        "prato": "Rodízio de carnes",
+        "onde": "Churrascaria Braseiru's River, em frente ao Brasil Free Shop",
+        "icone": "🍖"
+      },
+      {
+        "prato": "Prato executivo e cafés",
+        "onde": "Café da Praça, na Praça Barão do Rio Branco",
+        "icone": "☕"
+      }
+    ],
+    "melhor_epoca": "Vá no carnaval (fevereiro ou março) para viver um dos maiores desfiles do sul; o outono e a primavera trazem clima ameno para conhecer as estâncias e o rio.",
+    "como_chegar": "Fica na divisa oeste, a cerca de 630 km de Porto Alegre pela BR-290. Tem o Aeroporto Internacional Rubem Berta e ônibus da capital; a cidade também é rota para quem cruza à Argentina.",
+    "dica_local": "Aproveite a fronteira para provar a parrilla no capricho e cruzar a ponte até Paso de los Libres. Na Praça Barão do Rio Branco, sente para um chimarrão como os locais fazem — é o coração social da cidade.",
+    "slug": "uruguaiana"
+  },
+  {
+    "cidade": "São Borja",
+    "regiao": "Missões Jesuíticas",
+    "saudacao": "Tchê, bem-vindo à Terra dos Presidentes! Aqui em São Borja nasceram dois presidentes do Brasil e o dourado frito é de lamber os beiços, oigalê.",
+    "sobre": "Conhecida como a 'Terra dos Presidentes', São Borja é a cidade natal dos ex-presidentes Getúlio Vargas e João Goulart. Foi o primeiro dos Sete Povos das Missões e mantém viva a cultura tradicionalista — é a Capital Gaúcha do Fandango. Faz fronteira com Santo Tomé, na Argentina, às margens do Rio Uruguai.",
+    "destaques": [
+      {
+        "titulo": "Terra dos Presidentes",
+        "descricao": "São Borja é a única cidade do Brasil berço de dois presidentes da República: Getúlio Vargas e João Goulart. Guarda seus museus-casa, o mausoléu de Vargas projetado por Oscar Niemeyer e a memória política que marcou o país, barbaridade de história, tchê.",
+        "icone": "🏛️"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Museu Getúlio Vargas",
+        "descricao": "Instalado na casa onde Vargas viveu (Av. Presidente Vargas, 1772), reúne mais de dois mil objetos, livros, fardas e um rico acervo fotográfico do estadista.",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Memorial João Goulart",
+        "descricao": "Na casa onde viveu o ex-presidente Jango, restaurada e transformada em museu, com vestimentas, fotografias e a trajetória política dele.",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Mausoléu de Getúlio Vargas",
+        "descricao": "Projetado por Oscar Niemeyer e inaugurado em 2004, nos 50 anos da morte de Vargas, guarda os restos mortais do estadista na Praça XV de Novembro.",
+        "icone": "🗿",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Fonte São João Batista",
+        "descricao": "Fonte missioneira da época da redução de São Francisco de Borja, que servia como reserva de água aos jesuítas. Vestígio do primeiro dos Sete Povos.",
+        "icone": "⛲",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Cais do Porto e Rio Uruguai",
+        "descricao": "Ótimo lugar para o pôr do sol e para saborear o típico peixe frito à beira do rio.",
+        "icone": "🌅",
+        "tipo": "natureza"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Dourado frito",
+        "onde": "Restaurante Casa do Peixe, no Cais do Porto, com vista para o Rio Uruguai",
+        "icone": "🐟"
+      },
+      {
+        "prato": "Churrasco e chimarrão",
+        "onde": "nos CTGs e galpões da cidade, Capital Gaúcha do Fandango",
+        "icone": "🥩"
+      },
+      {
+        "prato": "Peixe de água doce",
+        "onde": "nos restaurantes do bairro do Passo, tradicional na cidade",
+        "icone": "🍽️"
+      }
+    ],
+    "melhor_epoca": "O outono e a primavera oferecem clima mais ameno para os passeios históricos e à beira do rio; a cultura do fandango e do tradicionalismo pulsa nos CTGs o ano todo.",
+    "como_chegar": "Fica a cerca de 594 km de Porto Alegre, pelas BR-285 e BR-287. Os aeroportos mais próximos são os de Santo Ângelo e Uruguaiana; há ônibus da capital.",
+    "dica_local": "Comece pelo Museu Getúlio Vargas, que é o ponto de partida dos roteiros, e depois siga para o Memorial Jango e o mausoléu de Niemeyer. Ao entardecer, vá ao Cais do Porto para o peixe frito com vista do Rio Uruguai — é tradição são-borjense.",
+    "slug": "sao-borja"
+  },
+  {
+    "cidade": "Cachoeira do Sul",
+    "regiao": "Região Central",
+    "saudacao": "Bah, tchê, chegou na Capital Nacional do Arroz! Aqui em Cachoeira, a Princesa do Jacuí, o grão é rei e a Ponte do Fandango te dá as boas-vindas.",
+    "sobre": "Quinta cidade mais antiga do Rio Grande do Sul, Cachoeira do Sul é a 'Capital Nacional do Arroz' e a 'Princesa do Jacuí', às margens do Rio Jacuí. Uma das quatro capitais farroupilhas, guarda cartões-postais como o Château d'Eau e a Ponte do Fandango, e é o maior produtor de noz-pecã da América Latina.",
+    "destaques": [
+      {
+        "titulo": "Capital Nacional do Arroz e a Fenarroz",
+        "descricao": "Cachoeira do Sul ostenta o título de Capital Nacional do Arroz e sedia a Fenarroz — Feira Nacional do Arroz, a maior feira orizícola do Mercosul e a segunda maior do mundo. O município também é o maior produtor de noz-pecã da América Latina, barbaridade, tchê.",
+        "icone": "🌾"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Château d'Eau",
+        "descricao": "O principal cartão-postal da cidade, um castelo das águas em estilo eclético de 1925, com a estátua de Netuno no topo. Símbolo de Cachoeira do Sul.",
+        "icone": "🏰",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Ponte do Fandango",
+        "descricao": "Inaugurada em 1961, foi a primeira ponte-barragem construída no Brasil, sobre o Rio Jacuí. Outro cartão-postal da Princesa do Jacuí.",
+        "icone": "🌉",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Catedral Nossa Senhora da Conceição",
+        "descricao": "Templo histórico no centro, com a imagem da padroeira no topo, formando dupla simbólica com o Château d'Eau.",
+        "icone": "⛪",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Ponte de Pedra de Botucaraí",
+        "descricao": "Construção histórica de 1848, um dos pontos de destaque do patrimônio da cidade.",
+        "icone": "🌉",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Museu Municipal e Casa da Aldeia",
+        "descricao": "A Casa da Aldeia é o prédio mais antigo do município; o museu guarda a memória da revolução e da história cachoeirense.",
+        "icone": "🏛️",
+        "tipo": "cultura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Pratos à base de arroz",
+        "onde": "nos restaurantes da cidade, terra da Capital Nacional do Arroz",
+        "icone": "🍚"
+      },
+      {
+        "prato": "Churrasco gaúcho",
+        "onde": "Churrascaria Querência (Av. Júlio de Castilhos, centro)",
+        "icone": "🥩"
+      },
+      {
+        "prato": "Noz-pecã",
+        "onde": "produto típico da região, maior produtora da América Latina",
+        "icone": "🌰"
+      }
+    ],
+    "melhor_epoca": "Dá pra visitar o ano todo, com chuvas bem distribuídas e invernos amenos pela baixa altitude. A Fenarroz é o grande evento da cidade (a edição de 2025 ocorreu em junho).",
+    "como_chegar": "Fica a cerca de 200 km de Porto Alegre, principalmente pela BR-290 e depois a BR-153 (Transbrasiliana). O aeroporto mais próximo é o de Porto Alegre; há ônibus da capital.",
+    "dica_local": "Comece pelo Château d'Eau e pela Ponte do Fandango para as fotos clássicas. Se puder, programe a viagem para a época da Fenarroz e caia na feira — é quando a cidade mostra toda a sua força orizícola.",
+    "slug": "cachoeira-do-sul"
+  },
+  {
+    "cidade": "Osório",
+    "regiao": "Litoral Norte",
+    "saudacao": "Bah, tchê! Chegou em Osório, a porta de entrada do Litoral Norte — aqui o vento sopra tão forte que a gente até faz energia com ele, oigalê!",
+    "sobre": "Osório é um dos principais municípios do Litoral Norte gaúcho, ponto de passagem obrigatório de quem vai de Porto Alegre para as praias pela BR-290 (Free Way). A cidade combina lagoas, o Morro da Borússia e um dos maiores complexos eólicos da América Latina.",
+    "destaques": [
+      {
+        "titulo": "Complexo Eólico de Osório",
+        "descricao": "Com 150 aerogeradores, foi o maior parque eólico da América Latina em sua inauguração (primeiras torres em 2006, restante em 2007); desde 2012 é o segundo maior do continente. As torres têm cerca de 98 a 100 metros de altura e podem ser vistas da BR-290 e de quase todos os bairros da cidade, e o Centro de Visitação oferece tours guiados gratuitos.",
+        "icone": "💨"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Parque Eólico de Osório",
+        "descricao": "Centro de Visitação com tours guiados gratuitos entre os gigantescos aerogeradores. Aberto de quarta a segunda, fechado às terças; leve documento com foto.",
+        "icone": "💨",
+        "tipo": "aventura"
+      },
+      {
+        "nome": "Mirante do Morro da Borússia",
+        "descricao": "Mirante gratuito a cerca de 400 metros de altitude com vista 360° do parque eólico, da cidade, das lagoas e do litoral. Criado como compensação ambiental do parque eólico, é parada popular de quem vai para as praias.",
+        "icone": "⛰️",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Lagoa dos Barros",
+        "descricao": "Lago cênico às margens da Free Way, usado para esportes náuticos e descanso na viagem ao litoral.",
+        "icone": "🏞️",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Cascata da Borússia / Sítio da família Bertoli",
+        "descricao": "Área de cascatas e trilhas no Morro da Borússia, com churrasqueiras e infraestrutura para famílias (entrada paga).",
+        "icone": "💦",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Capela de Santa Rita de Cássia",
+        "descricao": "Igrejinha de arquitetura ornamentada na Vila Borússia, no alto do morro, em frente ao famoso restaurante da região.",
+        "icone": "⛪",
+        "tipo": "cultura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Buffet caseiro no fogão a lenha",
+        "onde": "Dodô Restaurante (Morro da Borússia) — buffet caseiro em casa de arquitetura rústica germânica, decorada como museu de objetos antigos",
+        "icone": "🍲"
+      },
+      {
+        "prato": "Buffet com churrasco",
+        "onde": "Restaurante Monticelli (dentro da rodoviária de Osório) — opção popular e acessível",
+        "icone": "🍖"
+      }
+    ],
+    "melhor_epoca": "Primavera e verão para curtir o litoral e as lagoas; o mirante e o parque eólico podem ser visitados o ano todo.",
+    "como_chegar": "Cerca de 100 km de Porto Alegre, aproximadamente 1h10 de viagem pela BR-290 (Free Way). Também é acessível pela BR-101 (de quem vem do Norte). Há linhas de ônibus regulares.",
+    "dica_local": "Aproveite a subida ao Morro da Borússia para almoçar no Dodô nos fins de semana — mas chegue cedo, porque a fila em dia de sol é longa. O acesso ao mirante é pavimentado, embora estreito e íngreme.",
+    "slug": "osorio"
+  },
+  {
+    "cidade": "Alegrete",
+    "regiao": "Pampa e Fronteira",
+    "saudacao": "Oigalê, tchê! Tu sabe onde fica o Alegrete? Aqui é uma das cidades mais gaúchas do pago, terra de pampa largo, estâncias e boa prosa!",
+    "sobre": "Alegrete é uma das cidades mais tradicionalistas do Rio Grande do Sul, marcada pelo pampa e pelas grandes estâncias. É terra natal do poeta Mario Quintana e do estadista Oswaldo Aranha, e possui um dos maiores desfiles farroupilhas do estado.",
+    "destaques": [
+      {
+        "titulo": "Terceira Capital Farroupilha",
+        "descricao": "Entre 1842 e 1845, Alegrete foi a terceira (e última) capital da República Rio-Grandense durante a Revolução Farroupilha. Foi lá que, em 1843, foi concluída e aprovada a Constituição da República Rio-Grandense, na fase final do conflito.",
+        "icone": "🏛️"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Museu Oswaldo Aranha",
+        "descricao": "Acervo do estadista alegretense, com peças que fizeram parte da história política do Brasil e do estado.",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Praça Getúlio Vargas e casarões históricos",
+        "descricao": "Praça central rodeada de casarões antigos e igrejas, ideal para uma caminhada sem pressa observando a arquitetura.",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Museu do Gaúcho",
+        "descricao": "Guarda parte rica da história do povo gaúcho e das tradições da fronteira.",
+        "icone": "🐎",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Ponte Borges de Medeiros (Ponte do Ibirapuitã)",
+        "descricao": "Ponte histórica sobre o Rio Ibirapuitã, cenário de um dos combates da Revolução de 1923.",
+        "icone": "🌉",
+        "tipo": "historia"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Pastel de carne de ovelha",
+        "onde": "Pastelaria Primeira Opção",
+        "icone": "🥟"
+      },
+      {
+        "prato": "Galeto e comida campeira",
+        "onde": "Galeteria Mário",
+        "icone": "🍗"
+      }
+    ],
+    "melhor_epoca": "Setembro, na Semana Farroupilha, quando ocorre um dos maiores desfiles a cavalo do estado; o clima do pampa é mais ameno no outono e na primavera.",
+    "como_chegar": "Aproximadamente 490 km de Porto Alegre, cerca de 6h45 de viagem, principalmente pela BR-290. Há ônibus interurbanos.",
+    "dica_local": "Reserve tempo para conhecer as obras espalhadas pelo escultor local Chapéu Preto e ouça o 'Canto Alegretense' — praticamente um hino que começa perguntando justamente onde fica o Alegrete.",
+    "slug": "alegrete"
+  },
+  {
+    "cidade": "Dom Pedrito",
+    "regiao": "Pampa e Fronteira",
+    "saudacao": "Bah, tchê, chegou na Capital da Paz! Aqui o pampa é sereno, o vinho é bom e a história pede uma parada tranquila.",
+    "sobre": "Dom Pedrito é uma cidade histórica da Campanha Gaúcha, conhecida como Capital da Paz porque foi em seu território, no Ponche Verde, que se firmou o acordo que encerrou a Revolução Farroupilha em 1845. Hoje a cidade também se destaca no enoturismo do pampa.",
+    "destaques": [
+      {
+        "titulo": "Capital da Paz — fim da Revolução Farroupilha",
+        "descricao": "O tratado de paz que encerrou a Revolução Farroupilha foi firmado no Ponche Verde, em Dom Pedrito, em 1845, o que rendeu à cidade o título de Capital da Paz. O Obelisco da Paz Farroupilha (1945) marca o local histórico, no interior do município.",
+        "icone": "🕊️"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Obelisco da Paz Farroupilha",
+        "descricao": "Monumento de 1945 que simboliza o local onde se tratou a paz do Ponche Verde. Fica a cerca de 38 km da cidade e a visita depende das condições climáticas da estrada.",
+        "icone": "🕊️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Vinícola Guatambu — Estância do Vinho",
+        "descricao": "Uma das vinícolas mais elegantes da Campanha Gaúcha, com tours guiados, almoços harmonizados e degustações. Fica a cerca de 15 km do centro; experiências como o Dia Épico exigem reserva antecipada.",
+        "icone": "🍷",
+        "tipo": "gastronomia"
+      },
+      {
+        "nome": "Caixa d'Água (Praça General Osório)",
+        "descricao": "Instalada em 1935, é um dos marcos arquitetônicos da cidade e, quando aberta, permite ver Dom Pedrito do alto.",
+        "icone": "🏛️",
+        "tipo": "historia"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Almoço harmonizado com vinhos do pampa",
+        "onde": "Restaurante Cumbuca (Hotel Alexandre, Avenida Barão do Upacaraí, 1055)",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Vinhos e espumantes da Campanha",
+        "onde": "Vinícola Guatambu (Estância do Vinho), a cerca de 15 km do centro",
+        "icone": "🍷"
+      }
+    ],
+    "melhor_epoca": "Verão (janeiro a março), época da vindima nas vinícolas; outono e inverno para curtir a gastronomia e os vinhos no ritmo tranquilo do pampa.",
+    "como_chegar": "Cerca de 439 km de Porto Alegre (aproximadamente 6h de viagem), com acesso pela BR-290 e rodovias da Campanha, passando pela região de São Gabriel. Fica entre Bagé e Santana do Livramento.",
+    "dica_local": "Se puder, agende a visita para coincidir com um almoço harmonizado ou o Dia Épico da Guatambu — as vagas são disputadas por visitantes de todo o país e a reserva antecipada é obrigatória.",
+    "slug": "dom-pedrito"
+  },
+  {
+    "cidade": "São Gabriel",
+    "regiao": "Pampa e Fronteira",
+    "saudacao": "Tchê, chegou na Terra dos Marechais! Aqui o pampa é largo, a história é brava e o horizonte não tem fim, barbaridade!",
+    "sobre": "São Gabriel é uma cidade histórica da Campanha Gaúcha, conhecida como Terra dos Marechais por ser berço de importantes militares brasileiros. Guarda um dos maiores conjuntos arquitetônicos tombados do estado e forte ligação com a figura do herói guarani Sepé Tiaraju.",
+    "pontos": [
+      {
+        "nome": "Monumento e Trilha Caminhos de Sepé (Sanga da Bica)",
+        "descricao": "Local onde, segundo a história, o herói guarani Sepé Tiaraju tombou em 1746. Há uma oca inaugurada em 2002 e uma trilha ecológica chamada Caminhos de Sepé.",
+        "icone": "🏹",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Museu Gaúcho da Força Expedicionária Brasileira (FEB)",
+        "descricao": "Um dos maiores acervos sobre a Segunda Guerra Mundial da América do Sul, com documentos, fotos, condecorações e armas da época.",
+        "icone": "🎖️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Conjunto arquitetônico histórico",
+        "descricao": "A cidade tem mais de 200 construções tombadas, com casarões e palacetes que remontam ao tempo em que era chamada de Terra dos Marechais.",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Monumento à Batalha do Caiboaté",
+        "descricao": "Monumento piramidal de pedra na Coxilha do Caiboaté, em memória da batalha da Guerra Guaranítica de 1756.",
+        "icone": "⚔️",
+        "tipo": "historia"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Churrasco e buffet regional",
+        "onde": "Restaurante Batovi — confirmar horário antes de ir",
+        "icone": "🍖"
+      },
+      {
+        "prato": "Galeto e churrasco",
+        "onde": "Brito Galeteria e Churrasqueria",
+        "icone": "🍗"
+      }
+    ],
+    "melhor_epoca": "Outono e primavera, com clima mais ameno no pampa; setembro para as celebrações tradicionalistas.",
+    "como_chegar": "Cerca de 326 km de Porto Alegre, aproximadamente 4h25 de viagem pela BR-290 no sentido oeste. Há ônibus interurbanos.",
+    "dica_local": "Vale reservar tempo para o cemitério da cidade, que virou ponto de curiosidade por causa das histórias de seus 'santos do povo' — figuras milagreiras de devoção popular como a Guapa e o Negrinho da Sanga Funda.",
+    "slug": "sao-gabriel"
+  },
+  {
+    "cidade": "São Luiz Gonzaga",
+    "regiao": "Missões Jesuíticas",
+    "saudacao": "Bah, tchê, bem-vindo a São Luiz Gonzaga! Aqui a alma é missioneira, a música é boa e o carreteiro é de encher os olhos.",
+    "sobre": "São Luiz Gonzaga fica no coração da região das Missões, no noroeste gaúcho, e guarda as ruínas da redução jesuítica de São Lourenço Mártir, parte dos Sete Povos das Missões. A cidade é reconhecida como Capital Estadual da Música Missioneira e Capital Gaúcha do Arroz Carreteiro.",
+    "destaques": [
+      {
+        "titulo": "Sítio Arqueológico de São Lourenço Mártir",
+        "descricao": "Ruínas da redução jesuítica de São Lourenço Mártir, fundada em 1690 e uma das maiores dos Sete Povos das Missões, que chegou a abrigar milhares de indígenas. Fica a cerca de 30 km da cidade, com acesso pela BR-285, e é protegido pelo IPHAN.",
+        "icone": "⛪"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Sítio Arqueológico São Lourenço Mártir",
+        "descricao": "Preserva partes da antiga igreja, da casa dos padres e das latrinas da redução jesuítica, em meio a árvores que se entrelaçaram às ruínas. Fica no distrito de São Lourenço das Missões, a cerca de 30 km da sede.",
+        "icone": "⛪",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Igreja Matriz de São Luiz Gonzaga",
+        "descricao": "No centro, expõe 12 imagens barrocas esculpidas pelos indígenas com auxílio dos padres jesuítas, representando os santos das reduções missioneiras.",
+        "icone": "⛪",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Complexo Turístico Jayme Caetano Braun",
+        "descricao": "Centro de informações turísticas com memorial e salas de vídeo, homenagem ao payador Jayme Caetano Braun, na entrada da cidade.",
+        "icone": "🎤",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Museu Arqueológico (Estação Férrea)",
+        "descricao": "Guarda peças e objetos do período da redução jesuítica, incluindo a pia batismal da antiga missão.",
+        "icone": "🏛️",
+        "tipo": "historia"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Arroz carreteiro",
+        "onde": "Prato símbolo da cidade (Capital Gaúcha do Arroz Carreteiro); servido tradicionalmente em restaurantes locais — restaurante específico não verificado",
+        "icone": "🍚"
+      }
+    ],
+    "melhor_epoca": "Outono e primavera, com temperaturas mais agradáveis; vale conferir a agenda de festivais de música missioneira.",
+    "como_chegar": "Cerca de 491 a 505 km de Porto Alegre, aproximadamente 7h de viagem. Combina bem com um roteiro pela região das Missões (Santo Ângelo, São Miguel das Missões, Entre-Ijuís).",
+    "dica_local": "Combine São Luiz Gonzaga com São Miguel das Missões para entender a história completa dos Sete Povos; e não deixe de provar um bom carreteiro de charque, já que a cidade é a capital gaúcha do prato.",
+    "slug": "sao-luiz-gonzaga"
+  },
+  {
+    "cidade": "São Francisco de Paula",
+    "regiao": "Aparados da Serra",
+    "saudacao": "Bah, tchê, chegou em São Chico! Aqui o ar é de araucária, o frio é de lareira e o pinhão é rei na mesa.",
+    "sobre": "São Francisco de Paula, carinhosamente chamada de São Chico, é uma cidade serrana nos Campos de Cima da Serra, cercada por florestas de araucárias e clima de altitude. É porta de entrada para a região dos Aparados da Serra vindo de Porto Alegre e abriga parte do Parque Estadual do Tainhas.",
+    "pontos": [
+      {
+        "nome": "Lago São Bernardo",
+        "descricao": "No centro da cidade, cercado de araucárias e com passarela de madeira, é ideal para caminhadas e contemplação, especialmente ao entardecer.",
+        "icone": "🏞️",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Parque Estadual do Tainhas",
+        "descricao": "Unidade de conservação com campos de altitude, rios cristalinos e araucárias, compartilhada com Cambará do Sul e Jaquirana. Atrações como o Passo do S têm acesso livre.",
+        "icone": "🌲",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Passo do S / Passo da Ilha",
+        "descricao": "Travessias naturais pelo leito do Rio Tainhas, com cachoeiras e paisagens de campos e araucárias, no Passeio Tour das Águas.",
+        "icone": "💦",
+        "tipo": "aventura"
+      },
+      {
+        "nome": "Parque das 8 Cachoeiras",
+        "descricao": "Refúgio natural com trilhas e cascatas, muito procurado por quem gosta de ecoturismo.",
+        "icone": "💦",
+        "tipo": "natureza"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Galeto ao primo canto e churrasco de pinhão",
+        "onde": "Galeteria Casa da Dinda",
+        "icone": "🍗"
+      },
+      {
+        "prato": "Café colonial e tortas com ingredientes regionais (pinhão, queijo serrano, bergamota)",
+        "onde": "Cafés coloniais na Av. Júlio de Castilhos, no centro",
+        "icone": "☕"
+      }
+    ],
+    "melhor_epoca": "Inverno, para curtir o frio, as neblinas, lareiras e vinhos; outono para as araucárias e o pinhão.",
+    "como_chegar": "Cerca de 110 a 120 km de Porto Alegre, aproximadamente 1h45 a 2h de viagem pela BR-290 e RS-020, passando por Cachoeirinha e Taquara. De Gramado/Canela são cerca de 45 km pela RS-235.",
+    "dica_local": "No outono e inverno, prove o pinhão em todas as formas — do churrasco de pinhão ao café colonial. Alugar um carro dá liberdade para explorar as cachoeiras e os campos de altitude da região.",
+    "slug": "sao-francisco-de-paula"
+  },
+  {
+    "cidade": "Viamão",
+    "regiao": "Vale do Sinos",
+    "saudacao": "Bah, tchê, chegou em Viamão! Poucos sabem, mas foi daqui que nasceu a nossa capital — respeita a mais velha, oigalê!",
+    "sobre": "Viamão é uma das cidades mais antigas do Rio Grande do Sul e o maior município em extensão territorial da Região Metropolitana de Porto Alegre. Combina patrimônio histórico colonial com grandes áreas naturais preservadas, como o Parque Estadual de Itapuã.",
+    "destaques": [
+      {
+        "titulo": "Berço da capital gaúcha",
+        "descricao": "A freguesia de Viamão foi elevada a essa categoria em 1747, e parte de seu território original deu origem à freguesia de Porto Alegre, desmembrada em 1772. Viamão sediou o governo da capitania entre 1763 e 1773, antes de a capital ser transferida para o porto que viria a ser Porto Alegre.",
+        "icone": "🏛️"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Parque Estadual de Itapuã",
+        "descricao": "Protege a última amostra dos ecossistemas originais da Região Metropolitana, com praias de água doce, dunas, lagoas, morros e o Farol de Itapuã (1860). Administrado pela Secretaria de Estado do Meio Ambiente.",
+        "icone": "🏖️",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Igreja Matriz de Nossa Senhora da Conceição",
+        "descricao": "Construída em 1770 no padrão Barroco Rococó Português, é uma das mais antigas do estado e tombada pelo IPHAN.",
+        "icone": "⛪",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Banhados Grande e dos Pachecos",
+        "descricao": "Áreas úmidas de extrema importância para a biodiversidade ao longo do Rio Gravataí.",
+        "icone": "🦆",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Centro Histórico",
+        "descricao": "Roteiro a pé pelas principais edificações da região central, começando pela Igreja Matriz e passando pela Praça Júlio de Castilhos.",
+        "icone": "🏛️",
+        "tipo": "historia"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Churrasco, carreteiro e chimarrão",
+        "onde": "Gastronomia típica gaúcha, encontrada em restaurantes locais e no Mercado Público de Viamão — restaurante específico não verificado",
+        "icone": "🍖"
+      }
+    ],
+    "melhor_epoca": "Primavera e verão, para aproveitar as praias de água doce do Parque de Itapuã (conferir as praias abertas à visitação).",
+    "como_chegar": "Vizinha de Porto Alegre, a cerca de 23 km do centro da capital, aproximadamente 30 minutos de viagem pelas rodovias RS-040 e RS-118.",
+    "dica_local": "O Parque de Itapuã abre apenas parte das praias para visitação em cada temporada — confirme com a administração antes de ir. A trilha ao Morro da Fortaleza, ponto de observação dos Farrapos, precisa ser agendada.",
+    "slug": "viamao"
+  },
+  {
+    "cidade": "Garibaldi",
+    "regiao": "Serra Gaúcha",
+    "saudacao": "Tchê, saúde! Chegou na terra do espumante — aqui até a alegria vem com bolhinhas, oigalê!",
+    "sobre": "Garibaldi é uma charmosa cidade da Serra Gaúcha, no coração da Região da Uva e do Vinho, marcada pela colonização italiana. É reconhecida como a capital brasileira do espumante e é uma das paradas do passeio de trem Maria Fumaça.",
+    "destaques": [
+      {
+        "titulo": "Capital brasileira do espumante",
+        "descricao": "Garibaldi é amplamente reconhecida como a capital brasileira do espumante, abrigando vinícolas de referência como Peterlongo e Chandon. O reconhecimento federal do título de Capital Nacional do Espumante ainda tramitava no Congresso em dezembro de 2025 (Projeto de Lei 9692/2018).",
+        "icone": "🍾"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Rota dos Espumantes",
+        "descricao": "Roteiro por vinícolas famosas como Peterlongo, Chandon e Cooperativa Vinícola Garibaldi, com degustações e visita ao processo de produção do espumante.",
+        "icone": "🍷",
+        "tipo": "gastronomia"
+      },
+      {
+        "nome": "Estação da Maria Fumaça",
+        "descricao": "A estação de Garibaldi é uma das paradas do tradicional passeio de trem Maria Fumaça, com cantorias, brindes e música italiana, no trajeto que liga Bento Gonçalves e Carlos Barbosa.",
+        "icone": "🚂",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Vidraçaria Madelustre (O Mundo do Vidro)",
+        "descricao": "Fundada em 1984, é um dos principais pontos turísticos da cidade, com produção artesanal de vidro nos moldes da escola Murano.",
+        "icone": "🔮",
+        "tipo": "cultura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Espumantes e vinhos finos",
+        "onde": "Vinícolas da Rota dos Espumantes (Peterlongo, Chandon, Cooperativa Vinícola Garibaldi, entre outras)",
+        "icone": "🍾"
+      },
+      {
+        "prato": "Comida colonial italiana",
+        "onde": "Restaurantes da Estrada do Sabor",
+        "icone": "🍝"
+      }
+    ],
+    "melhor_epoca": "Janeiro a março, época da Vindima; outubro, durante a Fenachamp (Festa do Espumante).",
+    "como_chegar": "Cerca de 110 km de Porto Alegre, aproximadamente 1h40 de viagem, na região da Serra Gaúcha próxima a Bento Gonçalves e Caxias do Sul.",
+    "dica_local": "Como Garibaldi é menor e a vizinha Bento Gonçalves tem mais estrutura, muita gente se hospeda em Bento e faz bate-volta. Se estiver sem carro, o passeio de Maria Fumaça e os city tours organizados pela secretaria de turismo são ótimas opções.",
+    "slug": "garibaldi"
+  },
+  {
+    "cidade": "Flores da Cunha",
+    "regiao": "Serra Gaúcha",
+    "saudacao": "Bah, tchê, chegou na Terra do Galo! Aqui o vinho corre solto e a mesa italiana é farta que só — mangia bene!",
+    "sobre": "Flores da Cunha é um município da Serra Gaúcha de forte colonização italiana, também chamada carinhosamente de Terra do Galo. É reconhecida como o maior município produtor de uvas e vinhos do Brasil e faz parte da rota enoturística dos Altos Montes.",
+    "destaques": [
+      {
+        "titulo": "Maior produtor de vinhos do Brasil",
+        "descricao": "Desde 1994, Flores da Cunha ostenta o título de maior município produtor de uvas e vinhos do país (dados do Cadastro Vinícola do RS/Ibravin), com produção que superou 120 milhões de litros de vinho por ano. O título refere-se ao volume de produção, sobretudo de vinhos de mesa — distinto do reconhecimento de Garibaldi como capital do espumante.",
+        "icone": "🍇"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Rota dos Vinhos dos Altos Montes",
+        "descricao": "Roteiro enoturístico que envolve Flores da Cunha e Nova Pádua, passando por vinícolas como Luiz Argenta, Viapiana e outras. Os Altos Montes são também uma Indicação de Procedência (IP) do vinho brasileiro.",
+        "icone": "🍷",
+        "tipo": "gastronomia"
+      },
+      {
+        "nome": "Casarão dos Veronese",
+        "descricao": "Edifício de 1898 em pedra aparente, construído por Felice Veronese; hoje funciona como museu e centro cultural, exemplo da arquitetura italiana.",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Otávio Rocha (Vila Colonial)",
+        "descricao": "Distrito de forte tradição italiana, com roteiro colonial, restaurantes típicos e vida no interior encantador da serra.",
+        "icone": "🍇",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Cascata Muraro",
+        "descricao": "Queda d'água de cerca de 18 metros na localidade do Carmo, com trilha curta e vestígios de uma antiga usina hidrelétrica.",
+        "icone": "💦",
+        "tipo": "natureza"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Almoço colonial italiano (galeto, massas, polenta)",
+        "onde": "Dona Adélia Hotel e Restaurante (distrito de Otávio Rocha)",
+        "icone": "🍝"
+      },
+      {
+        "prato": "Menu degustação harmonizado com vinhos",
+        "onde": "Clô Restaurante (Vinícola Luiz Argenta)",
+        "icone": "🍷"
+      }
+    ],
+    "melhor_epoca": "Janeiro e fevereiro, na época da vindima, quando as vinícolas oferecem ampla programação; outono e inverno para a gastronomia e os vinhos da serra.",
+    "como_chegar": "Cerca de 140 a 150 km de Porto Alegre, aproximadamente 2h de viagem, com acesso via Caxias do Sul (a cerca de 20 km) pela Rodovia Synval Guazzelli e ERS-122.",
+    "dica_local": "Vá com fome: nos bufês coloniais, não deixe de provar o bife à milanesa fininho e a versão local da massa carbonara (sem nata). O interior, com os roteiros de Otávio Rocha e Caminhos do Alfredo, é onde está o melhor da experiência.",
+    "slug": "flores-da-cunha"
+  },
+  {
+    "cidade": "Canoas",
+    "regiao": "Vale do Sinos",
+    "saudacao": "Bah, tchê, chegou em Canoas! Aqui o xis é levado a sério — tem lei e tudo, oigalê!",
+    "sobre": "Canoas é a terceira maior economia do Rio Grande do Sul e uma das cidades mais populosas do estado, integrando a Região Metropolitana de Porto Alegre. É um polo industrial e de serviços, oficialmente reconhecida por sua tradição no preparo do xis, o lanche típico gaúcho.",
+    "destaques": [
+      {
+        "titulo": "Cidade Referência do Típico Xis Gaúcho",
+        "descricao": "Por lei municipal (nº 5.990/2016, originada do Projeto de Lei 15/2015, aprovado pela Câmara em 17 de dezembro de 2015), Canoas é oficialmente reconhecida como a 'Cidade Referência do Típico Xis Gaúcho', com o Dia do Xis celebrado anualmente em 28 de maio. A cidade tem centenas de lanchonetes especializadas no lanche.",
+        "icone": "🍔"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "ParkShopping Canoas",
+        "descricao": "Inaugurado em 2017, é um dos maiores shoppings da região, integrado a um parque municipal por passarela, com centenas de lojas, cinema e uma ampla arena de patinação no gelo. Atrai público de toda a Região Metropolitana e do Vale do Sinos.",
+        "icone": "🛍️",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Roteiro do Xis",
+        "descricao": "As centenas de lanchonetes especializadas espalhadas pela cidade fazem do xis uma verdadeira instituição gastronômica local, com variados tamanhos e sabores.",
+        "icone": "🍔",
+        "tipo": "gastronomia"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Xis gaúcho",
+        "onde": "Lancherias tradicionais da cidade, como Rapach Lanches (várias unidades) e Cia do Xis (Centro)",
+        "icone": "🍔"
+      }
+    ],
+    "melhor_epoca": "O ano todo; 28 de maio é o Dia do Xis.",
+    "como_chegar": "Vizinha imediata de Porto Alegre, a cerca de 15 a 18 km do centro da capital, aproximadamente 20 minutos pela BR-116 / BR-290. Fica a cerca de 11 km do Aeroporto Salgado Filho.",
+    "dica_local": "O Dia do Xis, em 28 de maio, é a melhor data para se jogar num roteiro de lancherias e provar as variações do lanche. Vale saber: Santa Maria, na Região Central, promove seu próprio Festival do Xis (com 4ª edição marcada para nov/2026) e se apresenta como 'Cidade Nacional do Xis' — cada cidade defende com orgulho a sua própria tradição.",
+    "slug": "canoas"
+  },
+  {
+    "cidade": "Cambará do Sul",
+    "regiao": "Aparados da Serra",
+    "saudacao": "Bah, xirú! Bem-vindo à Terra dos Cânions — aqui o campo termina de repente e vira paredão de 700 metros. Segura o coração!",
+    "sobre": "Cidade pequena (pouco mais de 6 mil habitantes), emancipada de São Francisco de Paula em 1963. O nome vem do tupi-guarani e batiza a árvore que dá sombra na praça central. É a base para visitar os Parques Nacionais de Aparados da Serra e Serra Geral.",
+    "pontos": [
+      {
+        "nome": "Cânion Itaimbezinho",
+        "descricao": "O mais visitado da região, com paredões de até 720 metros de profundidade e cachoeiras visíveis dos mirantes.",
+        "icone": "🏔️",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Cânion Fortaleza",
+        "descricao": "Vista ampla sobre um dos cânions mais fotografados do Brasil, com trilha mais leve que o Itaimbezinho.",
+        "icone": "🏔️",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Trilha do Rio do Boi",
+        "descricao": "Passeio 'por baixo' do cânion, andando dentro do leito do rio — pra quem quer outra perspectiva.",
+        "icone": "🥾",
+        "tipo": "aventura"
+      },
+      {
+        "nome": "Praça Central",
+        "descricao": "Ponto de encontro da cidade, com a árvore de cambará que dá nome ao município.",
+        "icone": "🌳",
+        "tipo": "cultura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Truta serrana em crosta de pinhão",
+        "onde": "Restaurante A Taberna",
+        "icone": "🐟"
+      },
+      {
+        "prato": "Galeto com polenta e queijo serrano",
+        "onde": "Galeteria O Casarão (conhecida como 'Restaurante do Padre')",
+        "icone": "🍗"
+      },
+      {
+        "prato": "Geleias artesanais e produtos coloniais",
+        "onde": "Sabores da Querência",
+        "icone": "🍯"
+      }
+    ],
+    "melhor_epoca": "Visitável o ano todo — inverno traz o clima de lareira e fondue nos restaurantes; primavera e verão facilitam as trilhas, mas leva agasalho sempre: vento e neblina nas bordas dos cânions são constantes.",
+    "como_chegar": "Cerca de 200km de Porto Alegre (3-4h de carro) pela BR-116, RS-239 (Taquara), RS-020 (São Francisco de Paula) e RS-427. Sem aeroporto próprio; ônibus disponível com baldeação em Caxias do Sul ou São Francisco de Paula.",
+    "dica_local": "O PARNA Aparados da Serra fecha às segundas (exceto véspera de feriado) — checa antes de ir. E não subestima o frio: mesmo no verão, a borda do cânion pode surpreender.",
+    "slug": "cambara-do-sul"
+  },
+  {
+    "cidade": "São João do Polêsine",
+    "regiao": "Região Central",
+    "saudacao": "Oigalê! Bora viajar 233 milhões de anos no tempo? Aqui na Quarta Colônia os dinossauros mais antigos do planeta deixaram seu rastro, tchê.",
+    "sobre": "Cidade pequena (cerca de 2.700 habitantes) na Região Central do RS, colonizada por imigrantes italianos que batizaram o lugar em referência à região do Pó, na Itália. Parte do Geoparque da Quarta Colônia, reconhecido pela UNESCO. Sede do CAPPA/UFSM, com os fósseis de dinossauro mais antigos já identificados no mundo (233 milhões de anos).",
+    "destaques": [
+      {
+        "titulo": "Dinossauros mais antigos do mundo",
+        "descricao": "O CAPPA/UFSM guarda os fósseis de dinossauro mais antigos já identificados no planeta, com 233 milhões de anos — incluindo o Buriolestes schultzi. É parte do Geoparque da Quarta Colônia, reconhecido pela UNESCO.",
+        "icone": "🦖"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "CAPPA — Centro de Apoio à Pesquisa Paleontológica da Quarta Colônia",
+        "descricao": "Acervo com fósseis triássicos únicos no mundo, incluindo o Buriolestes schultzi; visitação gratuita com paleontólogos.",
+        "icone": "🦖",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Distrito de Vale Vêneto",
+        "descricao": "Vilarejo colonial italiano com a Igreja de Corpus Christi, o Calvário com 14 estações de 1913 e o Museu do Imigrante Italiano Eduardo Marcuzzo.",
+        "icone": "⛪",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Praça Central com esculturas de dinossauros",
+        "descricao": "Réplicas em tamanho real pra fotos, ponto final do tour paleontológico.",
+        "icone": "🦖",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Rota dos Dinossauros",
+        "descricao": "Circuito de cicloturismo autoguiado de ~200km passando por 9 municípios da Quarta Colônia.",
+        "icone": "🚴",
+        "tipo": "aventura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Sopa de agnolini e bruschettas",
+        "onde": "Romilda Restaurante (Vale Vêneto)",
+        "icone": "🍲"
+      },
+      {
+        "prato": "Bife à milanesa e risoto de frango",
+        "onde": "Arrivo78 Ristorante",
+        "icone": "🍝"
+      },
+      {
+        "prato": "Rodízio de massas italianas",
+        "onde": "Restaurante Rio Vale (aos domingos, com reserva)",
+        "icone": "🍝"
+      }
+    ],
+    "melhor_epoca": "Julho costuma ser o auge cultural, com a Semana Cultural Italiana de Vale Vêneto e o Festival Internacional de Inverno da UFSM — mas o CAPPA funciona o ano todo, inclusive fins de semana.",
+    "como_chegar": "Cerca de 280km de Porto Alegre, no coração da Região Central. Sem aeroporto próprio; o mais próximo é o aeroporto de Santa Maria, a cerca de 30-40km.",
+    "dica_local": "Reserva o restaurante em Vale Vêneto com antecedência — a maioria funciona só com agendamento, principalmente fora de temporada. E a visita ao CAPPA é gratuita, mas vale confirmar horário antes de ir (9h-11h30 e 13h30-17h).",
+    "slug": "sao-joao-do-polesine"
+  },
+  {
+    "cidade": "Mostardas",
+    "regiao": "Litoral Gaúcho",
+    "saudacao": "Bah, tchê, chegou em Mostardas! Prepara o binóculo que aqui os flamingos vêm de bem longe pra dar oi.",
+    "sobre": "Mostardas fica cravada num istmo estreito entre a Lagoa dos Patos e o Oceano Atlântico, no litoral médio gaúcho, com 12.090 habitantes (Censo IBGE 2022). Colonizada por açorianos a partir de 1773, preserva um centro histórico tombado pelo município desde 1989, com casario de arquitetura portuguesa e telhados de eira e beira. É uma das cidades-porta do Parque Nacional da Lagoa do Peixe, onde fica a sede administrativa do parque (ICMBio).",
+    "destaques": [
+      {
+        "titulo": "Parque Nacional da Lagoa do Peixe",
+        "descricao": "Santuário de aves migratórias designado Sítio Ramsar de importância internacional em 1993 e reconhecido pela Rede Hemisférica de Reservas para Aves Limícolas (WHSRN) desde 1991. O parque tem 275 espécies de aves catalogadas, sendo 35 migratórias — algumas voam quase 15.000 km pelas Américas até chegar aqui. A sede administrativa, gerida pelo ICMBio, fica em Mostardas.",
+        "icone": "🦩"
+      },
+      {
+        "titulo": "Festival Brasileiro das Aves Migratórias",
+        "descricao": "Evento de relevância nacional realizado em parceria entre o Município de Mostardas e o ICMBio. A 16ª edição ocorreu de 20 a 23 de novembro de 2025, com palestras, oficinas e observação de aves.",
+        "icone": "🐦"
+      },
+      {
+        "titulo": "Berço de Menotti Garibaldi e centro histórico açoriano",
+        "descricao": "Mostardas é a terra natal de Domenico Menotti Garibaldi, primogênito de Anita e Giuseppe Garibaldi, nascido em 1840 na localidade de São Simão. O centro histórico açoriano tombado preserva casario do século XVIII e a Igreja Matriz São Luiz Rei, de 1773.",
+        "icone": "⛪"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Igreja Matriz São Luiz Rei",
+        "descricao": "Construída em 1773, é uma das igrejas mais antigas do Rio Grande do Sul, no coração do centro histórico açoriano.",
+        "icone": "⛪",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Centro Histórico de Mostardas",
+        "descricao": "Conjunto tombado desde 1989, com casario açoriano de telhados de eira e beira e fachadas coloridas.",
+        "icone": "🏘️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Farol Cristóvão Pereira",
+        "descricao": "Farol histórico à beira da Lagoa dos Patos, em área de dunas e praias desertas do município.",
+        "icone": "🗼",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Marco histórico de São Simão",
+        "descricao": "Local onde Anita Garibaldi deu à luz Menotti Garibaldi em 1840; ponto de romaria cívica.",
+        "icone": "📜",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Artesanato do cobertor mostardeiro",
+        "descricao": "Tradição de tecelagem em lã de ovelha crua, vendida diretamente pelas artesãs no centro da cidade.",
+        "icone": "🧶",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Lagoa do Bacupari e Dunas",
+        "descricao": "Considerada por muitas fontes a mais bela praia de água doce do RS, com águas rasas e cristalinas cercadas por dunas de areia clara — ótima para caiaque, stand-up paddle e passeios de 4x4. Fica a cerca de 82km do centro (sentido Osório), com trecho final de estrada de saibro.",
+        "icone": "🏖️",
+        "tipo": "natureza"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Peixe e camarão frescos",
+        "onde": "Restaurante Pousada Pouso Alegre",
+        "icone": "🐟"
+      },
+      {
+        "prato": "Pizza e frutos do mar",
+        "onde": "Pizzaria e Restaurante Maresia",
+        "icone": "🍕"
+      }
+    ],
+    "melhor_epoca": "A melhor janela para observação de aves vai de outubro a maio. O verão favorece as praias e a Lagoa do Bacupari.",
+    "como_chegar": "Cerca de 230 km de Porto Alegre. Pela RS-040 até Capivari do Sul, seguindo pela RST-101 até Mostardas.",
+    "dica_local": "Contrate um guia local para entrar no Parque Nacional da Lagoa do Peixe — as trilhas são de areia e a barra onde lagoa e mar se encontram concentra a maior quantidade de aves. Aproveite para levar de lembrança um cobertor mostardeiro feito à mão pelas artesãs do centro.",
+    "slug": "mostardas"
+  },
+  {
+    "cidade": "Tavares",
+    "regiao": "Litoral Gaúcho",
+    "saudacao": "Oigalê, bem-vindo a Tavares, tchê! Aqui é sossego de sobra, entre a lagoa e o mar, com passarinho voando de longe.",
+    "sobre": "Tavares é um pequeno município do litoral médio gaúcho, encaixado entre a Lagoa dos Patos e o Oceano Atlântico. É o principal município do Parque Nacional da Lagoa do Peixe, abrigando cerca de 80% da área do parque e 100% da Lagoa do Peixe propriamente dita.",
+    "destaques": [
+      {
+        "titulo": "Coração do Parque Nacional da Lagoa do Peixe",
+        "descricao": "Tavares abriga cerca de 80% da área do Parque Nacional da Lagoa do Peixe e a totalidade da Lagoa do Peixe, o principal ponto de concentração de aves migratórias do parque.",
+        "icone": "🦅"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Lagoa do Peixe",
+        "descricao": "Laguna rasa (média de 60 cm) e cerca de 35 km de extensão, cujas águas salobras atraem grandes bandos de aves. Fica inteiramente dentro do município de Tavares.",
+        "icone": "🌊",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Dunas e praias desertas",
+        "descricao": "Extensos campos de dunas preservadas em Área de Proteção Ambiental e praias quase intocadas à beira do Atlântico.",
+        "icone": "🏖️",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Margens da Lagoa dos Patos",
+        "descricao": "Local do povoamento original de Tavares, com praias de areia branca e águas mornas.",
+        "icone": "🌅",
+        "tipo": "natureza"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Refeições locais e internacionais",
+        "onde": "Hotel e Restaurante Parque da Lagoa",
+        "icone": "🍽️"
+      },
+      {
+        "prato": "Pratos típicos da cozinha açoriana",
+        "onde": "Restaurante Costa do Mar",
+        "icone": "🐟"
+      }
+    ],
+    "melhor_epoca": "De outubro a maio para observação de aves; o verão para as praias e a Lagoa dos Patos.",
+    "como_chegar": "Cerca de 230 km de Porto Alegre. Pela RS-040 até Capivari do Sul e depois RST-101; o acesso ao parque em geral exige veículo 4x4.",
+    "dica_local": "Para entrar no parque pelo lado de Tavares, contrate uma expedição em 4x4 com guia — o passeio depende da maré. É a forma mais segura de chegar à barra da Lagoa do Peixe, onde as aves se concentram.",
+    "slug": "tavares"
+  },
+  {
+    "cidade": "Nova Esperança do Sul",
+    "regiao": "Missões Jesuíticas",
+    "saudacao": "Bah, tchê, chegou na Capital da Bota! Aqui o couro é arte e a natureza guarda uma gruta de tirar o fôlego.",
+    "sobre": "Nova Esperança do Sul é uma cidade interiorana do Vale do Jaguari, a cerca de 430 km de Porto Alegre. É conhecida como 'Capital da Bota', título reconhecido por lei estadual em razão de mais de um século de tradição em selaria e trabalho em couro.",
+    "destaques": [
+      {
+        "titulo": "Gruta Subterrânea Nossa Senhora de Fátima",
+        "descricao": "Enorme caverna de arenito na comunidade de Linha Um, a 7-9 km do centro, considerada uma das maiores grutas subterrâneas da América Latina (fontes divergem: 1.000 a 5.000 pessoas de capacidade). Possui duas aberturas naturais no teto e é palco da Romaria de Nossa Senhora de Fátima, último domingo de janeiro.",
+        "icone": "⛰️"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Gruta Nossa Senhora de Fátima",
+        "descricao": "Caverna de arenito com túneis, duas claraboias naturais e altar dedicado a Nossa Senhora de Fátima.",
+        "icone": "🕳️",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Cascata Véu de Noiva",
+        "descricao": "Queda d'água que faz parte do mesmo complexo rochoso da gruta, acessada por trilha.",
+        "icone": "💧",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Cascata dos Corvos",
+        "descricao": "Queda de cerca de 29 metros, batizada pelas aves de rapina que nidificam nos paredões rochosos ao redor.",
+        "icone": "🌊",
+        "tipo": "aventura"
+      },
+      {
+        "nome": "Tradição da Bota e da Selaria",
+        "descricao": "A 'Capital da Bota' mantém mais de um século de tradição em couro e artigos gaúchos.",
+        "icone": "🥾",
+        "tipo": "cultura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Comida caseira",
+        "onde": "Restaurante Tio Maneco",
+        "icone": "🍽️"
+      }
+    ],
+    "melhor_epoca": "A Romaria de Nossa Senhora de Fátima ocorre no último domingo de janeiro. As cascatas rendem mais no verão e na primavera.",
+    "como_chegar": "Cerca de 430 km de Porto Alegre e 142 km de Santa Maria, pela BR-287. A gruta fica a 7-9 km do centro, na comunidade de Linha Um.",
+    "dica_local": "Reserve tempo para a trilha que liga a gruta às cascatas Véu de Noiva e dos Corvos. E aproveite para conhecer uma selaria local.",
+    "slug": "nova-esperanca-do-sul"
+  },
+  {
+    "cidade": "São Lourenço do Sul",
+    "regiao": "Litoral Gaúcho",
+    "saudacao": "Tri contente de te ver na Pérola da Lagoa, tchê! Aqui a praia é de água doce e a cuca é pomerana.",
+    "sobre": "Conhecida como 'Pérola da Lagoa', São Lourenço do Sul fica às margens da Lagoa dos Patos, na Costa Doce gaúcha, com 41.989 habitantes (Censo IBGE 2022). Sua colonização, iniciada em 1858 pelo prussiano Jacob Rheingantz, deixou forte herança pomerana (alemã).",
+    "pontos": [
+      {
+        "nome": "Praia da Barrinha",
+        "descricao": "A maior e mais frequentada praia de água doce da cidade, com boa infraestrutura à beira da Lagoa dos Patos.",
+        "icone": "🏖️",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Praia das Nereidas",
+        "descricao": "Praia mais procurada por jovens e por esportes náuticos.",
+        "icone": "🏄",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Caminho Pomerano",
+        "descricao": "Roteiro rural que resgata a cultura pomerana, com lendas, danças, dialeto e gastronomia; visitas por agendamento.",
+        "icone": "🚜",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Casa do Colonizador Jacob Rheingantz",
+        "descricao": "Residência erguida por volta de 1860 pelo fundador da colônia.",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Museu Histórico de São Lourenço do Sul",
+        "descricao": "Conta a história da colonização alemã com objetos, ferramentas e utensílios de época.",
+        "icone": "🏺",
+        "tipo": "historia"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Cuca pomerana",
+        "onde": "Casa das Cucas Pomeranas (Caminho Pomerano)",
+        "icone": "🍰"
+      },
+      {
+        "prato": "Galeto e comida caseira",
+        "onde": "Nona Bray Galeteria e Restaurante",
+        "icone": "🍗"
+      },
+      {
+        "prato": "Peito de ganso defumado e queijos coloniais",
+        "onde": "Família Klasen (Caminho Pomerano, visita por agendamento)",
+        "icone": "🧀"
+      }
+    ],
+    "melhor_epoca": "O verão é a alta temporada para as praias de água doce. Fora do verão, ótimo para turismo rural pomerano.",
+    "como_chegar": "Cerca de 215 km de Porto Alegre pela BR-116. Fica a 73 km de Pelotas; aeroporto mais próximo é o de Pelotas (64 km).",
+    "dica_local": "Vá ao fim da tarde à orla para o pôr do sol sobre a Lagoa dos Patos. Reserve um dia para o Caminho Pomerano — ligue antes, muitas propriedades atendem só com agendamento.",
+    "slug": "sao-lourenco-do-sul"
+  },
+  {
+    "cidade": "Santiago",
+    "regiao": "Missões Jesuíticas",
+    "saudacao": "Bah, tchê, chegou na Terra dos Poetas! Aqui até o vento parece declamar verso pelas esquinas.",
+    "sobre": "Santiago é um polo regional do Vale do Jaguari, na região das Missões, com cerca de 50 mil habitantes e origem ligada às missões jesuíticas do século XVIII. É oficialmente reconhecida como 'Terra dos Poetas' por lei estadual, em homenagem à sua forte tradição literária — é terra natal do escritor Caio Fernando Abreu. A cidade cultiva com orgulho as tradições gaúchas em cavalgadas, rodeios e cultura campeira.",
+    "pontos": [
+      {
+        "nome": "Rua dos Poetas",
+        "descricao": "Ao longo de quatro quadras, calçadas exibem bustos, poemas e monumentos em homenagem a mais de 30 escritores.",
+        "icone": "📖",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Museu Pedro Palmeiro",
+        "descricao": "Museu histórico com mais de 2 mil peças catalogadas, entre armas de revoluções, estátuas jesuíticas e documentos.",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Praça Moisés Viana",
+        "descricao": "Praça central bem arborizada, com quiosques de informações turísticas e artesanato.",
+        "icone": "🌳",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Casa do Poeta",
+        "descricao": "Espaço cultural com acervo de escritores santiaguenses.",
+        "icone": "✍️",
+        "tipo": "cultura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Churrasco gaúcho / rodízio",
+        "onde": "Churrascaria do Batista (BR-287, Km 398)",
+        "icone": "🥩"
+      }
+    ],
+    "melhor_epoca": "A região pode ser visitada o ano todo. A Semana Farroupilha (setembro) intensifica as tradições gaúchas.",
+    "como_chegar": "Cerca de 450 km de Porto Alegre, com acesso pela BR-287.",
+    "dica_local": "Faça o passeio a pé pela Rua dos Poetas lendo os versos gravados nas placas — é o cartão de visita da cidade. Um causo famoso conta que o payador Jayme Caetano Braun (nascido na Timbaúva, hoje Bossoroca) arrancou aplausos com uma trova numa visita à cidade e virou, de coração, 'santiaguense honorário'. Depois, um bom churrasco encerra o dia à moda da fronteira.",
+    "slug": "santiago"
+  },
+  {
+    "cidade": "Carlos Barbosa",
+    "regiao": "Serra Gaúcha",
+    "saudacao": "Oigalê, tchê, bem-vindo a Carlos Barbosa — a terra da faca, do queijo e do futsal campeão!",
+    "sobre": "Carlos Barbosa fica na Região Uva e Vinho da Serra Gaúcha, pertencendo à Primeira Colônia da Imigração Italiana no RS, junto de Garibaldi e Bento Gonçalves. É conhecida como a 'terra da faca e do queijo', berço de empresas centenárias como a Tramontina e a Cooperativa Santa Clara. É também oficialmente a Capital Nacional do Futsal, por lei federal.",
+    "destaques": [
+      {
+        "titulo": "Capital Nacional do Futsal",
+        "descricao": "Carlos Barbosa recebeu o título de Capital Nacional do Futsal pela Lei federal nº 13.503, de 1º de novembro de 2017, em reconhecimento à trajetória da Associação Carlos Barbosa de Futsal (ACBF).",
+        "icone": "⚽"
+      }
+    ],
+    "pontos": [
+      {
+        "nome": "Passeio de trem Maria Fumaça",
+        "descricao": "Trem a vapor histórico que percorre cerca de 23 km entre Bento Gonçalves, Garibaldi e Carlos Barbosa.",
+        "icone": "🚂",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Estação Ferroviária de Carlos Barbosa",
+        "descricao": "Ponto de embarque/desembarque do Trem do Vinho.",
+        "icone": "🚉",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Tramontina e cultura da faca",
+        "descricao": "A cidade é sede da centenária Tramontina; a tradição em cutelaria é uma das marcas do município.",
+        "icone": "🔪",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Cooperativa Santa Clara e queijarias",
+        "descricao": "Forte tradição leiteira sustenta queijarias premiadas e o festival Festiqueijo.",
+        "icone": "🧀",
+        "tipo": "gastronomia"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Galeto, sopa de capeletti e polenta",
+        "onde": "Restaurante e Café Colonial Nono Otávio",
+        "icone": "🍗"
+      },
+      {
+        "prato": "Comida típica italiana",
+        "onde": "Cantina D'Noni",
+        "icone": "🍝"
+      },
+      {
+        "prato": "Queijos coloniais e delícias do queijo",
+        "onde": "Festiqueijo (festival anual, junho/julho) e Cooperativa Santa Clara",
+        "icone": "🧀"
+      }
+    ],
+    "melhor_epoca": "O Festiqueijo acontece de junho a julho. O inverno serrano valoriza a experiência do queijo, do vinho e do trem.",
+    "como_chegar": "Cerca de 100 km de Porto Alegre, a 17 km de Bento Gonçalves.",
+    "dica_local": "Combine o Maria Fumaça com um almoço em cantina italiana e uma parada na Cooperativa Santa Clara. Em julho, o Festiqueijo é imperdível.",
+    "slug": "carlos-barbosa"
+  },
+  {
+    "cidade": "Gravataí",
+    "regiao": "Vale do Sinos",
+    "saudacao": "Bah, tchê, bem-vindo a Gravataí, a antiga Aldeia dos Anjos, coladinha na capital!",
+    "sobre": "Gravataí é uma grande cidade da Região Metropolitana de Porto Alegre, a cerca de 23 km da capital, com 265.070 habitantes (Censo IBGE 2022). Nascida como Aldeia de Nossa Senhora dos Anjos em 1763, tornou-se um importante polo industrial após a instalação do complexo da General Motors.",
+    "pontos": [
+      {
+        "nome": "Igreja Matriz Nossa Senhora dos Anjos",
+        "descricao": "Templo em estilo barroco português cuja construção começou em 1772.",
+        "icone": "⛪",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Museu Municipal Agostinho Martha",
+        "descricao": "Instalado em sobrado colonial português de 1870, reúne acervo da economia colonial da região.",
+        "icone": "🏛️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Parque dos Anjos",
+        "descricao": "Área de lazer com trilhas para caminhada e espaços esportivos.",
+        "icone": "🌳",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "CTG Aldeia dos Anjos",
+        "descricao": "Um dos centros de tradições gaúchas mais tradicionais da cidade.",
+        "icone": "🐎",
+        "tipo": "cultura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Churrasco gaúcho",
+        "onde": "não verificado",
+        "icone": "🥩"
+      }
+    ],
+    "melhor_epoca": "Pode ser visitada o ano todo. O Rodeio Internacional do Mercosul e a Festa de Nossa Senhora dos Anjos movimentam o calendário local.",
+    "como_chegar": "Cerca de 23 km de Porto Alegre, com acesso rápido pela Freeway (BR-290).",
+    "dica_local": "Vale uma parada no centro histórico para ver a Igreja Matriz e o Museu Agostinho Martha. Para lazer ao ar livre, os parques municipais são o melhor programa.",
+    "slug": "gravatai"
+  },
+  {
+    "cidade": "Imbé",
+    "regiao": "Litoral Norte",
+    "saudacao": "Tri legal te ver em Imbé, tchê! Aqui o rio encontra o mar e os botos ajudam a pescar.",
+    "sobre": "Imbé é uma cidade praiana do Litoral Norte gaúcho, na foz do Rio Tramandaí, ligada à vizinha Tramandaí pela Ponte Giuseppe Garibaldi. Tem cerca de 15 km de praias e uma orla central revitalizada.",
+    "pontos": [
+      {
+        "nome": "Barra do Rio Tramandaí (Guia Corrente)",
+        "descricao": "Encontro do rio com o mar, ponto onde os botos ajudam os pescadores; local de pesca, caminhada e pôr do sol.",
+        "icone": "🐬",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Museu de Ciências Naturais (MUCIN/CECLIMAR/UFRGS)",
+        "descricao": "Museu da UFRGS especializado em fauna marinha e costeira, com aquários e acervo científico.",
+        "icone": "🐢",
+        "tipo": "cultura"
+      },
+      {
+        "nome": "Lago do Braço Morto",
+        "descricao": "Antigo braço do Rio Tramandaí, área de lazer com pedalinhos, caiaques e pista de caminhada.",
+        "icone": "🚣",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Praia central de Imbé (da Barra)",
+        "descricao": "Praia com a melhor estrutura turística do município, calçadão e quiosques.",
+        "icone": "🏖️",
+        "tipo": "natureza"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Frutos do mar e peixe fresco",
+        "onde": "não verificado",
+        "icone": "🐟"
+      }
+    ],
+    "melhor_epoca": "O verão é a alta temporada das praias; a orla revitalizada também recebe visitantes fora de temporada.",
+    "como_chegar": "Acesso a partir de Porto Alegre pela ERS-389 (Estrada do Mar), via Osório, ou de Tramandaí pela Ponte Giuseppe Garibaldi.",
+    "dica_local": "Vá ao fim da tarde até a barra do Rio Tramandaí, no lado de Imbé, para ver os botos ajudando os pescadores a capturar tainhas.",
+    "slug": "imbe"
+  },
+  {
+    "cidade": "Quaraí",
+    "regiao": "Pampa e Fronteira",
+    "saudacao": "Bah, tchê, bem-vindo a Quaraí, na fronteira da paz! Aqui se toma um mate olhando pro Uruguai.",
+    "sobre": "Quaraí é uma cidade da Fronteira Oeste gaúcha, separada da cidade uruguaia de Artigas pelo Rio Quaraí e ligada a ela pela Ponte Internacional da Concórdia, de 1968. Está a cerca de 600 km de Porto Alegre. Tem no Cerro do Jarau — formação rochosa consagrada na obra 'Salamanca do Jarau', de Simões Lopes Neto — sua principal atração.",
+    "pontos": [
+      {
+        "nome": "Cerro do Jarau",
+        "descricao": "Formação rochosa de grande valor geológico e cultural, ligada à lenda da Salamanca do Jarau. Pesquisadores da Unicamp confirmaram sua origem no impacto de um meteorito (cratera de ~14 km), com idade estimada em ~115 milhões de anos.",
+        "icone": "⛰️",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Ponte Internacional da Concórdia",
+        "descricao": "Ponte de 750 metros sobre o Rio Quaraí que liga Quaraí a Artigas (Uruguai).",
+        "icone": "🌉",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Ruínas do Saladeiro São Carlos",
+        "descricao": "Antiga propriedade onde se produzia charque no auge das charqueadas.",
+        "icone": "🏚️",
+        "tipo": "historia"
+      },
+      {
+        "nome": "Praça General Osório",
+        "descricao": "Reconhecida pelo município como um dos principais pontos turísticos, no centro histórico.",
+        "icone": "🌳",
+        "tipo": "cultura"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Hambúrguer artesanal e fondue Saladeiro",
+        "onde": "Canelo's (gastrobar/steak house, Centro)",
+        "icone": "🍔"
+      },
+      {
+        "prato": "Churrasco e carnes",
+        "onde": "Restaurante Casarão (em antigo saladeiro histórico)",
+        "icone": "🥩"
+      }
+    ],
+    "melhor_epoca": "O clima do Pampa favorece visitas o ano todo; primavera e outono são mais amenos.",
+    "como_chegar": "Cerca de 600 km de Porto Alegre. Uma opção é chegar pelo aeroporto de Uruguaiana e seguir de carro (cerca de 1h30).",
+    "dica_local": "Leve sempre um documento de identificação ao cruzar a Ponte da Concórdia para Artigas — as exigências podem variar, então informe-se com antecedência sobre as regras vigentes. Para ir mais fundo no Uruguai (além de 30 km da fronteira) é preciso registro migratório. Vale combinar a visita ao Cerro do Jarau com uma passada nos free shops do lado uruguaio.",
+    "slug": "quarai"
+  },
+  {
+    "cidade": "Palmares do Sul",
+    "regiao": "Litoral Gaúcho",
+    "saudacao": "Oigalê, tchê, chegou em Palmares do Sul! Cidade plana, praia larga e pôr do sol de lagoa.",
+    "sobre": "Palmares do Sul é uma pequena cidade do litoral gaúcho, com pouco mais de 11 mil habitantes, no extremo norte da Lagoa dos Patos. É banhada pela Lagoa dos Patos, pelas lagoas Casamento e Capivari e pelo Oceano Atlântico. Seu principal atrativo é a Praia do Quintão.",
+    "pontos": [
+      {
+        "nome": "Praia do Quintão",
+        "descricao": "Praia oceânica de cerca de 11 km com dunas preservadas; a Rua Esparta, com bares e lojas, é o coração da praia.",
+        "icone": "🏖️",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Farol de Quintão",
+        "descricao": "Farol na orla do município, bem avaliado por visitantes.",
+        "icone": "🗼",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Lagoa do Quintão",
+        "descricao": "Lago do município, ponto de lazer e contemplação.",
+        "icone": "🌊",
+        "tipo": "natureza"
+      },
+      {
+        "nome": "Rio Palmares",
+        "descricao": "Rio que nasce no Banhado Feliciano e deságua na Lagoa do Casamento.",
+        "icone": "🏞️",
+        "tipo": "natureza"
+      }
+    ],
+    "gastronomia": [
+      {
+        "prato": "Xis e lanches",
+        "onde": "Rei do Xis (Praia do Quintão)",
+        "icone": "🍔"
+      }
+    ],
+    "melhor_epoca": "O verão é a alta temporada, quando a população da Praia do Quintão se multiplica.",
+    "como_chegar": "Pouco mais de 100 km de Porto Alegre, com acesso pela BR-101.",
+    "dica_local": "A Rua Esparta, na Praia do Quintão, concentra os bares e a vida da praia. A cidade disponibiliza cadeira anfíbia para banho de mar acessível, mediante agendamento.",
+    "slug": "palmares-do-sul"
+  }
+]

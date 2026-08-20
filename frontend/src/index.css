@@ -338,3 +338,89 @@ body {
 @media (min-width: 600px) {
   .app-shell { height: 700px; border-radius: 20px; margin: 24px auto; }
 }
+
+/* ── Navegação inferior (substitui .tab-nav do topo) ────────────── */
+.tab-nav-bottom {
+  display: flex;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  flex-shrink: 0;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+.tab-btn-bottom {
+  flex: 1; padding: 8px 4px 10px;
+  border: none; background: transparent;
+  color: var(--text-3);
+  font-size: 11px; font-family: var(--font-body); font-weight: 400;
+  cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  transition: color .15s;
+}
+.tab-btn-bottom .tab-icon { font-size: 20px; line-height: 1; }
+.tab-btn-bottom.active { color: var(--green); font-weight: 500; }
+
+/* ── Toggle Região / Cidade (Turismo) ───────────────────────────── */
+.turismo-toggle {
+  display: flex; gap: 6px; padding: 12px 16px 4px;
+}
+.toggle-btn {
+  flex: 1; padding: 8px 12px; border-radius: var(--radius-xl);
+  border: 1px solid var(--border); background: var(--surface);
+  color: var(--text-2); font-size: 13px; font-family: var(--font-body);
+  cursor: pointer; transition: background .15s, border-color .15s, color .15s;
+}
+.toggle-btn.active {
+  background: var(--green); border-color: var(--green); color: var(--green-bg); font-weight: 500;
+}
+
+/* ── Busca de cidade ─────────────────────────────────────────────── */
+.cidade-busca {
+  margin: 8px 16px 4px; padding: 10px 14px;
+  border-radius: var(--radius-xl); border: 1px solid var(--green);
+  font-size: 14px; font-family: var(--font-body); outline: none;
+}
+.cidades-lista { display: flex; flex-direction: column; gap: 6px; padding: 8px 16px 16px; }
+.cidade-item {
+  padding: 11px 14px; border-radius: var(--radius-md);
+  border: 1px solid var(--border); background: var(--surface);
+  cursor: pointer; text-align: left;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: var(--font-body); transition: border-color .15s, background .15s;
+}
+.cidade-item:hover { border-color: var(--green); background: var(--green-bg); }
+.cidade-nome { font-size: 13px; color: var(--text-1); }
+.cidade-regiao { font-size: 11px; color: var(--text-3); }
+.cidade-vazio { font-size: 13px; color: var(--text-2); text-align: center; padding: 24px 0; }
+
+/* ── Detalhe adicional dos cards de ponto turístico (cidade) ────── */
+.ponto-nome-linha { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; }
+.tipo-badge { font-size: 10px; padding: 1px 7px; border-radius: 20px; }
+.guia-sobre { font-size: 13px; color: var(--text-1); line-height: 1.7; margin-bottom: 14px; }
+.info-aviso { font-size: 11px; color: var(--text-3); margin-top: 6px; font-style: italic; }
+
+/* ── Tela de Onboarding (só dentro do app instalado) ─────────────── */
+.onboarding-screen {
+  display: flex; flex-direction: column; align-items: center;
+  height: 100%; padding: 48px 28px 32px; text-align: center;
+  background: var(--green); color: var(--green-bg); overflow-y: auto;
+}
+.onboarding-avatar {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: var(--green-light); display: flex; align-items: center; justify-content: center;
+  font-size: 32px; margin-bottom: 20px;
+}
+.onboarding-titulo { font-family: var(--font-display); font-size: 28px; margin-bottom: 6px; }
+.onboarding-sub { font-size: 14px; color: var(--green-light); margin-bottom: 32px; }
+.onboarding-cards { display: flex; flex-direction: column; gap: 12px; width: 100%; margin-bottom: 32px; }
+.onboarding-card {
+  display: flex; align-items: flex-start; gap: 12px; text-align: left;
+  background: rgba(255,255,255,0.08); border-radius: var(--radius-lg); padding: 14px 16px;
+}
+.onboarding-card-icone { font-size: 22px; flex-shrink: 0; }
+.onboarding-card-titulo { font-size: 13px; font-weight: 500; margin-bottom: 3px; }
+.onboarding-card-texto { font-size: 12px; color: var(--green-light); line-height: 1.5; }
+.onboarding-cta {
+  padding: 13px 28px; border-radius: var(--radius-xl); border: none;
+  background: var(--green-bg); color: var(--green); font-size: 14px; font-weight: 500;
+  font-family: var(--font-body); cursor: pointer; margin-top: auto;
+}
