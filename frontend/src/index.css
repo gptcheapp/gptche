@@ -54,6 +54,8 @@ body {
   align-items: center;
   gap: 12px;
   flex-shrink: 0;
+  margin: 10px 10px 0;
+  border-radius: 22px;
 }
 .header-avatar {
   width: 42px; height: 42px;
@@ -498,9 +500,10 @@ body {
 
 /* 3. TAB BAR (substitui .tab-nav-bottom) */
 .gp-tabbar {
-  position: relative; flex-shrink: 0; padding: 12px 12px 30px; display: flex; gap: 6px;
-  border-radius: 26px 26px 0 0; background: linear-gradient(180deg, #FDFEFD, #F4F9F6);
-  box-shadow: inset 0 1px 0 var(--border), inset 0 2px 0 rgba(255,255,255,.9), 0 -6px 22px rgba(27,77,46,.07);
+  position: relative; flex-shrink: 0; padding: 10px 12px; display: flex; gap: 6px;
+  margin: 0 10px 10px; border-radius: 22px; background: linear-gradient(180deg, #FDFEFD, #F4F9F6);
+  box-shadow: inset 0 1px 0 var(--border), inset 0 2px 0 rgba(255,255,255,.9), 0 4px 16px rgba(27,77,46,.10);
+  padding-bottom: max(10px, env(safe-area-inset-bottom, 10px));
 }
 .gp-tab {
   position: relative; flex: 1; min-height: 52px; border: none; background: transparent;
