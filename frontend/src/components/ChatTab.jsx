@@ -78,10 +78,35 @@ export default function ChatTab({ initialInput, onInputConsumed }) {
       salvarMensagem("assistant", reply);
     } catch (err) {
       const erroMsg = `Barbaridade! ${err.message || "Deu um problema na conexão. Tenta de novo!"}`;
-      setMessages((prev) => [...prev, { role: "assistant", content: erroMsg }]);
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: erroMsg, isError: true, retryText: t },
+      ]);
     }
     setLoading(false);
     inputRef.current?.focus();
+  };
+
+  const tentarNovamente = async (retryText) => {
+    if (loading) return;
+    setMessages((prev) => prev.slice(0, -1)); // remove a bolha de erro
+    setLoading(true);
+    try {
+      const historicoAteAqui = messages
+        .filter((m) => !m.isError)
+        .slice(-10)
+        .map((m) => ({ role: m.role, content: m.content }));
+      const reply = await sendChat(historicoAteAqui);
+      setMessages((prev) => [...prev, { role: "assistant", content: reply }]);
+      salvarMensagem("assistant", reply);
+    } catch (err) {
+      const erroMsg = `Barbaridade! ${err.message || "Deu um problema na conexão. Tenta de novo!"}`;
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: erroMsg, isError: true, retryText },
+      ]);
+    }
+    setLoading(false);
   };
 
   return (
@@ -91,8 +116,19 @@ export default function ChatTab({ initialInput, onInputConsumed }) {
           <div key={i} className={`message-row ${m.role}`}>
             {m.role === "assistant" && <div className="avatar">🧉</div>}
             <div className={`message-bubble-wrap ${m.role}`}>
-              <div className={`message-bubble ${m.role}`}>{m.content}</div>
-              {m.role === "assistant" && (
+              <div className={`message-bubble ${m.role} ${m.isError ? "is-error" : ""}`}>
+                {m.content}
+              </div>
+              {m.isError && (
+                <button
+                  className="btn-retry"
+                  onClick={() => tentarNovamente(m.retryText)}
+                  disabled={loading}
+                >
+                  ↻ Tentar de novo
+                </button>
+              )}
+              {m.role === "assistant" && !m.isError && (
                 <button
                   className={`speak-btn ${speaking === i ? "active" : ""}`}
                   onClick={() => handleSpeak(m.content, i)}
@@ -141,7 +177,14 @@ export default function ChatTab({ initialInput, onInputConsumed }) {
         </div>
       )}
 
-      <div className="chat-input-area">
+      {listening && (
+        <div className="gravando-faixa">
+          <span className="gravando-dot" />
+          Te escutando, tchê... toca no quadrado pra parar
+        </div>
+      )}
+
+      <div className={`chat-input-area ${listening ? "listening" : ""}`}>
         {supported && (
           <button
             className={`mic-btn ${listening ? "listening" : ""}`}

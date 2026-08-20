@@ -4,6 +4,10 @@ import { salvarBuscaGlossario, buscarHistoricoGlossario } from "../api/historico
 
 const SUGESTOES = ["bah", "chimarrão", "tchê", "guri", "barbaridade", "xis", "bagual", "querência", "minuano", "oigalê"];
 
+// Rotaciona por dia do mês — mesmo padrão já usado no workflow do X ("termo do dia").
+const PALAVRA_DO_DIA_POOL = ["bah", "tchê", "chimarrão", "guri", "barbaridade", "xis", "bagual", "querência", "minuano", "oigalê", "campear", "lagartear", "entrevero", "cusco", "bergamota"];
+const palavraDoDia = PALAVRA_DO_DIA_POOL[new Date().getDate() % PALAVRA_DO_DIA_POOL.length];
+
 const NIVEL_CORES = {
   Cotidiano:         { cls: "nivel-cotidiano" },
   Regional:          { cls: "nivel-regional" },
@@ -83,6 +87,13 @@ export default function GlossarioTab() {
             <div className="empty-icon">🧉</div>
             <h3>Dicionário do Gauchês</h3>
             <p>Digita uma palavra ou expressão gaúcha e o GPTchê explica com todo o estilo campeiro!</p>
+
+            <button className="palavra-dia-card" onClick={() => buscarTermo(palavraDoDia)}>
+              <span className="palavra-dia-label">✨ Palavra do dia</span>
+              <span className="palavra-dia-termo">{palavraDoDia}</span>
+              <span className="palavra-dia-cta">Toca pra ver o verbete →</span>
+            </button>
+
             {historico.length > 0 && (
               <div className="historico">
                 <span className="chips-label">Buscados recentemente:</span>
