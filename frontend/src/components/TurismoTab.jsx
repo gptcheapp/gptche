@@ -175,13 +175,14 @@ export default function TurismoTab({ onPerguntar }) {
       {/* ── LISTA: Região ── */}
       {modo === "regiao" && !selecionado && (
         <>
-          <p className="turismo-intro">
-            Escolhe uma região do RS, tchê, e o GPTchê te conta tudo! 🧉
-          </p>
+          <div className="tela-header">
+            <h1 className="tela-titulo">Turismo</h1>
+            <p className="tela-subtitulo">Do pampa à serra — escolhe por onde começar, tchê.</p>
+          </div>
           <div className="regioes-grid">
             {REGIOES.map((r) => (
               <button key={r.id} className="regiao-card" onClick={() => buscarGuiaRegiao(r)}>
-                <span className="regiao-icone">{r.icone}</span>
+                <span className="regiao-icone-box">{r.icone}</span>
                 <span className="regiao-nome">{r.nome}</span>
                 <span className="regiao-desc">{r.desc}</span>
               </button>
@@ -193,6 +194,10 @@ export default function TurismoTab({ onPerguntar }) {
       {/* ── LISTA: Cidade (busca + destaques) ── */}
       {modo === "cidade" && !selecionado && (
         <>
+          <div className="tela-header">
+            <h1 className="tela-titulo">Turismo</h1>
+            <p className="tela-subtitulo">Do pampa à serra — escolhe por onde começar, tchê.</p>
+          </div>
           <input
             className="cidade-busca"
             type="text"

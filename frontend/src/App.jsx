@@ -12,11 +12,13 @@ const TABS = [
   { id: "glossario", icon: "📖", label: "Glossário" },
 ];
 
-// TWA (app instalado via Play Store) e qualquer PWA instalado abrem em
-// display-mode "standalone" — navegador comum nunca abre assim.
-const ehAppInstalado = () =>
-  typeof window !== "undefined" &&
-  window.matchMedia?.("(display-mode: standalone)").matches;
+const ehAppInstalado = () => {
+  if (typeof window === "undefined") return false;
+  // Atalho pra testar localmente sem precisar instalar de verdade:
+  // http://localhost:5173/?standalone=1
+  if (new URLSearchParams(window.location.search).get("standalone") === "1") return true;
+  return window.matchMedia?.("(display-mode: standalone)").matches;
+};
 
 export default function App() {
   const [showLanding, setShowLanding] = useState(
@@ -27,6 +29,7 @@ export default function App() {
   );
   const [aba, setAba] = useState("chat");
   const [chatInput, setChatInput] = useState("");
+  const [prefsAberta, setPrefsAberta] = useState(false);
 
   if (showLanding) {
     return (
@@ -59,17 +62,31 @@ export default function App() {
 
   return (
     <div className="app-shell">
-      <PreferenciaModal />
+      <PreferenciaModal forceOpen={prefsAberta} onEscolher={() => setPrefsAberta(false)} />
       <header className="app-header">
-        <div className="header-avatar">🧉</div>
+        <div className="gp-avatar">
+          <img src="/icons/icon-192.png" alt="" />
+          <div className="gp-avatar__gloss" />
+          <div className="gp-avatar__brilho" />
+          <div className="gp-avatar__rim" />
+          <div className="gp-avatar__online" />
+        </div>
         <div className="header-info">
           <div className="header-title">GPTchê</div>
           <div className="header-subtitle">Teu parceiro gaúcho de plantão</div>
         </div>
-        <div className="header-status">
-          <span className="status-dot" />
-          <span>Online</span>
-        </div>
+        <button
+          className="gp-btn-vidro"
+          onClick={() => setPrefsAberta(true)}
+          aria-label="Preferências"
+        >
+          <div className="gp-btn-vidro__sheen" />
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+            <line x1="4" y1="6" x2="20" y2="6" /><circle cx="9" cy="6" r="2" fill="currentColor" stroke="none" />
+            <line x1="4" y1="12" x2="20" y2="12" /><circle cx="15" cy="12" r="2" fill="currentColor" stroke="none" />
+            <line x1="4" y1="18" x2="20" y2="18" /><circle cx="11" cy="18" r="2" fill="currentColor" stroke="none" />
+          </svg>
+        </button>
       </header>
 
       <main className="app-content">
@@ -83,15 +100,17 @@ export default function App() {
         {aba === "glossario" && <GlossarioTab />}
       </main>
 
-      <nav className="tab-nav-bottom">
+      <nav className="gp-tabbar">
         {TABS.map(({ id, icon, label }) => (
           <button
             key={id}
-            className={`tab-btn-bottom ${aba === id ? "active" : ""}`}
+            className="gp-tab"
+            aria-selected={aba === id}
             onClick={() => setAba(id)}
           >
-            <span className="tab-icon">{icon}</span>
-            <span className="tab-label">{label}</span>
+            <span className="gp-tab__sheen" />
+            <span className="gp-tab__icone">{icon}</span>
+            <span className="gp-tab__label">{label}</span>
           </button>
         ))}
       </nav>

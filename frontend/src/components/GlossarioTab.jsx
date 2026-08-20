@@ -1,12 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { fetchGlossario } from "../api/index.js";
 import { salvarBuscaGlossario, buscarHistoricoGlossario } from "../api/historico.js";
+import termosData from "../data/glossarioTermos.json";
 
+const TERMOS = termosData.termos;
 const SUGESTOES = ["bah", "chimarrão", "tchê", "guri", "barbaridade", "xis", "bagual", "querência", "minuano", "oigalê"];
 
-// Rotaciona por dia do mês — mesmo padrão já usado no workflow do X ("termo do dia").
-const PALAVRA_DO_DIA_POOL = ["bah", "tchê", "chimarrão", "guri", "barbaridade", "xis", "bagual", "querência", "minuano", "oigalê", "campear", "lagartear", "entrevero", "cusco", "bergamota"];
+const PALAVRA_DO_DIA_POOL = TERMOS.map((t) => t.termo);
 const palavraDoDia = PALAVRA_DO_DIA_POOL[new Date().getDate() % PALAVRA_DO_DIA_POOL.length];
+const palavraDoDiaMeta = TERMOS.find((t) => t.termo === palavraDoDia);
+
+// Categorias na ordem de aparição em TERMOS, com "Tudo" na frente.
+const CATS_GLOSS = [
+  { id: "todas", label: "Tudo" },
+  ...[...new Set(TERMOS.map((t) => t.categoria))].map((c) => ({ id: c, label: c })),
+];
 
 const NIVEL_CORES = {
   Cotidiano:         { cls: "nivel-cotidiano" },
@@ -19,6 +27,7 @@ export default function GlossarioTab() {
   const [resultado, setResultado] = useState(null);
   const [loading, setLoading] = useState(false);
   const [historico, setHistorico] = useState([]);
+  const [catGloss, setCatGloss] = useState("todas");
 
   useEffect(() => {
     buscarHistoricoGlossario().then((dados) => {
@@ -26,6 +35,11 @@ export default function GlossarioTab() {
       setHistorico(termos);
     });
   }, []);
+
+  const termosFiltrados = useMemo(() => {
+    if (catGloss === "todas") return TERMOS;
+    return TERMOS.filter((t) => t.categoria === catGloss);
+  }, [catGloss]);
 
   const buscarTermo = async (termo) => {
     const t = (termo || busca).trim();
@@ -48,12 +62,22 @@ export default function GlossarioTab() {
     setLoading(false);
   };
 
+  const voltarLista = () => {
+    setResultado(null);
+    setBusca("");
+  };
+
   const nivelCls = resultado?.encontrado
     ? (NIVEL_CORES[resultado.nivel] || NIVEL_CORES["Cotidiano"]).cls
     : "";
 
   return (
     <div className="glossario-tab">
+      <div className="tela-header">
+        <h1 className="tela-titulo">Glossário</h1>
+        <p className="tela-subtitulo">O dicionário do gauchês, explicado com estilo campeiro.</p>
+      </div>
+
       <div className="glossario-search-area">
         <div className="search-row">
           <input
@@ -83,30 +107,66 @@ export default function GlossarioTab() {
 
       <div className="glossario-result">
         {!resultado && !loading && (
-          <div className="glossario-empty">
-            <div className="empty-icon">🧉</div>
-            <h3>Dicionário do Gauchês</h3>
-            <p>Digita uma palavra ou expressão gaúcha e o GPTchê explica com todo o estilo campeiro!</p>
+          <>
+            <div className="glossario-empty">
+              <div className="empty-icon">🧉</div>
+              <h3>Dicionário do Gauchês</h3>
+              <p>Digita uma palavra ou expressão gaúcha e o GPTchê explica com todo o estilo campeiro!</p>
 
-            <button className="palavra-dia-card" onClick={() => buscarTermo(palavraDoDia)}>
-              <span className="palavra-dia-label">✨ Palavra do dia</span>
-              <span className="palavra-dia-termo">{palavraDoDia}</span>
-              <span className="palavra-dia-cta">Toca pra ver o verbete →</span>
-            </button>
+              <button className="palavra-dia-card" onClick={() => buscarTermo(palavraDoDia)}>
+                <span className="palavra-dia-label">✨ Palavra do dia</span>
+                <span className="palavra-dia-termo">{palavraDoDia}</span>
+                {palavraDoDiaMeta?.significado_curto && (
+                  <span className="palavra-dia-gloss">{palavraDoDiaMeta.significado_curto}</span>
+                )}
+                <span className="palavra-dia-cta">Toca pra ver o verbete →</span>
+              </button>
 
-            {historico.length > 0 && (
-              <div className="historico">
-                <span className="chips-label">Buscados recentemente:</span>
-                <div className="chips-row center">
-                  {historico.map((h) => (
-                    <button key={h} className="chip" onClick={() => buscarTermo(h)}>
-                      {h}
-                    </button>
-                  ))}
+              {historico.length > 0 && (
+                <div className="historico">
+                  <span className="chips-label">Buscados recentemente:</span>
+                  <div className="chips-row center">
+                    {historico.map((h) => (
+                      <button key={h} className="chip" onClick={() => buscarTermo(h)}>
+                        {h}
+                      </button>
+                    ))}
+                  </div>
                 </div>
+              )}
+            </div>
+
+            <div className="galpao-section">
+              <div className="galpao-header">
+                <span className="galpao-titulo">Todo o galpão</span>
+                <span className="galpao-contagem">{termosFiltrados.length} palavras</span>
               </div>
-            )}
-          </div>
+              <div className="chips-row cats-row">
+                {CATS_GLOSS.map((c) => (
+                  <button
+                    key={c.id}
+                    className={`chip-cat ${catGloss === c.id ? "active" : ""}`}
+                    onClick={() => setCatGloss(c.id)}
+                  >
+                    {c.label}
+                  </button>
+                ))}
+              </div>
+              <div className="galpao-lista">
+                {termosFiltrados.map((t) => (
+                  <button key={t.termo} className="galpao-item" onClick={() => buscarTermo(t.termo)}>
+                    <div className="galpao-item-top">
+                      <span className="galpao-item-termo">{t.termo}</span>
+                      <span className={`nivel-badge ${(NIVEL_CORES[t.nivel] || NIVEL_CORES.Cotidiano).cls}`}>
+                        {t.nivel}
+                      </span>
+                    </div>
+                    <p className="galpao-item-desc">{t.significado_curto}</p>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </>
         )}
 
         {loading && (
@@ -137,11 +197,13 @@ export default function GlossarioTab() {
                 "Tenta outra palavra gaúcha!"
               )}
             </p>
+            <button className="btn-voltar" onClick={voltarLista}>← Voltar pro galpão</button>
           </div>
         )}
 
         {resultado?.encontrado && !loading && (
           <div className={`verbete ${nivelCls}`}>
+            <button className="btn-voltar" onClick={voltarLista}>← Voltar pro galpão</button>
             <div className="verbete-header">
               <div>
                 <div className="verbete-termo">{resultado.termo}</div>

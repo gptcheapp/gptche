@@ -43,6 +43,8 @@ body {
   height: 100dvh;
   background: var(--surface);
   box-shadow: 0 0 0 1px var(--border), 0 8px 40px rgba(27,77,46,.1);
+  border-radius: 24px;
+  overflow: hidden;
 }
 
 .app-header {
@@ -398,32 +400,7 @@ body {
 .guia-sobre { font-size: 13px; color: var(--text-1); line-height: 1.7; margin-bottom: 14px; }
 .info-aviso { font-size: 11px; color: var(--text-3); margin-top: 6px; font-style: italic; }
 
-/* ── Tela de Onboarding (só dentro do app instalado) ─────────────── */
-.onboarding-screen {
-  display: flex; flex-direction: column; align-items: center;
-  height: 100%; padding: 48px 28px 32px; text-align: center;
-  background: var(--green); color: var(--green-bg); overflow-y: auto;
-}
-.onboarding-avatar {
-  width: 64px; height: 64px; border-radius: 50%;
-  background: var(--green-light); display: flex; align-items: center; justify-content: center;
-  font-size: 32px; margin-bottom: 20px;
-}
-.onboarding-titulo { font-family: var(--font-display); font-size: 28px; margin-bottom: 6px; }
-.onboarding-sub { font-size: 14px; color: var(--green-light); margin-bottom: 32px; }
-.onboarding-cards { display: flex; flex-direction: column; gap: 12px; width: 100%; margin-bottom: 32px; }
-.onboarding-card {
-  display: flex; align-items: flex-start; gap: 12px; text-align: left;
-  background: rgba(255,255,255,0.08); border-radius: var(--radius-lg); padding: 14px 16px;
-}
-.onboarding-card-icone { font-size: 22px; flex-shrink: 0; }
-.onboarding-card-titulo { font-size: 13px; font-weight: 500; margin-bottom: 3px; }
-.onboarding-card-texto { font-size: 12px; color: var(--green-light); line-height: 1.5; }
-.onboarding-cta {
-  padding: 13px 28px; border-radius: var(--radius-xl); border: none;
-  background: var(--green-bg); color: var(--green); font-size: 14px; font-weight: 500;
-  font-family: var(--font-body); cursor: pointer; margin-top: auto;
-}
+/* Onboarding: ver bloco completo mais abaixo (seção "Fase 4"). */
 
 /* ── Fase 3: estados extras do Chat ──────────────────────────────── */
 .message-bubble.is-error { border: 1px solid #E8A5A0; }
@@ -460,3 +437,203 @@ body {
 .palavra-dia-label { font-size: 11px; font-weight: 500; color: var(--green-mid); text-transform: uppercase; letter-spacing: 0.5px; }
 .palavra-dia-termo { font-family: var(--font-display); font-size: 24px; color: var(--green); }
 .palavra-dia-cta { font-size: 11px; color: var(--text-2); }
+
+/* ══════════════════════════════════════════════════════════════════
+   Fase 4: tratamento "vidro" (gloss/especular) — export do Claude Design
+   Nada aqui usa backdrop-filter: é gloss (gradiente especular + rim
+   light), não vidro translúcido de verdade. Único blur: highlight do
+   avatar, filter: blur(1.5px).
+   ══════════════════════════════════════════════════════════════════ */
+:root {
+  --vidro-rim-forte: rgba(255, 255, 255, .9);
+  --vidro-rim-medio: rgba(255, 255, 255, .5);
+  --vidro-rim-suave: rgba(255, 255, 255, .3);
+  --vidro-sheen-tab: rgba(255, 255, 255, .7);
+  --vidro-sheen-btn: rgba(255, 255, 255, .14);
+}
+
+.app-header { gap: 12px; }
+.header-info { flex: 1; min-width: 0; }
+
+/* 1. AVATAR DO HEADER — 46×46, 4 camadas */
+.gp-avatar {
+  position: relative; width: 46px; height: 46px; flex-shrink: 0;
+  border-radius: 50%; padding: 2px;
+  background: linear-gradient(150deg, rgba(255,255,255,.55), rgba(168,213,181,.18) 42%, rgba(255,255,255,.06) 62%, rgba(255,255,255,.34));
+  box-shadow: 0 2px 10px rgba(0,0,0,.22), inset 0 1px 1px rgba(255,255,255,.5);
+}
+.gp-avatar > img { width: 100%; height: 100%; display: block; border-radius: 50%; }
+.gp-avatar__gloss {
+  position: absolute; inset: 2px; border-radius: 50%; pointer-events: none;
+  background: linear-gradient(160deg, rgba(255,255,255,.42) 0%, rgba(255,255,255,.10) 26%, rgba(255,255,255,0) 46%, rgba(27,77,46,.16) 100%);
+}
+.gp-avatar__brilho {
+  position: absolute; top: 5px; left: 9px; width: 19px; height: 9px; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(255,255,255,.72), rgba(255,255,255,0));
+  filter: blur(1.5px); transform: rotate(-18deg);
+}
+.gp-avatar__rim {
+  position: absolute; inset: 1px; border-radius: 50%; pointer-events: none;
+  box-shadow: inset 0 -2px 4px rgba(255,255,255,.28), inset 0 1px 2px rgba(255,255,255,.40);
+}
+.gp-avatar__online {
+  position: absolute; right: 0; bottom: 1px; width: 13px; height: 13px; border-radius: 50%;
+  background: var(--green-light); box-shadow: 0 0 0 2.5px var(--green); animation: pulse-dot 2s infinite;
+}
+
+/* 2. BOTÃO DE PREFERÊNCIAS (header) — 44×44 circular */
+.gp-btn-vidro {
+  position: relative; width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%;
+  border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; overflow: hidden;
+  color: var(--green-bg);
+  background: linear-gradient(155deg, rgba(232,245,236,.06), rgba(232,245,236,0) 55%, rgba(232,245,236,.03)), var(--green-mid);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.30), inset 0 0 0 1px rgba(168,213,181,.34), 0 1px 5px rgba(0,0,0,.16);
+}
+.gp-btn-vidro:hover  { background: #3B7F55; }
+.gp-btn-vidro:active { background: #143B22; }
+.gp-btn-vidro__sheen {
+  position: absolute; top: 0; left: 0; right: 0; height: 24%; pointer-events: none;
+  background: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,0));
+}
+
+/* 3. TAB BAR (substitui .tab-nav-bottom) */
+.gp-tabbar {
+  position: relative; flex-shrink: 0; padding: 12px 12px 30px; display: flex; gap: 6px;
+  border-radius: 26px 26px 0 0; background: linear-gradient(180deg, #FDFEFD, #F4F9F6);
+  box-shadow: inset 0 1px 0 var(--border), inset 0 2px 0 rgba(255,255,255,.9), 0 -6px 22px rgba(27,77,46,.07);
+}
+.gp-tab {
+  position: relative; flex: 1; min-height: 52px; border: none; background: transparent;
+  border-radius: 18px; padding: 8px 4px 7px; display: flex; flex-direction: column;
+  align-items: center; gap: 3px; cursor: pointer; overflow: hidden; box-shadow: none;
+  font-family: var(--font-body);
+}
+.gp-tab:hover  { background: rgba(232,245,236,.55); }
+.gp-tab:active { background: var(--green-bg); }
+.gp-tab[aria-selected="true"] {
+  background: linear-gradient(160deg, rgba(232,245,236,.95), rgba(168,213,181,.42));
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.9), inset 0 0 0 1px rgba(168,213,181,.5), 0 2px 8px rgba(27,77,46,.12);
+}
+.gp-tab__sheen {
+  position: absolute; top: 0; left: 0; right: 0; height: 56%; pointer-events: none;
+  border-radius: 18px 18px 45% 45% / 18px 18px 80% 80%;
+  background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,0));
+}
+.gp-tab[aria-selected="true"] .gp-tab__sheen {
+  background: linear-gradient(180deg, rgba(255,255,255,.7), rgba(255,255,255,0));
+}
+.gp-tab__icone { font-size: 21px; line-height: 1; opacity: .55; }
+.gp-tab__label { font-size: 11.5px; font-weight: 400; color: #4A6655; }
+.gp-tab[aria-selected="true"] .gp-tab__icone { opacity: 1; }
+.gp-tab[aria-selected="true"] .gp-tab__label { font-weight: 500; color: var(--green); }
+
+/* ══════════════════════════════════════════════════════════════════
+   Fase 4: cabeçalhos de tela (título + subtítulo) — Turismo/Glossário
+   ══════════════════════════════════════════════════════════════════ */
+.tela-header { padding: 16px 16px 4px; }
+.tela-titulo { font-family: var(--font-display); font-size: 26px; color: var(--text-1); margin-bottom: 4px; }
+.tela-subtitulo { font-size: 13px; color: var(--text-2); line-height: 1.5; }
+
+/* Ícone de região com fundo quadrado — cor única padrão pra todas */
+.regiao-icone-box {
+  width: 44px; height: 44px; border-radius: 14px; background: var(--green-bg);
+  display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 2px;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   Fase 4: Glossário — Palavra do Dia com gloss curto + "Todo o galpão"
+   ══════════════════════════════════════════════════════════════════ */
+.palavra-dia-gloss { font-size: 12px; color: var(--text-2); text-align: center; margin-top: -2px; }
+
+.galpao-section { padding: 4px 16px 16px; }
+.galpao-header { display: flex; justify-content: space-between; align-items: baseline; margin: 18px 0 10px; }
+.galpao-titulo { font-size: 12px; font-weight: 600; color: var(--text-3); text-transform: uppercase; letter-spacing: .5px; }
+.galpao-contagem { font-size: 12px; color: var(--text-3); }
+.cats-row { margin-top: 0; margin-bottom: 12px; }
+.chip-cat {
+  padding: 6px 14px; border-radius: 20px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--text-2); font-size: 12.5px; font-family: var(--font-body); cursor: pointer;
+}
+.chip-cat.active { background: var(--green); border-color: var(--green); color: var(--green-bg); font-weight: 500; }
+.galpao-lista { display: flex; flex-direction: column; gap: 8px; }
+.galpao-item {
+  text-align: left; padding: 12px 14px; border-radius: var(--radius-md);
+  border: 1px solid var(--border); background: var(--surface); cursor: pointer; font-family: var(--font-body);
+  transition: border-color .15s, background .15s;
+}
+.galpao-item:hover { border-color: var(--green); background: var(--green-bg); }
+.galpao-item-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3px; }
+.galpao-item-termo { font-family: var(--font-display); font-size: 16px; color: var(--text-1); }
+.galpao-item-desc { font-size: 12.5px; color: var(--text-2); line-height: 1.4; }
+
+/* ══════════════════════════════════════════════════════════════════
+   Fase 4: Modal de preferência — opções descritivas + confirmação
+   ══════════════════════════════════════════════════════════════════ */
+.pref-overlay {
+  position: fixed; inset: 0; background: rgba(27,77,46,.45);
+  display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 20px;
+}
+.pref-card {
+  background: var(--surface); border-radius: 20px; padding: 30px 24px; max-width: 360px; width: 100%;
+  text-align: center; box-shadow: 0 16px 44px rgba(27,77,46,.28); font-family: var(--font-body);
+}
+.pref-icone { font-size: 32px; margin-bottom: 10px; }
+.pref-titulo { font-family: var(--font-display); font-size: 20px; color: var(--green); margin-bottom: 8px; font-weight: 600; }
+.pref-sub { font-size: 13px; color: var(--text-2); line-height: 1.6; margin-bottom: 20px; }
+.pref-opcoes { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+.pref-opcao {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 12px 16px; border-radius: 14px; border: 1px solid var(--border);
+  background: var(--surface); cursor: pointer; text-align: left; font-family: var(--font-body);
+}
+.pref-opcao.selecionada { border-color: var(--green); background: var(--green-bg); }
+.pref-opcao-label { font-size: 14px; font-weight: 600; color: var(--text-1); }
+.pref-opcao-frase { font-size: 12px; color: var(--text-2); font-style: italic; margin-top: 2px; }
+.pref-opcao-radio {
+  width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--border); flex-shrink: 0;
+}
+.pref-opcao.selecionada .pref-opcao-radio { border-color: var(--green); background: var(--green); }
+.pref-confirmar {
+  width: 100%; background: var(--green); color: var(--green-bg); border: none; border-radius: 24px;
+  padding: 12px 22px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit;
+}
+.pref-confirmar:disabled { opacity: .5; cursor: default; }
+.pref-depois { background: none; border: none; color: var(--text-2); font-size: 12px; margin-top: 10px; cursor: pointer; font-family: inherit; }
+
+/* ══════════════════════════════════════════════════════════════════
+   Fase 4: Onboarding — 2 etapas, "Pular", indicador de progresso
+   ══════════════════════════════════════════════════════════════════ */
+.onboarding-screen {
+  display: flex; flex-direction: column; height: 100dvh; max-width: 480px; margin: 0 auto;
+  padding: 20px 24px 28px; background: var(--green); color: var(--green-bg);
+  overflow-y: auto; position: relative; border-radius: 24px;
+}
+.onboarding-pular {
+  align-self: flex-end; background: none; border: none; color: var(--green-light);
+  font-size: 13px; cursor: pointer; font-family: var(--font-body); margin-bottom: 24px;
+}
+.onboarding-conteudo { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.onboarding-conteudo-centro { align-items: center; text-align: center; }
+.onboarding-avatar-final {
+  width: 96px; height: 96px; border-radius: 24px; background: rgba(255,255,255,.06);
+  display: flex; align-items: center; justify-content: center; font-size: 44px; margin-bottom: 28px;
+}
+.onboarding-titulo { font-family: var(--font-display); font-size: 26px; margin-bottom: 20px; }
+.onboarding-sub { font-size: 14px; color: var(--green-light); line-height: 1.6; max-width: 280px; }
+.onboarding-cards { display: flex; flex-direction: column; gap: 12px; }
+.onboarding-card {
+  display: flex; align-items: flex-start; gap: 12px; text-align: left;
+  background: rgba(255,255,255,0.08); border-radius: var(--radius-lg); padding: 14px 16px;
+}
+.onboarding-card-icone { font-size: 22px; flex-shrink: 0; }
+.onboarding-card-titulo { font-size: 13px; font-weight: 500; margin-bottom: 3px; }
+.onboarding-card-texto { font-size: 12px; color: var(--green-light); line-height: 1.5; }
+.onboarding-rodape { display: flex; flex-direction: column; align-items: center; gap: 16px; padding-top: 20px; }
+.onboarding-dots { display: flex; gap: 6px; }
+.onboarding-dots .dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.35); transition: all .2s; }
+.onboarding-dots .dot.ativo { width: 18px; border-radius: 3px; background: var(--green-bg); }
+.onboarding-cta {
+  padding: 13px 32px; border-radius: var(--radius-xl); border: none; width: 100%;
+  background: var(--green-bg); color: var(--green); font-size: 14px; font-weight: 500;
+  font-family: var(--font-body); cursor: pointer;
+}
