@@ -150,6 +150,25 @@ export default function TurismoTab({ onPerguntar }) {
     setModo(novoModo);
   };
 
+  const compartilhar = async (titulo, texto) => {
+    const url = "https://gptche.app";
+    const shareData = { title: `GPTchê — ${titulo}`, text: `${texto}\n\n${url}`, url };
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch {
+        /* usuário cancelou o share sheet, sem problema */
+      }
+    } else {
+      try {
+        await navigator.clipboard.writeText(`${shareData.title}\n${shareData.text}`);
+        alert("Copiado! Cola onde tu quiser compartilhar, tchê.");
+      } catch {
+        alert("Não consegui copiar automaticamente — copia o link manualmente: gptche.app");
+      }
+    }
+  };
+
   const selecionado = modo === "regiao" ? regiaoSel : cidadeSel;
   const guia = modo === "regiao" ? guiaRegiao : guiaCidade;
   const nomeSelecionado = modo === "regiao" ? regiaoSel?.nome : cidadeSel?.nome;
@@ -324,6 +343,17 @@ export default function TurismoTab({ onPerguntar }) {
           >
             <span>🧉</span> Perguntar mais sobre {regiaoSel.nome}
           </button>
+
+          <button
+            className="btn-secundario"
+            onClick={() => compartilhar(regiaoSel.nome, guiaRegiao.saudacao)}
+          >
+            ↗ Compartilhar este guia
+          </button>
+
+          <button className="btn-secundario" onClick={voltar}>
+            ← Voltar para as regiões
+          </button>
         </div>
       )}
 
@@ -415,6 +445,17 @@ export default function TurismoTab({ onPerguntar }) {
             onClick={() => onPerguntar(`Me conta mais sobre ${cidadeSel.nome}`)}
           >
             <span>🧉</span> Perguntar mais sobre {cidadeSel.nome}
+          </button>
+
+          <button
+            className="btn-secundario"
+            onClick={() => compartilhar(cidadeSel.nome, guiaCidade.saudacao)}
+          >
+            ↗ Compartilhar este guia
+          </button>
+
+          <button className="btn-secundario" onClick={voltar}>
+            ← Voltar para as cidades
           </button>
         </div>
       )}

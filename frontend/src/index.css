@@ -266,6 +266,14 @@ body {
 }
 .btn-perguntar:hover { background: var(--green-mid); }
 
+.btn-secundario {
+  padding: 11px 20px; border-radius: var(--radius-xl); border: 1px solid var(--green-light);
+  background: transparent; color: var(--green);
+  font-size: 13px; font-weight: 500; cursor: pointer; font-family: var(--font-body);
+  display: flex; align-items: center; justify-content: center; gap: 8px; transition: background .15s, border-color .15s;
+}
+.btn-secundario:hover { background: var(--green-bg); border-color: var(--green); }
+
 .glossario-tab { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
 .glossario-search-area { padding: 16px 16px 12px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
 .search-row { display: flex; gap: 8px; }
