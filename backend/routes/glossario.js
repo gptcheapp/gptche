@@ -246,7 +246,24 @@ const VERBETES_ANCORA = {
     curiosidade: "Antigamente era ameaça de castigo dos pais aos filhos ('olha que te dou uma tunda'); hoje sobrevive principalmente no sentido figurado, esportivo ou de brincadeira.",
     gptche_diz: "Tunda no futebol dói, mas tunda de infância vira história boa pra contar depois, tchê!",
   },
+  "chinelão": {
+    categoria: "Substantivo",
+    nivel: "Cotidiano",
+    significado: "Quem pratica chinelagem: pessoa de comportamento inadequado, mal-arrumada, sem elegância ou que não segue as regras básicas de convivência.",
+    exemplo: "Não convida ele pro jantar, é um chinelão — chega atrasado e ainda fala de boca cheia.",
+    curiosidade: "Vem do hábito de andar de chinelo de dedo de qualquer jeito, relaxado, rompendo convenções sociais — quem age assim na vida, não só nos pés, vira chinelão.",
+    gptche_diz: "Chinelão não erra por acidente, tchê — é estilo de vida!",
+  },
+  "chinelona": {
+    categoria: "Substantivo",
+    nivel: "Cotidiano",
+    significado: "Versão feminina de chinelão: mulher de comportamento inadequado, mal-arrumada, sem elegância ou que não segue as regras básicas de convivência.",
+    exemplo: "Ela chegou de chinelo no casamento, uma chinelona daquelas.",
+    curiosidade: "Segue a mesma raiz de chinelão e chinelagem — o chinelo de dedo usado de qualquer jeito como símbolo de relaxo e desapego às convenções.",
+    gptche_diz: "Chinelona não liga pro que os outros pensam, tchê — e às vezes até tem sua graça!",
+  },
 };
+
 
 const GLOSSARIO_PROMPT = (palavra) =>
   `Você é o GPTchê, especialista em cultura e linguagem gaúcha do Rio Grande do Sul.
