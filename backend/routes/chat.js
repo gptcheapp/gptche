@@ -102,12 +102,22 @@ const PRONOME_INSTRUCOES = {
 };
 
 /**
- * Monta o system prompt final, injetando a preferência de pronome se existir.
- * Se o device_id não tiver preferência salva (ou não vier na requisição), o comportamento
- * continua neutro — igual é hoje.
+ * Monta o system prompt final, injetando a data de hoje (fuso de Brasília,
+ * o mesmo do RS) e a preferência de pronome se existir.
+ * Sem a data explícita, o modelo não tem como saber "hoje" de verdade e
+ * pode travar ou chutar errado em perguntas relativas a data/época do ano.
  */
 async function buildSystemPrompt(deviceId) {
-  if (!deviceId) return SYSTEM_PROMPT;
+  const hoje = new Date().toLocaleDateString("pt-BR", {
+    timeZone: "America/Sao_Paulo",
+    weekday: "long",
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  });
+  const contextoData = `\n\nCONTEXTO DE DATA: hoje é ${hoje} (horário de Brasília). Use essa informação sempre que a pergunta envolver "hoje", "essa época do ano", datas relativas ou cálculo de quanto tempo falta/passou pra algum evento. Nunca pergunte "que dia é hoje" pro usuário nem invente uma data diferente desta.`;
+
+  if (!deviceId) return SYSTEM_PROMPT + contextoData;
 
   const { data, error } = await supabase
     .from("preferencias")
@@ -118,14 +128,14 @@ async function buildSystemPrompt(deviceId) {
 
   if (error) {
     console.error("[chat route] erro ao buscar preferencia:", error.message);
-    return SYSTEM_PROMPT;
+    return SYSTEM_PROMPT + contextoData;
   }
 
   if (data?.valor && PRONOME_INSTRUCOES[data.valor]) {
-    return SYSTEM_PROMPT + "\n\n" + PRONOME_INSTRUCOES[data.valor];
+    return SYSTEM_PROMPT + contextoData + "\n\n" + PRONOME_INSTRUCOES[data.valor];
   }
 
-  return SYSTEM_PROMPT;
+  return SYSTEM_PROMPT + contextoData;
 }
 
 function validateMessages(messages) {
