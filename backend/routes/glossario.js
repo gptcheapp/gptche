@@ -99,8 +99,12 @@ const VERBETES_ANCORA = {
     nivel: "CTG/Tradicional",
     significado: "O traje típico completo do gaúcho — bombacha, camisa, bota campeira, lenço, guaiaca e chapéu. Vestir a pilcha é honrar a tradição gaúcha.",
     exemplo: "Na Semana Farroupilha todo mundo veste a pilcha completa para os desfiles e bailes.",
-    curiosidade: "Cada peça da pilcha tem regras e significados na tradição CTG. A cor do lenço, o tipo de chapéu e o estilo da guaiaca variam por região e ocasião. Existem manuais de pilcha publicados pelo MTG (Movimento Tradicionalista Gaúcho) que regulamentam o vestuário.",
+    curiosidade: "Cada peça da pilcha tem regras e significados na tradição CTG. A cor do lenço, o tipo de chapéu e o estilo da guaiaca variam por região e ocasião. O MTG (Movimento Tradicionalista Gaúcho) publica um manual oficial regulamentando o vestuário, atualizado periodicamente em convenção.",
     gptche_diz: "Gaúcho de pilcha completa, tchê, não precisa dizer de onde é — o traje já conta a história!",
+    link: {
+      label: "📄 Manual oficial da Pilcha (MTG-RS, PDF)",
+      url: "https://www.mtg.org.br/wp-content/uploads/2026/01/Diretrizes-para-a-Pilcha-Gaucha-2025.pdf",
+    },
   },
   "prenda": {
     categoria: "Substantivo",

@@ -224,6 +224,16 @@ export default function GlossarioTab() {
               <span>🧉</span>
               <p>{resultado.gptche_diz}</p>
             </div>
+            {resultado.link && (
+              <a
+                className="verbete-link-externo"
+                href={resultado.link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {resultado.link.label} ↗
+              </a>
+            )}
           </div>
         )}
       </div>
