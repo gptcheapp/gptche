@@ -659,3 +659,14 @@ body {
   font-family: var(--font-body); text-decoration: none; transition: border-color .15s, background .15s;
 }
 .btn-hospedagem:hover { border-color: var(--green); background: #DCEFE3; }
+
+/* ── Filtro de região ativo na lista de cidades ──────────────────── */
+.filtro-regiao-chip {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  margin: 8px 16px 0; padding: 8px 14px; border-radius: var(--radius-md);
+  background: var(--green-bg); font-size: 12.5px; color: var(--green);
+}
+.filtro-regiao-chip button {
+  background: none; border: none; color: var(--green); font-size: 12px;
+  font-weight: 500; cursor: pointer; font-family: var(--font-body); padding: 0;
+}

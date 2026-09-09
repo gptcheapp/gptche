@@ -97,15 +97,22 @@ export default function TurismoTab({ onPerguntar }) {
   const [busca, setBusca] = useState("");
   const [cidadeSel, setCidadeSel] = useState(null);
   const [guiaCidade, setGuiaCidade] = useState(null);
+  const [filtroRegiaoCidade, setFiltroRegiaoCidade] = useState(null);
 
   const [loading, setLoading] = useState(false);
   const [erro, setErro] = useState(null);
 
   const cidadesFiltradas = useMemo(() => {
     const termo = busca.trim().toLowerCase();
-    if (!termo) return CIDADES.filter((c) => c.destaque);
-    return CIDADES.filter((c) => c.nome.toLowerCase().includes(termo)).slice(0, 12);
-  }, [busca]);
+    let base = CIDADES;
+    if (filtroRegiaoCidade) {
+      base = base.filter((c) => c.regiao === filtroRegiaoCidade);
+      if (!termo) return base;
+      return base.filter((c) => c.nome.toLowerCase().includes(termo));
+    }
+    if (!termo) return base.filter((c) => c.destaque);
+    return base.filter((c) => c.nome.toLowerCase().includes(termo)).slice(0, 12);
+  }, [busca, filtroRegiaoCidade]);
 
   const buscarGuiaRegiao = async (regiao) => {
     setRegiaoSel(regiao);
@@ -147,7 +154,17 @@ export default function TurismoTab({ onPerguntar }) {
   const trocarModo = (novoModo) => {
     voltar();
     setBusca("");
+    setFiltroRegiaoCidade(null);
     setModo(novoModo);
+  };
+
+  const verCidadesDaRegiao = (nomeRegiao) => {
+    setRegiaoSel(null);
+    setGuiaRegiao(null);
+    setErro(null);
+    setBusca("");
+    setFiltroRegiaoCidade(nomeRegiao);
+    setModo("cidade");
   };
 
   const compartilhar = async (titulo, texto) => {
@@ -224,7 +241,13 @@ export default function TurismoTab({ onPerguntar }) {
             value={busca}
             onChange={(e) => setBusca(e.target.value)}
           />
-          {!busca.trim() && <p className="turismo-intro">Cidades em destaque 🧉</p>}
+          {filtroRegiaoCidade && (
+            <div className="filtro-regiao-chip">
+              <span>📍 Cidades de: {filtroRegiaoCidade}</span>
+              <button onClick={() => setFiltroRegiaoCidade(null)}>Ver todas ✕</button>
+            </div>
+          )}
+          {!filtroRegiaoCidade && !busca.trim() && <p className="turismo-intro">Cidades em destaque 🧉</p>}
           <div className="cidades-lista">
             {cidadesFiltradas.map((c) => (
               <button key={c.nome} className="cidade-item" onClick={() => buscarGuiaCidade(c)}>
@@ -342,6 +365,13 @@ export default function TurismoTab({ onPerguntar }) {
             onClick={() => onPerguntar(`Me conta mais sobre o turismo na região: ${regiaoSel.nome}`)}
           >
             <span>🧉</span> Perguntar mais sobre {regiaoSel.nome}
+          </button>
+
+          <button
+            className="btn-secundario"
+            onClick={() => verCidadesDaRegiao(regiaoSel.nome)}
+          >
+            🏘️ Cidades da região
           </button>
 
           <button
