@@ -424,6 +424,31 @@ export default function TurismoTab({ onPerguntar }) {
             </div>
           </section>
 
+          <section className="guia-section">
+            <h3 className="section-label">🏨 Hospedagem</h3>
+            <p className="hospedagem-aviso">
+              Busca em tempo real — preços e disponibilidade mudam direto, então não arriscamos inventar número aqui.
+            </p>
+            <div className="hospedagem-links">
+              <a
+                className="btn-hospedagem"
+                href={`https://www.booking.com/searchresults.html?ss=${encodeURIComponent(cidadeSel.nome + ", Rio Grande do Sul, Brasil")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver no Booking.com ↗
+              </a>
+              <a
+                className="btn-hospedagem"
+                href={`https://www.airbnb.com/s/homes?query=${encodeURIComponent(cidadeSel.nome + ", Rio Grande do Sul")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver no Airbnb ↗
+              </a>
+            </div>
+          </section>
+
           <div className="info-card neutral">
             <div className="info-label">🗓️ Melhor época para visitar</div>
             <p>{guiaCidade.melhor_epoca}</p>

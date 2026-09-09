@@ -648,3 +648,14 @@ body {
   background: var(--green-bg); color: var(--green); font-size: 14px; font-weight: 500;
   font-family: var(--font-body); cursor: pointer;
 }
+
+/* ── Hospedagem (guia de cidade) ─────────────────────────────────── */
+.hospedagem-aviso { font-size: 12px; color: var(--text-3); line-height: 1.5; margin-bottom: 10px; }
+.hospedagem-links { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn-hospedagem {
+  flex: 1; min-width: 140px; text-align: center; padding: 11px 16px;
+  border-radius: var(--radius-xl); border: 1px solid var(--green-light);
+  background: var(--green-bg); color: var(--green); font-size: 13px; font-weight: 500;
+  font-family: var(--font-body); text-decoration: none; transition: border-color .15s, background .15s;
+}
+.btn-hospedagem:hover { border-color: var(--green); background: #DCEFE3; }
