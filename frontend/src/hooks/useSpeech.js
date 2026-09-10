@@ -40,21 +40,34 @@ export function useSpeech(onTranscript) {
   return { listening, supported, toggle };
 }
 
-// Referência ao áudio atual para poder parar
+// Referência ao áudio atual, pra poder pausar e retomar (não só parar)
 let currentAudio = null;
+let currentTexto = null;
 
 export async function speak(text, onEnd) {
-  // Para qualquer áudio em andamento
-  if (currentAudio) {
-    currentAudio.pause();
-    currentAudio = null;
-  }
-
-  // Remove emojis antes de enviar
   const textoLimpo = text.replace(/[\u{1F300}-\u{1FFFF}]/gu, "").trim();
   if (!textoLimpo) {
     onEnd?.();
     return;
+  }
+
+  // Mesmo texto de antes, ainda pausado (não chegou ao fim): retoma do
+  // ponto onde parou, sem buscar áudio novo.
+  if (currentAudio && currentTexto === textoLimpo && !currentAudio.ended) {
+    currentAudio.onended = () => {
+      currentAudio = null;
+      currentTexto = null;
+      onEnd?.();
+    };
+    currentAudio.play();
+    return;
+  }
+
+  // Texto diferente do que estava tocando: descarta o anterior e busca um novo.
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio = null;
+    currentTexto = null;
   }
 
   try {
@@ -74,16 +87,19 @@ export async function speak(text, onEnd) {
     const url = URL.createObjectURL(blob);
     const audio = new Audio(url);
     currentAudio = audio;
+    currentTexto = textoLimpo;
 
     audio.onended = () => {
       URL.revokeObjectURL(url);
       currentAudio = null;
+      currentTexto = null;
       onEnd?.();
     };
 
     audio.onerror = () => {
       URL.revokeObjectURL(url);
       currentAudio = null;
+      currentTexto = null;
       onEnd?.();
     };
 
@@ -94,9 +110,8 @@ export async function speak(text, onEnd) {
   }
 }
 
+// Só pausa — mantém o áudio guardado pra dar pra retomar depois (não zera
+// currentAudio/currentTexto, diferente de antes).
 export function stopSpeaking() {
-  if (currentAudio) {
-    currentAudio.pause();
-    currentAudio = null;
-  }
+  currentAudio?.pause();
 }

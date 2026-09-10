@@ -38,7 +38,7 @@ router.post("/", async (req, res) => {
 
     const audioStream = await client.textToSpeech.convert(VOICE_ID, {
       text: textoParaVoz,
-      model_id: "eleven_multilingual_v2",
+      model_id: "eleven_flash_v2_5",
       voice_settings: VOICE_SETTINGS,
       output_format: "mp3_44100_128",
     });
@@ -46,13 +46,12 @@ router.post("/", async (req, res) => {
     res.setHeader("Content-Type", "audio/mpeg");
     res.setHeader("Cache-Control", "no-cache");
 
-    // SDK novo retorna Web ReadableStream — converte pra Buffer e envia
-    const chunks = [];
+    // Manda cada pedaço assim que chega da ElevenLabs, em vez de esperar
+    // o áudio inteiro ficar pronto na memória — reduz a demora percebida.
     for await (const chunk of audioStream) {
-      chunks.push(chunk);
+      res.write(chunk);
     }
-    const buffer = Buffer.concat(chunks);
-    res.end(buffer);
+    res.end();
 
   } catch (err) {
     console.error("[ElevenLabs] Erro na chamada da API:", err);
