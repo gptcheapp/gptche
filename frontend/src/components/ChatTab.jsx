@@ -58,7 +58,8 @@ export default function ChatTab({ initialInput, onInputConsumed }) {
     return;
   }
   setSpeaking(idx);
-  speak(text, () => setSpeaking(null));
+  const vozPreferida = localStorage.getItem("gptche_voz") || "masculina";
+  speak(text, () => setSpeaking(null), vozPreferida);
 };
 
   const sendMessage = async (text) => {

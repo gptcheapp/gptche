@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { salvarPreferencia } from "../api/preferencias.js";
 
 const STORAGE_KEY = "gptche_pronome";
+const STORAGE_KEY_VOZ = "gptche_voz";
 
 const OPCOES = [
   { id: "guri", label: "Guri", frase: "Bah, guri, senta que a prosa é longa." },
@@ -9,8 +10,13 @@ const OPCOES = [
   { id: "neutro", label: "Tanto faz", frase: "Bah, xirú, senta que a prosa é longa." },
 ];
 
+const OPCOES_VOZ = [
+  { id: "masculina", label: "Masculina" },
+  { id: "feminina", label: "Feminina" },
+];
+
 /**
- * Modal de preferência guri/guria/neutro.
+ * Modal de preferência guri/guria/neutro + escolha de voz do Ouvir.
  * - Aparece só uma vez (checa localStorage) com um pequeno delay pra não parecer popup de anúncio.
  * - Pode ser reaberto manualmente via `forceOpen` (botão de preferências no header).
  * - Salva local imediatamente e sincroniza com Supabase em segundo plano.
@@ -19,11 +25,13 @@ export default function PreferenciaModal({ forceOpen = false, onEscolher }) {
   const [visible, setVisible] = useState(false);
   const [saving, setSaving] = useState(false);
   const [selecionado, setSelecionado] = useState(null);
+  const [vozSelecionada, setVozSelecionada] = useState("masculina");
   const primeiraVez = !localStorage.getItem(STORAGE_KEY);
 
   useEffect(() => {
     if (forceOpen) {
       setSelecionado(localStorage.getItem(STORAGE_KEY) || null);
+      setVozSelecionada(localStorage.getItem(STORAGE_KEY_VOZ) || "masculina");
       setVisible(true);
       return;
     }
@@ -37,7 +45,11 @@ export default function PreferenciaModal({ forceOpen = false, onEscolher }) {
     if (!selecionado) return;
     setSaving(true);
     localStorage.setItem(STORAGE_KEY, selecionado);
-    await salvarPreferencia("pronome", selecionado);
+    localStorage.setItem(STORAGE_KEY_VOZ, vozSelecionada);
+    await Promise.all([
+      salvarPreferencia("pronome", selecionado),
+      salvarPreferencia("voz", vozSelecionada),
+    ]);
     setSaving(false);
     setVisible(false);
     onEscolher?.(selecionado);
@@ -64,6 +76,19 @@ export default function PreferenciaModal({ forceOpen = false, onEscolher }) {
                 <div className="pref-opcao-frase">"{op.frase}"</div>
               </div>
               <span className="pref-opcao-radio" />
+            </button>
+          ))}
+        </div>
+
+        <p className="pref-sub pref-sub-voz">E qual voz tu prefere ouvir nas respostas?</p>
+        <div className="pref-voz-opcoes">
+          {OPCOES_VOZ.map((v) => (
+            <button
+              key={v.id}
+              className={`pref-voz-opcao ${vozSelecionada === v.id ? "selecionada" : ""}`}
+              onClick={() => setVozSelecionada(v.id)}
+            >
+              {v.label}
             </button>
           ))}
         </div>

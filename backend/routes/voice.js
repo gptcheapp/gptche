@@ -7,7 +7,10 @@ const client = new ElevenLabsClient({
   apiKey: process.env.ELEVENLABS_API_KEY,
 });
 
-const VOICE_ID = "W7t9oLns7EqMdVWmwGUE";
+const VOICE_IDS = {
+  masculina: "W7t9oLns7EqMdVWmwGUE",
+  feminina: "D23CoGZB5CI3Ckg3lg6J",
+};
 
 const VOICE_SETTINGS = {
   stability: 0.72,
@@ -23,7 +26,8 @@ function aplicarAjustesFoneticos(texto) {
 }
 
 router.post("/", async (req, res) => {
-  const { text } = req.body;
+  const { text, voz } = req.body;
+  const VOICE_ID = VOICE_IDS[voz] || VOICE_IDS.masculina;
 
   if (!text || typeof text !== "string" || text.trim().length === 0) {
     return res.status(400).json({ error: "Texto inválido ou ausente." });

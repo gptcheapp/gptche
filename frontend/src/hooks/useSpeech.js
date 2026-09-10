@@ -43,38 +43,41 @@ export function useSpeech(onTranscript) {
 // Referência ao áudio atual, pra poder pausar e retomar (não só parar)
 let currentAudio = null;
 let currentTexto = null;
+let currentVoz = null;
 
-export async function speak(text, onEnd) {
+export async function speak(text, onEnd, voz = "masculina") {
   const textoLimpo = text.replace(/[\u{1F300}-\u{1FFFF}]/gu, "").trim();
   if (!textoLimpo) {
     onEnd?.();
     return;
   }
 
-  // Mesmo texto de antes, ainda pausado (não chegou ao fim): retoma do
-  // ponto onde parou, sem buscar áudio novo.
-  if (currentAudio && currentTexto === textoLimpo && !currentAudio.ended) {
+  // Mesmo texto e mesma voz de antes, ainda pausado (não chegou ao fim):
+  // retoma do ponto onde parou, sem buscar áudio novo.
+  if (currentAudio && currentTexto === textoLimpo && currentVoz === voz && !currentAudio.ended) {
     currentAudio.onended = () => {
       currentAudio = null;
       currentTexto = null;
+      currentVoz = null;
       onEnd?.();
     };
     currentAudio.play();
     return;
   }
 
-  // Texto diferente do que estava tocando: descarta o anterior e busca um novo.
+  // Texto ou voz diferente do que estava tocando: descarta o anterior e busca um novo.
   if (currentAudio) {
     currentAudio.pause();
     currentAudio = null;
     currentTexto = null;
+    currentVoz = null;
   }
 
   try {
     const res = await fetch(`${BACKEND_URL}/api/voice`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text: textoLimpo }),
+      body: JSON.stringify({ text: textoLimpo, voz }),
     });
 
     if (!res.ok) {
@@ -88,11 +91,13 @@ export async function speak(text, onEnd) {
     const audio = new Audio(url);
     currentAudio = audio;
     currentTexto = textoLimpo;
+    currentVoz = voz;
 
     audio.onended = () => {
       URL.revokeObjectURL(url);
       currentAudio = null;
       currentTexto = null;
+      currentVoz = null;
       onEnd?.();
     };
 
@@ -100,6 +105,7 @@ export async function speak(text, onEnd) {
       URL.revokeObjectURL(url);
       currentAudio = null;
       currentTexto = null;
+      currentVoz = null;
       onEnd?.();
     };
 

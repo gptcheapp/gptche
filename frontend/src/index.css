@@ -679,3 +679,13 @@ body {
   text-decoration: none; font-family: var(--font-body);
 }
 .verbete-link-externo:hover { border-color: var(--green); background: var(--green-bg); }
+
+/* ── Escolha de voz dentro do modal de preferência ────────────────── */
+.pref-sub-voz { margin-top: 4px; margin-bottom: 10px; }
+.pref-voz-opcoes { display: flex; gap: 8px; margin-bottom: 20px; }
+.pref-voz-opcao {
+  flex: 1; padding: 10px 14px; border-radius: 14px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--text-1); font-size: 13px; font-weight: 500;
+  cursor: pointer; font-family: var(--font-body);
+}
+.pref-voz-opcao.selecionada { border-color: var(--green); background: var(--green-bg); color: var(--green); }
