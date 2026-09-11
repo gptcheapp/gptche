@@ -51,7 +51,7 @@ const aiLimiter = rateLimit({
 });
 
 app.use(globalLimiter);
-app.use(express.json({ limit: "10kb" }));
+app.use(express.json({ limit: "256kb" }));
 
 app.get("/health", function(_req, res) {
   res.json({ status: "ok", app: "GPTche" });
