@@ -1,6 +1,7 @@
 import { Router } from "express";
 import anthropic from "../anthropic.js";
 import { supabase } from "../lib/supabaseClient.js";
+import { VERBETES_ANCORA } from "../data/glossarioTermos.js";
 
 const router = Router();
 
@@ -90,10 +91,40 @@ GPTchê AVISO SOBRE FUTEBOL: para tabela atual, placar de jogo, elenco, contrata
 
 GPTchê AVISO SOBRE EVENTOS COM SEDE E DATA VARIÁVEIS: várias tradições gaúchas mudam de município-sede e de data TODO ANO — é o caso da Chama Crioula (Geração e Distribuição, parte dos Festejos Farroupilhas), que NÃO tem sede fixa em Piratini nem data fixa em 7 de setembro. A 1ª Geração, essa sim, foi em 7/9/1947, com a centelha tirada da Pira da Pátria em Porto Alegre — mas isso é origem histórica, não a edição de cada ano, que troca de cidade e datas conforme a Região Tradicionalista sede. O mesmo cuidado vale pra Expointer, Enart, rodeios oficiais, Semana Farroupilha (14 a 20 de setembro é a semana oficial, mas a programação e os eventos dentro dela variam por cidade e ano), Acampamento Farroupilha (o de Porto Alegre roda no Parque Harmonia, mas datas exatas, tema do ano, patrono/patrona e atrações mudam a cada edição — não é a mesma coisa que a Semana Farroupilha, é um evento à parte, geralmente com início antes dela) e qualquer "edição anual" de evento tradicionalista. NUNCA afirmes cidade-sede, data específica ou programação desses eventos de memória — usa sempre a ferramenta de busca pra confirmar a edição do ano corrente antes de responder, e deixa claro que é a informação mais atual encontrada.
 
-HONESTIDADE CULTURAL — REGRA FUNDAMENTAL: Se não reconheceres um prato, expressão, pessoa, clube, evento ou lugar do RS, diz claramente que não conheces e pede mais detalhes ao usuário. NUNCA inventes informações sobre gastronomia, futebol, figuras públicas, lugares ou tradições gaúchas. É melhor admitir desconhecimento do que dar uma informação errada sobre a cultura do RS.
+HONESTIDADE CULTURAL — REGRA FUNDAMENTAL: Se o usuário perguntar o significado de uma palavra, gíria ou expressão gaúcha e tu não tiveres certeza do significado, usa SEMPRE a ferramenta consultar_glossario_gaucho ANTES de responder ou de dizer que não conheces — ela consulta o mesmo dicionário oficial usado no Glossário do app. Se a ferramenta não encontrar o termo, aí sim podes tentar a busca web; se nem assim encontrares nada confiável, diz claramente que não conheces e pede mais detalhes ao usuário. O mesmo cuidado vale pra prato, pessoa, clube, evento ou lugar do RS que não sejam expressões de linguagem: NUNCA inventes informações sobre gastronomia, futebol, figuras públicas, lugares ou tradições gaúchas. É melhor admitir desconhecimento do que dar uma informação errada sobre a cultura do RS.
 Exemplo correto: "Bah, tchê, esse termo não tô conhecendo bem. Tu podes me contar mais? É de qual região do RS?"`;
 
-const TOOLS = [{ type: "web_search_20250305", name: "web_search" }];
+const TOOLS = [
+  { type: "web_search_20250305", name: "web_search" },
+  {
+    name: "consultar_glossario_gaucho",
+    description:
+      "Consulta o dicionário oficial de expressões, gírias e ditados gaúchos do GPTchê (a mesma base de dados usada no Glossário do app). Usa esta ferramenta sempre que o usuário perguntar o significado de uma palavra ou expressão gaúcha que tu não reconheças com total certeza, antes de dizer que não conheces o termo ou de tentar buscar na web.",
+    input_schema: {
+      type: "object",
+      properties: {
+        termo: {
+          type: "string",
+          description: "A palavra ou expressão gaúcha buscada, em minúsculas (ex.: \"chinelão\", \"faca na bota\").",
+        },
+      },
+      required: ["termo"],
+    },
+  },
+];
+
+/**
+ * Executa localmente a tool consultar_glossario_gaucho — sem chamada de API,
+ * é o mesmo lookup síncrono usado na rota /glossario para os VERBETES_ANCORA.
+ */
+function consultarGlossarioLocal(termoBuscado) {
+  const termo = String(termoBuscado || "").trim().toLowerCase();
+  const achado = VERBETES_ANCORA[termo];
+  if (!achado) {
+    return { encontrado: false, termo };
+  }
+  return { encontrado: true, termo, ...achado };
+}
 
 const PRONOME_INSTRUCOES = {
   guri: "Trate o usuário como 'guri' quando for natural (ex: 'e aí, guri!', 'tri, guri!'). Não force isso em toda frase, use com moderação.",
@@ -185,13 +216,26 @@ router.post("/", async (req, res) => {
 
       const toolResults = response.content
         .filter((b) => b.type === "tool_use")
-        .map((b) => ({
-          type: "tool_result",
-          tool_use_id: b.id,
-          content: Array.isArray(b.content)
-            ? b.content
-            : [{ type: "text", text: "Busca realizada." }],
-        }));
+        .map((b) => {
+          // Tool local: resolve na hora, sem chamada de API — mesma base do Glossário
+          if (b.name === "consultar_glossario_gaucho") {
+            const resultado = consultarGlossarioLocal(b.input?.termo);
+            return {
+              type: "tool_result",
+              tool_use_id: b.id,
+              content: [{ type: "text", text: JSON.stringify(resultado) }],
+            };
+          }
+
+          // Demais tools (ex.: web_search) seguem o comportamento já existente
+          return {
+            type: "tool_result",
+            tool_use_id: b.id,
+            content: Array.isArray(b.content)
+              ? b.content
+              : [{ type: "text", text: "Busca realizada." }],
+          };
+        });
 
       messages = [
         ...messages,
