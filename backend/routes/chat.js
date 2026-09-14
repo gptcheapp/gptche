@@ -107,37 +107,36 @@ const PRONOME_INSTRUCOES = {
  * Sem a data explícita, o modelo não tem como saber "hoje" de verdade e
  * pode travar ou chutar errado em perguntas relativas a data/época do ano.
  */
-async function buildSystemPrompt(deviceId) {
-  const hoje = new Date().toLocaleDateString("pt-BR", {
-    timeZone: "America/Sao_Paulo",
-    weekday: "long",
-    day: "2-digit",
-    month: "long",
-    year: "numeric",
-  });
-  const contextoData = `\n\nCONTEXTO DE DATA: hoje é ${hoje} (horário de Brasília). Use essa informação sempre que a pergunta envolver "hoje", "essa época do ano", datas relativas ou cálculo de quanto tempo falta/passou pra algum evento. Nunca pergunte "que dia é hoje" pro usuário nem invente uma data diferente desta.`;
+   async function buildSystemPrompt(deviceId) {
+     const hoje = new Date().toLocaleDateString("pt-BR", {
+       timeZone: "America/Sao_Paulo",
+       weekday: "long",
+       day: "2-digit",
+       month: "long",
+       year: "numeric",
+     });
+     let dinamico = `\n\nCONTEXTO DE DATA: hoje é ${hoje} (horário de Brasília). Use essa informação sempre que a pergunta envolver "hoje", "essa época do ano", datas relativas ou cálculo de quanto tempo falta/passou pra algum evento. Nunca pergunte "que dia é hoje" pro usuário nem invente uma data diferente desta.`;
 
-  if (!deviceId) return SYSTEM_PROMPT + contextoData;
+     if (deviceId) {
+       const { data, error } = await supabase
+         .from("preferencias")
+         .select("valor")
+         .eq("device_id", deviceId)
+         .eq("chave", "pronome")
+         .maybeSingle();
 
-  const { data, error } = await supabase
-    .from("preferencias")
-    .select("valor")
-    .eq("device_id", deviceId)
-    .eq("chave", "pronome")
-    .maybeSingle();
+       if (error) {
+         console.error("[chat route] erro ao buscar preferencia:", error.message);
+       } else if (data?.valor && PRONOME_INSTRUCOES[data.valor]) {
+         dinamico += "\n\n" + PRONOME_INSTRUCOES[data.valor];
+       }
+     }
 
-  if (error) {
-    console.error("[chat route] erro ao buscar preferencia:", error.message);
-    return SYSTEM_PROMPT + contextoData;
-  }
-
-  if (data?.valor && PRONOME_INSTRUCOES[data.valor]) {
-    return SYSTEM_PROMPT + contextoData + "\n\n" + PRONOME_INSTRUCOES[data.valor];
-  }
-
-  return SYSTEM_PROMPT + contextoData;
-}
-
+     return [
+       { type: "text", text: SYSTEM_PROMPT, cache_control: { type: "ephemeral" } },
+       { type: "text", text: dinamico },
+     ];
+   }
 function validateMessages(messages) {
   if (!Array.isArray(messages) || messages.length === 0) {
     throw Object.assign(new Error("Histórico de mensagens inválido."), { status: 400 });
@@ -155,19 +154,29 @@ function validateMessages(messages) {
     return { role: m.role, content: m.content.slice(0, 4000) };
   });
 }
-
 router.post("/", async (req, res) => {
   try {
-    let messages = validateMessages(req.body.messages);
-    const systemPrompt = await buildSystemPrompt(req.body.device_id);
+       let messages = validateMessages(req.body.messages);
+   const systemBlocks = await buildSystemPrompt(req.body.device_id);
+
+   if (messages.length >= 2) {
+     const idx = messages.length - 2;
+     messages[idx] = {
+       ...messages[idx],
+       content: [
+         { type: "text", text: messages[idx].content, cache_control: { type: "ephemeral" } },
+       ],
+     };
+   }
 
     let response = await anthropic.messages.create({
       model: "claude-sonnet-4-5",
       max_tokens: 1024,
-      system: systemPrompt,
+      system: systemBlocks,
       tools: TOOLS,
       messages,
     });
+ 
 
     // Loop para processar tool_use (web search) caso o modelo decida buscar
     let loopCount = 0;
@@ -193,7 +202,7 @@ router.post("/", async (req, res) => {
       response = await anthropic.messages.create({
         model: "claude-sonnet-4-5",
         max_tokens: 1024,
-        system: systemPrompt,
+        system: systemBlocks,
         tools: TOOLS,
         messages,
       });
