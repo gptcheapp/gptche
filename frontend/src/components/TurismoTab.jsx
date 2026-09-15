@@ -1,17 +1,17 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { fetchTurismo, fetchGuia } from "../api/index.js";
 import { salvarRegiaoVisitada } from "../api/historico.js";
 
 const REGIOES = [
-  { id: "serra", nome: "Serra Gaúcha", icone: "🍷", desc: "Vinhos, flores e café colonial" },
-  { id: "aparados", nome: "Aparados da Serra", icone: "🏔️", desc: "Cânions e natureza selvagem" },
-  { id: "missoes", nome: "Missões Jesuíticas", icone: "🏛️", desc: "Patrimônio da Humanidade" },
-  { id: "pampa", nome: "Pampa e Fronteira", icone: "🐄", desc: "Estâncias, vinhos e tradição" },
-  { id: "litoral", nome: "Litoral Gaúcho", icone: "🌊", desc: "Praias, dunas e falésias" },
-  { id: "litoralnorte", nome: "Litoral Norte", icone: "🐟", desc: "Festa do Peixe e praias do RS" },
-  { id: "poa", nome: "Porto Alegre", icone: "🌅", desc: "O pôr do sol no Guaíba" },
-  { id: "central", nome: "Região Central", icone: "🦕", desc: "Dinossauros e história" },
-  { id: "sinos", nome: "Vale do Sinos", icone: "🏘️", desc: "Imigração alemã e tradição" },
+  { id: "serra", slug: "serra-gaucha", nome: "Serra Gaúcha", icone: "🍷", desc: "Vinhos, flores e café colonial", frase: "Bah, os vinhos e o friozinho da Serra Gaúcha merecem uma visita, tchê!" },
+  { id: "aparados", slug: "aparados-da-serra", nome: "Aparados da Serra", icone: "🏔️", desc: "Cânions e natureza selvagem", frase: "Os cânions dos Aparados da Serra tiram o fôlego, tchê — precisa ver de perto!" },
+  { id: "missoes", slug: "missoes-jesuiticas", nome: "Missões Jesuíticas", icone: "🏛️", desc: "Patrimônio da Humanidade", frase: "As Missões Jesuíticas guardam uma história que todo gaúcho devia conhecer." },
+  { id: "pampa", slug: "pampa-e-fronteira", nome: "Pampa e Fronteira", icone: "🐄", desc: "Estâncias, vinhos e tradição", frase: "Bah, o Pampa e Fronteira é gaúcho puro — estância, tradição e um horizonte que não acaba." },
+  { id: "litoral", slug: "litoral-gaucho", nome: "Litoral Gaúcho", icone: "🌊", desc: "Praias, dunas e falésias", frase: "Praias, dunas e o jeitinho tranquilo do Litoral Gaúcho — baita programa, tchê!" },
+  { id: "litoralnorte", slug: "litoral-norte", nome: "Litoral Norte", icone: "🐟", desc: "Festa do Peixe e praias do RS", frase: "Bah, o Litoral Norte é praia boa e peixe fresco — combinação campeã." },
+  { id: "poa", slug: "porto-alegre", nome: "Porto Alegre", icone: "🌅", desc: "O pôr do sol no Guaíba", frase: "O pôr do sol no Guaíba, em Porto Alegre, é de arrepiar, tchê." },
+  { id: "central", slug: "regiao-central", nome: "Região Central", icone: "🦕", desc: "Dinossauros e história", frase: "Quem diria que a Região Central esconde até dinossauro? Baita curiosidade, tchê." },
+  { id: "sinos", slug: "vale-do-sinos", nome: "Vale do Sinos", icone: "🏘️", desc: "Imigração alemã e tradição", frase: "O Vale do Sinos carrega a história da imigração alemã junto com a gaúcha — vale a visita." },
 ];
 
 // Cidades verificadas (bate com CIDADES_VALIDAS do backend/routes/guia.js).
@@ -86,7 +86,7 @@ const TIPO_COR = {
   aventura: { bg: "#F3E5F5", text: "#6A1B9A" },
 };
 
-export default function TurismoTab({ onPerguntar }) {
+export default function TurismoTab({ onPerguntar, regiaoInicial }) {
   const [modo, setModo] = useState("regiao"); // "regiao" | "cidade"
 
   // ── estado modo Região ──
@@ -128,6 +128,15 @@ export default function TurismoTab({ onPerguntar }) {
     }
     setLoading(false);
   };
+
+  // Deep link: chegou por um link de região compartilhado (ex: /turismo/serra-gaucha
+  // → App.jsx lê "?turismo=serra" e passa aqui) — abre direto na região certa.
+  useEffect(() => {
+    if (!regiaoInicial) return;
+    const regiao = REGIOES.find((r) => r.id === regiaoInicial);
+    if (regiao) buscarGuiaRegiao(regiao);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [regiaoInicial]);
 
   const buscarGuiaCidade = async (cidade) => {
     setCidadeSel(cidade);
@@ -182,6 +191,32 @@ export default function TurismoTab({ onPerguntar }) {
         alert("Copiado! Cola onde tu quiser compartilhar, tchê.");
       } catch {
         alert("Não consegui copiar automaticamente — copia o link manualmente: gptche.app");
+      }
+    }
+  };
+
+  // Compartilhar região: link próprio da região (deep link + preview com
+  // imagem certa no WhatsApp/Instagram) e texto no tom de indicação de amigo,
+  // não de descrição de sistema.
+  const compartilharRegiao = async (regiao) => {
+    const url = `https://gptche.app/turismo/${regiao.slug}`;
+    const shareData = {
+      title: `GPTchê — ${regiao.nome}`,
+      text: `${regiao.frase}\n\ndescobri no GPTchê 🧉\n${url}`,
+      url,
+    };
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch {
+        /* usuário cancelou o share sheet, sem problema */
+      }
+    } else {
+      try {
+        await navigator.clipboard.writeText(`${shareData.text}`);
+        alert("Copiado! Cola onde tu quiser compartilhar, tchê.");
+      } catch {
+        alert(`Não consegui copiar automaticamente — copia o link manualmente: ${url}`);
       }
     }
   };
@@ -376,7 +411,7 @@ export default function TurismoTab({ onPerguntar }) {
 
           <button
             className="btn-secundario"
-            onClick={() => compartilhar(regiaoSel.nome, guiaRegiao.saudacao)}
+            onClick={() => compartilharRegiao(regiaoSel)}
           >
             ↗ Compartilhar este guia
           </button>

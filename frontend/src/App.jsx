@@ -20,6 +20,13 @@ const ehAppInstalado = () => {
   return window.matchMedia?.("(display-mode: standalone)").matches;
 };
 
+// Deep link de região compartilhada: /turismo/serra-gaucha redireciona (via
+// página estática) pra /?turismo=serra — lemos esse parâmetro aqui.
+const getRegiaoDaURL = () => {
+  if (typeof window === "undefined") return null;
+  return new URLSearchParams(window.location.search).get("turismo");
+};
+
 export default function App() {
   const [showLanding, setShowLanding] = useState(
     () => !ehAppInstalado() && !localStorage.getItem("gptche_visited")
@@ -27,7 +34,8 @@ export default function App() {
   const [showOnboarding, setShowOnboarding] = useState(
     () => ehAppInstalado() && !localStorage.getItem("gptche_onboarding_visto")
   );
-  const [aba, setAba] = useState("chat");
+  const [regiaoInicial] = useState(getRegiaoDaURL);
+  const [aba, setAba] = useState(() => (getRegiaoDaURL() ? "turismo" : "chat"));
   const [chatInput, setChatInput] = useState("");
   const [prefsAberta, setPrefsAberta] = useState(false);
 
@@ -96,7 +104,7 @@ export default function App() {
             onInputConsumed={handleInputConsumed}
           />
         )}
-        {aba === "turismo" && <TurismoTab onPerguntar={handlePerguntar} />}
+        {aba === "turismo" && <TurismoTab onPerguntar={handlePerguntar} regiaoInicial={regiaoInicial} />}
         {aba === "glossario" && <GlossarioTab />}
       </main>
 

@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/turismo/:slug", "destination": "/turismo/:slug.html" }
+  ]
+}
