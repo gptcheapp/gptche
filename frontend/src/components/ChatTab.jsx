@@ -24,10 +24,16 @@ export default function ChatTab({ initialInput, onInputConsumed }) {
   const [carregandoHistorico, setCarregandoHistorico] = useState(true);
   const bottomRef = useRef(null);
   const inputRef = useRef(null);
+  // Fica true assim que o usuário manda a primeira mensagem. Protege contra
+  // a busca de histórico (assíncrona) chegando depois e sobrescrevendo a
+  // conversa com uma versão desatualizada, apagando da tela a pergunta que
+  // acabou de ser enviada (e a resposta seguinte parecia "vir sozinha" ou
+  // "com dois textos juntos").
+  const jaInteragiuRef = useRef(false);
 
   useEffect(() => {
     buscarHistoricoChat().then((historico) => {
-      if (historico && historico.length > 0) {
+      if (!jaInteragiuRef.current && historico && historico.length > 0) {
         setMessages([initialMessage, ...historico]);
       }
       setCarregandoHistorico(false);
@@ -65,6 +71,7 @@ export default function ChatTab({ initialInput, onInputConsumed }) {
   const sendMessage = async (text) => {
     const t = (text || input).trim();
     if (!t || loading) return;
+    jaInteragiuRef.current = true;
     setInput("");
     const userMsg = { role: "user", content: t };
     const newMessages = [...messages, userMsg];

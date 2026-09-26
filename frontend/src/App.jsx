@@ -98,14 +98,32 @@ export default function App() {
       </header>
 
       <main className="app-content">
-        {aba === "chat" && (
+        {/*
+          As três abas ficam SEMPRE montadas (só trocamos a visibilidade com
+          display none/flex). Antes, cada aba só existia no DOM enquanto
+          estava ativa — trocar de aba desmontava o ChatTab por completo,
+          zerando o estado da conversa (mensagens, input, loading). Ao voltar
+          pro Chat, o componente remontava do zero e disparava de novo o
+          fetch de histórico (buscarHistoricoChat), que substitui o array de
+          mensagens inteiro quando termina — se o usuário mandasse uma
+          mensagem nova antes desse fetch terminar, a resposta chegava mas a
+          pergunta que a gerou já tinha sido apagada da tela, dando a
+          impressão de que a conversa "se perdeu" e de que a próxima resposta
+          vinha "com os dois textos" juntos. Mantendo tudo montado, o
+          ChatTab só monta (e só busca histórico) uma vez por sessão.
+        */}
+        <div className={`tab-painel ${aba === "chat" ? "tab-painel-ativo" : ""}`}>
           <ChatTab
             initialInput={chatInput}
             onInputConsumed={handleInputConsumed}
           />
-        )}
-        {aba === "turismo" && <TurismoTab onPerguntar={handlePerguntar} regiaoInicial={regiaoInicial} />}
-        {aba === "glossario" && <GlossarioTab />}
+        </div>
+        <div className={`tab-painel ${aba === "turismo" ? "tab-painel-ativo" : ""}`}>
+          <TurismoTab onPerguntar={handlePerguntar} regiaoInicial={regiaoInicial} />
+        </div>
+        <div className={`tab-painel ${aba === "glossario" ? "tab-painel-ativo" : ""}`}>
+          <GlossarioTab />
+        </div>
       </main>
 
       <nav className="gp-tabbar">
